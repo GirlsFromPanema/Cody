@@ -1095,3 +1095,7 @@ input[role='switch']:disabled:before {
   text-align: left;
   text-decoration: none;
 }
+
+#go-back:hover {
+  opacity: 0.8;
+}
