@@ -1086,3 +1086,12 @@ input[role='switch']:disabled:before {
   font-weight: 700;
   font-family: Inter;
 }
+
+#go-back {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Inter;
+  text-align: left;
+  text-decoration: none;
+}
