@@ -23,6 +23,7 @@ module.exports = {
       .setTitle("Cody's Information")
       .setColor(message.guild.me.displayHexColor)
       .setTimestamp()
+      .setFooter("Visit us at **cody.gg**")
       .setDescription(
         `**Ping:** \`${client.ws.ping}ms\`\n**Uptime:** \`${moment
           .duration(client.uptime)

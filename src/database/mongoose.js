@@ -25,7 +25,7 @@ module.exports = {
     })
 
     mongoose.connection.on('connected', () => {
-      console.log('CONNECTED TO THE DATABASE')
+      console.log('Successfully CONNECTED TO THE DATABASE')
     })
   }
 }

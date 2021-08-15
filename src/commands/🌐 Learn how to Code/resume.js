@@ -4,12 +4,15 @@ const User = require('../../database/schemas/User')
 const oneTry = new Set()
 
 module.exports = {
-  name: 'start',
+  name: 'resume',
   category: '🌐 Learn how to Code',
   description: 'Resume the course you were learning.',
   cooldown: 5,
 
   run: async (client, message, args, user, guild) => {
+
+    
+
     //if the user doesn't exist / isn't enrolled yet it will tell him to enroll
     if (!user && !user.enrolled) {
       const embed = new MessageEmbed()
@@ -19,7 +22,7 @@ module.exports = {
             ? 'GREEN'
             : message.guild.me.displayHexColor
         )
-        .setDescription(`Please enroll a course before using this command`)
+        .setDescription(`${message.author.username}, please enroll a course before using this command\nSimply run the (prefix)enroll Command\nExample: **$enroll**`)
       return message.channel.send({ embed: embed })
     }
 
@@ -609,10 +612,10 @@ async function cancelPrompt (number, message, answer) {
         })
       )
       .setFooter(
-        `Cody | The best coding bot for discord`,
+        `Cody | The best Coding Bot for Discord`,
         message.client.user.displayAvatarURL()
       )
-      .setDescription(`I couldn't dm you. Please make sure your dms are open!`)
+      .setDescription(`I couldn't dm you. Please make sure your DMs are open while you use my Commands!`)
 
     message.channel.send(` ${message.author} `, {
       embed: cancelEmbed
@@ -639,7 +642,7 @@ async function cancelPrompt (number, message, answer) {
         })
       )
       .setFooter(
-        `Cody | The best coding bot for discord`,
+        `Cody | The best Coding Bot for Discord`,
         message.client.user.displayAvatarURL()
       )
       .setDescription(

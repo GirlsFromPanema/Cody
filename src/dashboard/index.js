@@ -13,7 +13,7 @@ const path = require('path')
 const nicknameCooldown = new Set()
 const moment = require('moment')
 const config = require('../config.json')
-const port = config.PORT || 5000
+const port = config.PORT || 8000
 const User = require('../database/schemas/User')
 const minifyHTML = require('express-minify-html-terser')
 const Guild = require('../database/schemas/Guild')
@@ -257,9 +257,12 @@ module.exports = async client => {
             name: fetch.tag,
             avatar: fetch.avatar,
             id: user.Id,
-            level: user.courses.reduce((a, b) => {
-              return a.course.Level || 0 + b.course.Level || 0
-            })
+            level:
+              user.courses && user.courses.length > 1
+                ? user.courses.reduce((a, b) => {
+                    return a.course.Level || 0 + b.course.Level || 0
+                  })
+                : user.courses.Level || 0
           }
 
           array.push(obj)
@@ -270,7 +273,8 @@ module.exports = async client => {
 
     render(res, req, 'dashboard/dashboard/leaderboard/leaderboard.ejs', {
       users: array || [],
-      isGuild: false
+      isGuild: false,
+      guild: null
     })
   })
 
@@ -312,9 +316,12 @@ module.exports = async client => {
             name: fetch.user.username + '#' + fetch.user.discriminator,
             avatar: fetch.user.avatar,
             id: user.Id,
-            level: user.courses.reduce((a, b) => {
-              return a.course.Level || 0 + b.course.Level || 0
-            })
+            level:
+              user.courses && user.courses.length > 1
+                ? user.courses.reduce((a, b) => {
+                    return a.course.Level || 0 + b.course.Level || 0
+                  })
+                : user.courses.Level || 0
           }
 
           array.push(obj)

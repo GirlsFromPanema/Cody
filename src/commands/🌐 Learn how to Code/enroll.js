@@ -8,6 +8,10 @@ module.exports = {
   cooldown: 5,
 
   run: async (client, message, args, user, guild) => {
+
+    message.react("✅")
+
+
     //defining the valid Courses available the user can enter. You can change these once you add more courses.
     const validCourses = require('../../questions/courses.json').courses
     const answer = await ask(
@@ -17,10 +21,20 @@ module.exports = {
       message
     )
 
+
+    const timeover = new MessageEmbed()
+    .setTitle(":x: | Error")
+    .setDescription("The time ran out and the Process got canceled, rerun the Command to start again")
+    .setColor("RED")
+    .setFooter("Visit us at cody.com")
+    .setTimestamp()
+
+
+
     //if the user doesn't respond or types 'cancel', send him a "cancelled message"
     if (!answer) {
       try {
-        await message.author.send('Cancelled!')
+        await message.author.send({embed: timeover})
       } catch {
         message.channel.send('Cancelled')
       }
@@ -35,7 +49,7 @@ module.exports = {
             .setColor('RED')
             .setTitle('Provide a Valid Course')
             .setDescription(
-              `Invalid Course Provided.\n\n**Current Courses**\n${validCourses.join(
+              `Invalid Course Provided.\n\n**Current Courses available**\n${validCourses.join(
                 ' - '
               )}`
             )
@@ -46,7 +60,7 @@ module.exports = {
             .setColor('RED')
             .setTitle('Provide a Valid Course')
             .setDescription(
-              `Invalid Course Provided.\n\n**Current Courses**\n${validCourses.join(
+              `Invalid Course Provided.\n\n**Current Courses available**\n${validCourses.join(
                 ' - '
               )}`
             )
