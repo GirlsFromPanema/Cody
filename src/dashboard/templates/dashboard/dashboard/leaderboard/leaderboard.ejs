@@ -35,7 +35,7 @@ s
   <body>
     <noscript>
       <div class="noscript">
-        To view the page please enable Javascript in your browser
+        To view the page please enable javascript in your browser
       </div>
     </noscript>
     <script type="text/javascript">
@@ -114,8 +114,11 @@ s
       <div class="dash_box">
         <div class="leaderboard">
           <div class="user-data">
+            <a id="go-back" href="/dashboard/<%=guild.id%>"> &#60; Go Back</a>
+
             <span class="title"
-              ><%= isGuild ? "Guild" : "Global" %> Leaderboard</span>
+              ><%= isGuild ? "Guild" : "Global" %> Leaderboard</span
+            >
             <% if(users && users.length) { %> <% for (let i = 0; i <
             users.length; i++) { %>
             <div class="lb-a">
