@@ -306,11 +306,11 @@ module.exports = async client => {
     for (let user of users) {
       const db = client.userSettings.get(user.Id)
       if (db) {
-        const fetch = guild.members.cache.get(user.Id)
-        if (fetch && fetch.username) {
+        const fetch = await guild.members.fetch(user.Id)
+        if (fetch && fetch.user.username) {
           const obj = {
-            name: fetch.tag,
-            avatar: fetch.avatar,
+            name: fetch.user.username + '#' + fetch.user.discriminator,
+            avatar: fetch.user.avatar,
             id: user.Id,
             level: user.courses.reduce((a, b) => {
               return a.course.Level || 0 + b.course.Level || 0
