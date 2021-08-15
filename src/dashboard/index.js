@@ -257,9 +257,12 @@ module.exports = async client => {
             name: fetch.tag,
             avatar: fetch.avatar,
             id: user.Id,
-            level: user.courses.reduce((a, b) => {
-              return a.course.Level || 0 + b.course.Level || 0
-            })
+            level:
+              user.courses && user.courses.length > 1
+                ? user.courses.reduce((a, b) => {
+                    return a.course.Level || 0 + b.course.Level || 0
+                  })
+                : user.courses.Level || 0
           }
 
           array.push(obj)
@@ -312,9 +315,12 @@ module.exports = async client => {
             name: fetch.user.username + '#' + fetch.user.discriminator,
             avatar: fetch.user.avatar,
             id: user.Id,
-            level: user.courses.reduce((a, b) => {
-              return a.course.Level || 0 + b.course.Level || 0
-            })
+            level:
+              user.courses && user.courses.length > 1
+                ? user.courses.reduce((a, b) => {
+                    return a.course.Level || 0 + b.course.Level || 0
+                  })
+                : user.courses.Level || 0
           }
 
           array.push(obj)
