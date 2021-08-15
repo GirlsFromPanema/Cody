@@ -46,7 +46,7 @@
   <body>
     <noscript>
       <div class="noscript">
-        To view the page please enable Javascript in your browser
+        To view the page please enable javascript in your browser
       </div>
     </noscript>
     <script type="text/javascript">
@@ -127,6 +127,8 @@
     } %>
     <div class="dash_main">
       <div class="dash_box">
+        <a id="go-back" href="/panel/<%=guild.id%>"> &#60; Go Back</a>
+
         <form action="/panel/<%= guild.id %>/toggles" method="post">
           <div class="title">
             <span>Toggles</span>
@@ -198,7 +200,7 @@
       <div id="right-footer">
         <a href="/contact">Contact</a
         ><a href="/discord" target="_blank">Discord</a
-        ><a href="/" target="_blank">Home</a
+        ><a href="/dashboard" target="_blank">Home</a
         ><a href="/policy">Privacy Policy</a>
       </div>
     </div>
