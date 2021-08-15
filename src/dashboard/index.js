@@ -273,7 +273,8 @@ module.exports = async client => {
 
     render(res, req, 'dashboard/dashboard/leaderboard/leaderboard.ejs', {
       users: array || [],
-      isGuild: false
+      isGuild: false,
+      guild: null
     })
   })
 
