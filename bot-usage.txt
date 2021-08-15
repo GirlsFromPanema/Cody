@@ -1,0 +1,16 @@
+How to run the Code 
+
+1- Instructions for adding questions 
+file: /src/questions/how-to-use.txt
+
+2- Instructions for setting up the dashboard
+file: /src/dashboard/how-to-use.txt
+
+Setting up the bot!
+
+1- Go to /src/config.json and fill it.
+
+2- Install the bot modules using "npm i" or "npm install"
+
+3- Run the instance using "node ." or "node src/index.js"
+

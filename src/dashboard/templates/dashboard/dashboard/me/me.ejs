@@ -1,0 +1,509 @@
+<html lang="en">
+  <head>
+    <meta name="theme-color" content="#36393f" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <title>Cody • Dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="title" content="Cody • The best coding bot for discord" />
+    <meta property="og:image" content="<%=domain%>/logo.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard/dashboard.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bounce.js/0.8.2/bounce.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment-duration-format@2.3.2/lib/moment-duration-format.min.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript">
+        To view the page please enable Javascript in your browser
+      </div>
+    </noscript>
+    <script type="text/javascript">
+      var preload = document.createElement('div')
+      preload.className = 'loading-screen'
+      preload.innerHTML =
+        '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>'
+      document.body.appendChild(preload)
+      window.addEventListener('load', function () {
+        preload.className += ' fade'
+      })
+      setTimeout(function () {
+        preload.style.display = 'none'
+      }, 600)
+    </script>
+    <div id="logo" onclick="window.location.href='/'">
+      <svg height="30" width="200">
+        <text x="0" y="15" fill="white"></text>
+      </svg>
+    </div>
+    <div id="navbar">
+      <a href="/" target="_blank">Home</a>
+      <a href="/#features">Features</a
+      ><a href="/discord" target="_blank">Discord</a>
+    </div>
+    <% if (user) { %>
+    <div class="user-dropdown">
+      <div id="login">
+        <%= user.username %>
+        <i class="fa fa-caret-down"></i>
+        <div class="dropdown-content">
+          <a href="/panel">Dashboard</a>
+          <a href="/">Home</a>
+          <a href="/logout" style="color: red">Logout</a>
+        </div>
+      </div>
+    </div>
+    <% } else { %><a id="login" href="/login">Login</a><% } %>
+    <div id="lg">
+      <div id="login-hamburger">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/#features" class="nav-link">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="/discord" class="nav-link">Discord</a>
+          </li>
+          <li class="nav-item">
+            <a href="/status" class="nav-link">Status</a>
+          </li>
+          <li class="nav-item">
+            <% if (user) { %>
+            <div class="user-dropdown">
+              <div>
+                <a><%= user.username %></a>
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                  <a href="/">Home</a>
+                  <a href="/">Home</a>
+                  <a href="/logout" style="color: red">Logout</a>
+                </div>
+              </div>
+            </div>
+            <% } else { %><a id="user" href="/login">Login</a><% } %>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+    <% if (user.avatar) { avatar = "https://cdn.discordapp.com/avatars/" +
+    user.id + "/" + user.avatar + "?size=512"; } else { avatar =
+    "https://cdn.glitch.com/82fe990a-7942-42e3-9790-39807ccdb9f6/icon-404-dark.png?v=1602427904949";
+    } %>
+
+    <div class="dash_main">
+      <div class="dash_box">
+        <div class="title">
+          <img
+            style="border-radius: 50%; margin-right: 2%"
+            src="<%= avatar %>"
+            alt="<%= user.username %>'s avatar"
+          />
+          <span><%= user.username %>#<%= user.discriminator %></span>
+        </div>
+        <div class="settings_div">
+          <div class="settings_box">
+            <% if(settings.courses && settings.courses.length) { %>
+            <div class="courses">
+              <div class="ttl">
+                <span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    onclick="toggleCourses()"
+                    id="courseArrow"
+                  >
+                    <path
+                      d="M12 10L8 6L4 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  Your Courses
+                  <i
+                    id="courses"
+                    style="color: white"
+                    class="fas fa-info-circle pointer"
+                  ></i
+                ></span>
+              </div>
+              <div id="coursesDiv">
+                <ul>
+                  <% for (let course of settings.courses) { %>
+                  <li>
+                    <% function capitalize(str) { const word = []; for(let char
+                    of str.split(' ')){ word.push(char[0].toUpperCase() +
+                    char.slice(1)) } return word.join(' '); }%> <%=
+                    capitalize(course.name) %> - enrolled <%=
+                    moment(course.course.enrolled).fromNow() %>
+                  </li>
+                  <% } %>
+                </ul>
+              </div>
+            </div>
+
+            <script>
+              $(document).ready(function () {
+                tippy('#courses', {
+                  content: `<div class="tooltip-div"><h3>Enrolled Courses</h3><p>Displays information about your enrolled courses</p</div>`,
+                  zIndex: 9999,
+                  maxWidth: 500,
+                  interactiveBorder: 30,
+                  duration: [500, 200],
+                  animation: 'fade',
+                  allowHTML: true,
+                  moveTransition: 'transform 0.2s ease-out'
+                })
+              })
+              function toggleCourses () {
+                document
+                  .getElementById('courseArrow')
+                  .classList.toggle('show-arrow')
+                document.getElementById('coursesDiv').classList.toggle('show')
+              }
+            </script>
+
+            <% } %>
+            <div style="padding-bottom: 2%"></div>
+            <% if(settings.isPremium) { %>
+            <div class="premium">
+              <div class="ttl">
+                <span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    onclick="togglePremium()"
+                    id="premiumArrow"
+                  >
+                    <path
+                      d="M12 10L8 6L4 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  Premium Subscription Status
+                  <i
+                    id="premium"
+                    style="color: white"
+                    class="fas fa-info-circle pointer"
+                  ></i
+                ></span>
+              </div>
+              <div id="premiumstats">
+                <ul>
+                  <li>
+                    Redeemed <%= moment(settings.premium.redeemedAt).fromNow()
+                    %>
+                  </li>
+                  <li>
+                    Expires in <%= moment.duration(settings.premium.expiresAt - Date.now()).format("d [days,] h [hours,] m [minutes and] s [seconds]") %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <script>
+              $(document).ready(function () {
+                tippy('#premium', {
+                  content: `<div class="tooltip-div"><h3>Premium Stats</h3><p>Displays information about your premium subscription</p</div>`,
+                  zIndex: 9999,
+                  maxWidth: 500,
+                  interactiveBorder: 30,
+                  duration: [500, 200],
+                  animation: 'fade',
+                  allowHTML: true,
+                  moveTransition: 'transform 0.2s ease-out'
+                })
+              })
+              function togglePremium () {
+                document
+                  .getElementById('premiumArrow')
+                  .classList.toggle('show-arrow')
+                document.getElementById('premiumstats').classList.toggle('show')
+              }
+            </script>
+
+            <% } %>
+
+            <div class="privacy">
+              <label style="cursor: pointer;">
+                <% if(settings.hide === true) { %>
+                <input
+                  type="checkbox"
+                  role="switch"
+                  id="toggleLeaderboard"
+                  onchange="toggleLeaderboard()"
+                  checked
+                />
+                <% } else { %>
+                <input
+                  type="checkbox"
+                  role="switch"
+                  id="toggleLeaderboard"
+                  onchange="toggleLeaderboard()"
+                />
+                <% } %> Hide yourself from the leaderboard
+                <i
+                  id="privacy"
+                  style="color: white"
+                  class="fas fa-info-circle pointer"
+                ></i>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding-bottom: 6%"></div>
+      </div>
+    </div>
+    <div id="footer">
+      <hr />
+      <div id="left-footer">
+        © 2021 Cody Development
+      </div>
+      <div id="right-footer">
+        <a href="/contact">Contact</a
+        ><a href="/discord" target="_blank">Discord</a
+        ><a href="/dashboard" target="_blank">Home</a
+        ><a href="/policy">Privacy Policy</a>
+      </div>
+    </div>
+
+    <script>
+      tippy('#privacy', {
+        content: `<div class="tooltip-div">
+                    <h3>Control Your Privacy.</h3>
+                    <p>This feature will block you from:</p>
+            <ul>
+              <li>
+               The Global Leaderboard
+              </li>
+              <li>Guild Leaderboards</li>
+            </ul>
+          </div>
+          `,
+        zIndex: 9999,
+        maxWidth: 500,
+        interactiveBorder: 30,
+        duration: [500, 200],
+        animation: 'fade',
+        allowHTML: true,
+        moveTransition: 'transform 0.2s ease-out'
+      })
+    </script>
+
+    <script type="text/javascript">
+      function toggleLeaderboard () {
+        const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: 'button edit',
+            cancelButton: 'button red'
+          },
+          buttonsStyling: false
+        })
+
+        const toggle = document.getElementById('toggleLeaderboard')
+        fetch(`<%= domain %>/me`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            toggle: toggle && toggle.checked ? true : false
+          })
+        })
+          .then(async data => {
+            if (data.status === 200) {
+              data = await data.json()
+
+              new Noty({
+                type: 'success',
+                text: `${
+                  toggle.checked
+                    ? 'Removed you from the leaderboard'
+                    : 'Added you to the leaderboard'
+                } `,
+                timeout: 2000,
+                animation: {
+                  open: function (promise) {
+                    var n = this
+                    new Bounce()
+                      .translate({
+                        from: { x: 450, y: 0 },
+                        to: { x: 0, y: 0 },
+                        easing: 'bounce',
+                        duration: 1000,
+                        bounces: 4,
+                        stiffness: 3
+                      })
+                      .scale({
+                        from: { x: 1.2, y: 1 },
+                        to: { x: 1, y: 1 },
+                        easing: 'bounce',
+                        duration: 1000,
+                        delay: 100,
+                        bounces: 4,
+                        stiffness: 1
+                      })
+                      .scale({
+                        from: { x: 1, y: 1.2 },
+                        to: { x: 1, y: 1 },
+                        easing: 'bounce',
+                        duration: 1000,
+                        delay: 100,
+                        bounces: 6,
+                        stiffness: 1
+                      })
+                      .applyTo(n.barDom, {
+                        onComplete: function () {
+                          promise(function (resolve) {
+                            resolve()
+                          })
+                        }
+                      })
+                  },
+                  close: function (promise) {
+                    var n = this
+                    new Bounce()
+                      .translate({
+                        from: { x: 0, y: 0 },
+                        to: { x: 450, y: 0 },
+                        easing: 'bounce',
+                        duration: 500,
+                        bounces: 4,
+                        stiffness: 1
+                      })
+                      .applyTo(n.barDom, {
+                        onComplete: function () {
+                          promise(function (resolve) {
+                            resolve()
+                          })
+                        }
+                      })
+                  }
+                }
+              }).show()
+
+              if (data.user.hide === true) {
+                $('#toggleLeaderboard').prop('checked', true)
+              } else {
+                $('#toggleLeaderboard').prop('checked', false)
+              }
+            } else {
+              $('#toggleLeaderboard').prop(
+                'checked',
+                toggle.checked ? false : true
+              )
+              new Noty({
+                type: 'error',
+                text: `429 - Too many requests. Slow down!`,
+                timeout: 4000,
+                animation: {
+                  open: function (promise) {
+                    var n = this
+                    new Bounce()
+                      .translate({
+                        from: { x: 450, y: 0 },
+                        to: { x: 0, y: 0 },
+                        easing: 'bounce',
+                        duration: 1000,
+                        bounces: 4,
+                        stiffness: 3
+                      })
+                      .scale({
+                        from: { x: 1.2, y: 1 },
+                        to: { x: 1, y: 1 },
+                        easing: 'bounce',
+                        duration: 1000,
+                        delay: 100,
+                        bounces: 4,
+                        stiffness: 1
+                      })
+                      .scale({
+                        from: { x: 1, y: 1.2 },
+                        to: { x: 1, y: 1 },
+                        easing: 'bounce',
+                        duration: 1000,
+                        delay: 100,
+                        bounces: 6,
+                        stiffness: 1
+                      })
+                      .applyTo(n.barDom, {
+                        onComplete: function () {
+                          promise(function (resolve) {
+                            resolve()
+                          })
+                        }
+                      })
+                  },
+                  close: function (promise) {
+                    var n = this
+                    new Bounce()
+                      .translate({
+                        from: { x: 0, y: 0 },
+                        to: { x: 450, y: 0 },
+                        easing: 'bounce',
+                        duration: 500,
+                        bounces: 4,
+                        stiffness: 1
+                      })
+                      .applyTo(n.barDom, {
+                        onComplete: function () {
+                          promise(function (resolve) {
+                            resolve()
+                          })
+                        }
+                      })
+                  }
+                }
+              }).show()
+            }
+          })
+          .catch(err => {
+            alert(err)
+            swalWithBootstrapButtons.fire('Error', `${err.toString()}`, 'error')
+          })
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+This is how you can properly setup the dashboard.
+
+1- Head to https://discord.com/developers/applications/ and select your application.
+
+2- Go to the auth page and copy the client ID and client secret and paste them in the config.json file
+
+3- Select the domain, default is http://localhost:5000
+
+4- In the auth page, scroll to "Redirects" and add:
+
+- YOUR_DOMAIN/callback  (EXAMPLE http://localhost:5000/callback)
+- YOUR_DOMAIN/api/invite (EXAMPLE http://localhost:5000/api/invite)
+
+EXTRA:
+
+- CONTACT US page
+go to /src/dashboard/index.js LINE 709 and fill the webhook contact forms will be sent to.
+
+Everything should work fine like that, any questions open a ticket :)

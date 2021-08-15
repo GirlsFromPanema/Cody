@@ -1,0 +1,266 @@
+<html lang="en">
+  <head>
+    <meta name="theme-color" content="#36393f" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <title>Cody • Dashboard</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="title" content="Cody • The best coding bot for discord" />
+    <meta property="og:image" content="<%=domain%>/logo.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard/dashboard.css" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"
+      integrity="sha256-FdatTf20PQr/rWg+cAKfl6j4/IY3oohFAJ7gVC3M34E="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css"
+    />
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript">
+        To view the page please enable Javascript in your browser
+      </div>
+    </noscript>
+    <script type="text/javascript">
+      var preload = document.createElement('div')
+      preload.className = 'loading-screen'
+      preload.innerHTML =
+        '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>'
+      document.body.appendChild(preload)
+      window.addEventListener('load', function () {
+        preload.className += ' fade'
+      })
+      setTimeout(function () {
+        preload.style.display = 'none'
+      }, 600)
+    </script>
+    <div id="logo" onclick="window.location.href='/'">
+      <svg height="30" width="200">
+        <text x="0" y="15" fill="white"></text>
+      </svg>
+    </div>
+    <div id="navbar">
+      <a href="/" target="_blank">Home</a>
+
+      <a href="/#features">Features</a
+      ><a href="/discord" target="_blank">Discord</a>
+    </div>
+    <% if (user) { %>
+    <div class="user-dropdown">
+      <div id="login">
+        <%= user.username %>
+        <i class="fa fa-caret-down"></i>
+        <div class="dropdown-content">
+          <a href="/panel">Dashboard</a>
+          <a href="/me">Settings</a>
+          <a href="/logout" style="color: red">Logout</a>
+        </div>
+      </div>
+    </div>
+    <% } else { %><a id="login" href="/login">Login</a><% } %>
+    <div id="lg">
+      <div id="login-hamburger">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/#features" class="nav-link">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="/discord" class="nav-link">Discord</a>
+          </li>
+          <li class="nav-item">
+            <a href="/status" class="nav-link">Status</a>
+          </li>
+          <li class="nav-item">
+            <% if (user) { %>
+            <div class="user-dropdown">
+              <div>
+                <a><%= user.username %></a>
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                  <a href="/">Home</a>
+                  <a href="/me">Settings</a>
+                  <a href="/logout" style="color: red">Logout</a>
+                </div>
+              </div>
+            </div>
+            <% } else { %><a id="user" href="/login">Login</a><% } %>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+    <% if (guild.icon) { iconurl = "https://cdn.discordapp.com/icons/" +
+    guild.id + "/" + guild.icon + ".png??size=512"; } else { iconurl =
+    "https://cdn.glitch.com/82fe990a-7942-42e3-9790-39807ccdb9f6%2Ficon-404-dark.png?v=1602427904949";
+    } %>
+    <div class="dash_main">
+      <div class="dash_box">
+        <form action="/panel/<%= guild.id %>/toggles" method="post">
+          <div class="title">
+            <span>Toggles</span>
+          </div>
+          <div class="settings_div">
+            <div class="settings_box">
+              <div class="ttl">
+                <span>Block Channels </span>
+                <div class="dsc">
+                  Block specific channels the bot works in.
+                </div>
+                <div class="form-group" style="margin-top: 2%">
+                  <select
+                    multiple
+                    data-placeholder="Block Channels"
+                    data-allow-clear="1"
+                    name="blockChannels"
+                    class="togglesInput"
+                  >
+                    <% if(guild.channels.cache.size) { %> <%
+                    guild.channels.cache.filter((ch) => ch.type === "text" &&
+                    ch.viewable).forEach((ch) => { %> <%
+                    if(settings.disabledChannels.includes(ch.id)) { %>
+                    <option value="<%= ch.id %>" selected
+                      ># <%= ch.name %></option
+                    >
+                    <% } else { %>
+                    <option value="<%= ch.id %>"># <%= ch.name %></option>
+                    <% } %> <% }) %> <% } %>
+                  </select>
+                </div>
+
+                <div style="padding-bottom: 2%"></div>
+                <span>Block Commands </span>
+                <div class="dsc">Block certain commands from the bot</div>
+                <div class="form-group" style="margin-top: 2%">
+                  <select
+                    multiple
+                    data-placeholder="Block Commands"
+                    data-allow-clear="1"
+                    name="blockCommands"
+                    class="togglesInput"
+                  >
+                    <% if(commands && commands.length) { %> <% for (let command
+                    of commands) { %> <%
+                    if(settings.disabledCommands.includes(command.name)) { %>
+                    <option value="<%= command.name %>" selected
+                      ><%= command.name %></option
+                    ><% } else { %><option value="<%= command.name %>"
+                      ><%= command.name %></option
+                    ><% } %> <% } %> <% } %>
+                  </select>
+                </div>
+                <div style="padding-bottom: 6%"></div>
+
+                <button class="button edit">Save</button>
+              </div>
+            </div>
+          </div>
+          <div style="padding-bottom: 6%"></div>
+        </form>
+      </div>
+    </div>
+    <div id="footer">
+      <hr />
+      <div id="left-footer">
+        © 2021 Cody Development
+      </div>
+      <div id="right-footer">
+        <a href="/contact">Contact</a
+        ><a href="/discord" target="_blank">Discord</a
+        ><a href="/dashboard" target="_blank">Home</a
+        ><a href="/policy">Privacy Policy</a>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha256-7dA7lq5P94hkBsWdff7qobYkp9ope/L5LQy2t/ljPLo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"
+      integrity="sha256-AFAYEOkzB6iIKnTYZOdUf9FFje6lOTYdwRJKwTN5mks="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $('select').each(function () {
+          $(this).select2({
+            theme: 'bootstrap4',
+            width: $(this).data('width')
+              ? $(this).data('width')
+              : $(this).hasClass('w-100')
+              ? '100%'
+              : 'style',
+            placeholder: $(this).data('placeholder'),
+            allowClear: Boolean($(this).data('allow-clear')),
+            closeOnSelect: !$(this).attr('multiple')
+          })
+        })
+      })
+    </script>
+    <% if(alert && alert === "success"){ %>
+    <script>
+      $(document).ready(function () {
+        Swal.fire('Saved', `Your changes have been saved!`, 'success', 'close')
+      })
+    </script>
+    <% } else if (alert && alert !== "success") { %>
+    <script>
+      $(document).ready(function () {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: `<%= alert %>`
+        })
+      })
+    </script>
+    <% } %>
+  </body>
+</html>

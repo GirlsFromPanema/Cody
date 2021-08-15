@@ -1,0 +1,74 @@
+Instructions on how to create questions
+
+1- Every Question is in an array format
+2- Questions have 3 types; continue, answer, and reaction
+
+
+
+TYPES:
+1- continue
+
+• xp -> The amount of xp the user should get (Number)
+default: null / 0 (No XP)
+
+• time -> The amount of time the user can take to answer  (Number, in milliseconds)
+default: 30000 (30 seconds)
+
+• answers -> All possible answers, ALWAYS leave as ["continue"] (Array)
+
+• question -> The text that will popup usually explaining a lesson
+
+
+2- answer
+
+• question -> The question that / text that will popup that the user has to answer
+
+• answers -> All possible answers to that question (Array)
+
+• time -> The amount of time the user can take to answer  (Number, in milliseconds)
+default: 30000 (30 seconds)
+
+• tries -> The amount of default tries the user has to answer (Number) (Non Premium)
+default: null (0 tries)
+
+• premiumTries -> The amount of tries the user has to answer (Number) (For Premium Users)
+default: null (0 tries)
+
+• xp -> The amount of xp the user should get (Number)
+default: null / 0 (No XP)
+
+• correct -> The message shown when the user answers the correct answer (Only shows when there is xp)
+default: null
+
+• premium -> If the question is only for premium users. The bot will skip the question if its for premium users. (BOOLEAN: true / false)
+default: false
+
+3- reaction
+
+• question -> The question that / text that will popup that the user has to answer
+
+• answers -> ✅ or ❌ (ARRAY) ex. ["❌"]
+
+• time -> The amount of time the user can take to answer  (Number, in milliseconds)
+default: 30000 (30 seconds)
+
+• tries -> The amount of default tries the user has to answer (Number) (Non Premium)
+default: null (0 tries)
+
+• premiumTries -> The amount of tries the user has to answer (Number) (For Premium Users)
+default: null (0 tries)
+
+• xp -> The amount of xp the user should get (Number)
+default: null / 0 (No XP)
+
+• correct -> The message shown when the user answers the correct answer (Only shows when there is xp)
+default: null
+
+• premium -> If the question is only for premium users. The bot will skip the question if its for premium users. (BOOLEAN: true / false)
+default: false
+
+
+
+Any questions?
+Go to the ticket channel and open a support ticket :)
+Thank you for using botlix 

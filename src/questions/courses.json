@@ -1,0 +1,14 @@
+{
+
+    "courses": ["javascript", "python"],
+    "premium_courses":["python"],
+    "course_descriptions": {
+        "javascript":"Learn javascript",
+        "python":"Learn Python"
+    },
+    "premium_levels":{
+        "javascript":["level1"],
+        "python":[]
+    }
+
+}
