@@ -114,7 +114,11 @@ s
       <div class="dash_box">
         <div class="leaderboard">
           <div class="user-data">
+            <% if(guild) { %>
             <a id="go-back" href="/panel/<%=guild.id%>"> &#60; Go Back</a>
+            <% } else { %>
+            <a id="go-back" href="/"> &#60; Go Back</a>
+            <% } %>
 
             <span class="title"
               ><%= isGuild ? "Guild" : "Global" %> Leaderboard</span
