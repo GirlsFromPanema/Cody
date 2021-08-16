@@ -8,7 +8,7 @@
     },
     "premium_levels":{
         "javascript":[],
-        "python":[]
+        "python":["level10"]
     }
 
 }
