@@ -18,7 +18,6 @@
           "time": 60000,
           "tries": 2,
           "premiumTries": 3,
-          "premium": true,
           "xp": 10,
           "type": "answer",
           "correct": "Great job! Now let's take a look at outputs to console"
@@ -40,8 +39,8 @@
           "question": "**True, or false?**\n\nThe `console.log()` is a function in JavaScript which is used to print any kind of variables defined before in it or to just print any message that needs to be displayed.",
           "answers": ["✅"],
           "time": 60000,
-          "tries": null,
-          "premiumTries": null,
+          "tries": 2,
+          "premiumTries": 3,
           "xp": 2,
           "type": "reaction",
           "correct": "Wow!"
@@ -112,9 +111,9 @@
           "question": "**True, or false?**\n\nIn JavaScript, we can use variables in combination with Algebra (Math)",
           "answers": ["✅"],
           "time": 60000,
-          "tries": null,
-          "premiumTries": null,
-          "xp": 2,
+          "tries": 2,
+          "premiumTries": 5,
+          "xp": 10,
           "type": "reaction",
           "correct": "Wow!"
         }
@@ -126,7 +125,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let cannot be Redeclared and they have an **Block scope**\n\nHere are some Examples:\nlet number = 5000\nlet favouritenumber = 10\n\n**Warning!** You cannot declare the **same** Value **2** or **more** times, example:\nlet **x** = 5, let **x** = 500"
+          "question": "**let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let cannot be Redeclared and they have an **Block scope**\n\nHere are some Examples:\nlet number = 5000\nlet favouritenumber = 10\n\n**Warning!** You cannot declare the **same** Value **2** or **more** times, example:\nlet **x** = 5, let **x** = 500"
         }
       ],
 
@@ -135,8 +134,8 @@
           "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\nvar **x** = 'Cody is cool!', var **x** = 0;",
           "answers": ["✅"],
           "time": 60000,
-          "tries": null,
-          "premiumTries": null,
+          "tries": 2,
+          "premiumTries": 5,
           "xp": 8,
           "type": "reaction",
           "correct": "Awesome!"
@@ -148,11 +147,12 @@
           "question": "**Answer with yes or no**\n\nQUESTION\n\nExample:\nEXAMPLE",
           "answers": "yes",
           "time": 60000,
-          "tries": 1,
+          "tries": 2,
           "premiumTries": 3,
           "xp": 5,
           "type": "answer",
           "correct": "Awesome! Good Job :=)"
+          
         }
       ],
 
