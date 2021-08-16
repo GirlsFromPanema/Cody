@@ -79,14 +79,14 @@ module.exports = {
           new MessageEmbed()
             .setColor('RED')
             .setTitle('Course already enrolled')
-            .setDescription(`You are already enrolled in this course`)
+            .setDescription(`You are already enrolled in this course, run the resume Command to proceed here`)
         )
       } catch {
         message.channel.send(` ${message.author} `, {
           embed: new MessageEmbed()
             .setColor('RED')
             .setTitle('Course already enrolled')
-            .setDescription(`You are already enrolled in this course`)
+            .setDescription(`You are already enrolled in this course, run the resume Command to proceed here`)
         })
       }
       return

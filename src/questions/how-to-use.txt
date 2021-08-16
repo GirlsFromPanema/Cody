@@ -67,8 +67,3 @@ default: null
 • premium -> If the question is only for premium users. The bot will skip the question if its for premium users. (BOOLEAN: true / false)
 default: false
 
-
-
-Any questions?
-Go to the ticket channel and open a support ticket :)
-Thank you for using botlix 

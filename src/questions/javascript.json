@@ -4,39 +4,42 @@
       [
         {
           "xp": 0,
-          "time": 30000,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
           "question": "Welcome to **JavaScript!**\n\nJavascript is one of the `most popular` programming languages. \n\nIt's useful for `Websites`, `Process data`, `mobile and desktop apps`, and `games`"
         }
       ],
+
       [
         {
           "question": "Which is the correct statement?\n\n`1-` JavaScript is only for web apps\n`2-` JavaScript can be used to create interactive web elements\n`3-` JavaScript is not a client-side language",
           "answers": ["2"],
-          "time": 30000,
+          "time": 60000,
           "tries": 2,
-          "premiumTries":3,
+          "premiumTries": 3,
           "xp": 10,
           "type": "answer",
           "correct": "Great job! Now let's take a look at outputs to console",
           "premium": true
         }
       ],
+
       [
         {
           "xp": 0,
-          "time": 30000,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
           "question": "**Output to Console!**\n\nLet’s learn how to output something to a console using the `console.log()` function.\n\n__Looking like this:__\n```js\nconsole.log('Hello World')```"
         }
       ],
+
       [
         {
           "question": "**True, or false?**\n\nThe `console.log()` is a function in JavaScript which is used to print any kind of variables defined before in it or to just print any message that needs to be displayed.",
           "answers": ["✅"],
-          "time": 30000,
+          "time": 60000,
           "tries": null,
           "premiumTries": null,
           "xp": 2,
@@ -44,24 +47,27 @@
           "correct": "Wow!"
         }
       ],
+
       [
         {
           "xp": 0,
-          "time": 30000,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
           "question": "**Looking at Data Types:**\n\n`1- Number:` Any number.\n`2- String:` Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by single quotes: ' ... ' or double quotes \" ... \".\n`3- Boolean:` This data type only has two possible values `true` or `false` (without quotes).\n`4- Null:` This data type represents the intentional absence of a value, and is represented by the keyword `null` (without quotes).\n`5- Undefined:` This data type is denoted by the keyword `undefined` (without quotes). It also represents the absence of a value though it has a different use than null.\n`6- Object:` Collections of related data.\n\nWe refer as these datatypes as primitive data types, each of them can only store a single type of data."
         }
       ],
+
       [
         {
           "xp": 0,
-          "time": 30000,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
           "question": "Let's ignore the others for now and start with `strings` and `numbers`\n\n```js\nconsole.log('Today is a sunny day'); // includes lowercase and upercase, prints a string\nconsole.log(40); // logged without quotes, logs as a number```"
         }
       ],
+
       [
         {
           "question": "How can we log the **string** \"Hello World\" to console?",
@@ -70,7 +76,7 @@
             "console.log('hello world')",
             "console.log(`hello world`)"
           ],
-          "time": 30000,
+          "time": 60000,
           "tries": 1,
           "premiumTries": 3,
           "xp": 5,
@@ -78,40 +84,88 @@
           "correct": "Good job!"
         }
       ],
+
       [
         {
           "xp": 0,
-          "time": 30000,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
           "question": "**Comments:**\n\nAs we write our Code, we can write comments in our code that the computer will ignore as our program runs. These comments exist just for us humans.Comments can explain what the code is doing, leave instructions for developers using the code, or add any other useful annotations.\n\n`1- Single Line Comments`\n> comment on a single line using `//`\n```js\nconsole.log('Hello World') //Logs hello world```\n\n`2- Multi-Line Comments`\n> comment on a many lines using `/* */`\n```js\n/*\nconsole.log('Hello World')\n*/\nconsole.log('hello!') //this will log hello! the other will be ignored```"
         }
       ]
     ],
+
     "level1": [
       [
         {
-          "xp": 5,
-          "time": 30000,
+          "xp": 0,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "Level2"
+          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example: var x = 10;\nvar y = 5\nvar z = 3\n\nVariable **x** is storing **10**, **y** **5** and **z** is storing **3**"
         }
       ],
+
       [
         {
-          "xp": 5,
-          "time": 30000,
+          "question": "**True, or false?**\n\nIn JavaScript, we can use variables in combination with Algebra (Math)",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": null,
+          "premiumTries": null,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Wow!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "Level2"
+          "question": "**Let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let cannot be Redeclared and they have an **Block scope**\n\nHere are some Examples:\nlet number = 5000\nlet favouritenumber = 10\n\n**Warning!** You cannot declare the **same** Value **2** or **more** times, example:\nlet **x** = 5, let **x** = 500"
         }
       ],
+
       [
         {
-          
+          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\nvar **x** = 'Cody is cool!', var **x** = 0;",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": null,
+          "premiumTries": null,
+          "xp": 8,
+          "type": "reaction",
+          "correct": "Awesome!"
+        }
+      ],
+
+      [
+        {
+          "question": "**Answer with yes or no**\n\nQUESTION\n\nExample:\nEXAMPLE",
+          "answers": "yes",
+          "time": 60000,
+          "tries": 1,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Awesome! Good Job :=)"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n{ let a = 100 } // a cannot **NOT** be used on the outside\n\nWith var, you can! Example:\n{ var a = 100 } // a CAN be used here!"
         }
       ]
+
     ]
   }
 ]
