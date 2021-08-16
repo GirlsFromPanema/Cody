@@ -10,6 +10,8 @@
           "question": "Welcome to **python!**\n\npython is one of the `most popular` programming languages. \n\nIt's useful for `web development`, `AI`, `machine learning`, `operating systems`, `mobile application development`, and `video games`"
         }
       ],
+
+      
       [
         {
           "xp": 0,
@@ -19,17 +21,21 @@
           "question": "**Printing Text!**\n\nLet’s learn how to create a program that will display \"Hello World\" using the `print` statement.\n\n__Looking like this:__\n```js\nprint('Hello World')```"
         }
       ],
+
       [
         {
           "question": "**True, or false?**\n\n`print('Hello World')` will output 'Hello World'",
           "answers": ["✅"],
           "time": 60000,
-          "tries": null,
+          "tries": 2,
+          "premiumTries": 5,
           "xp": 2,
           "type": "reaction",
           "correct": "Nice, great job!"
         }
       ]
     ]
+
+
   }
 ]
