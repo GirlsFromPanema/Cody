@@ -24,8 +24,8 @@ client.on("guildCreate", (guild) => {
   .setDescription([
     '**Hey there, Cody here! Thanks for inviting me!** 👋',
     '',
-    `Prefix: **\`${client.config.prefix}\`**`,
-    `Commands: **\`${client.commands.size}\`**`,
+    `Standard Prefix: **\`$\`**`,
+    `Commands: **\`$help\`**`,
     '',
     '    🌐**Help & Support**',
     '• **[Status](https://www.google.com)**',
