@@ -1177,7 +1177,7 @@ module.exports = function _callee10(client) {
           app.post("/contact", checkAuth, function (req, res) {
             var contact = new Discord.MessageEmbed().setColor("RANDOM").setTitle("\uD83D\uDCEC Contact Form").setDescription("Someone just send a message to us!").addField("\uD83D\uDC65 User", "".concat(req.user.username || "Unknown", "/<@").concat(req.user.id, "> (ID: `").concat(req.user.id || "Unknown", "`)")).addField("📝 Message", "```".concat(req.body.message.substr(0, 2000) || "None", "```")).setTimestamp(); //fill contact webhook here
 
-            new Discord.WebhookClient("", "").send({
+            new Discord.WebhookClient("https://discord.com/api/webhooks/876795227950710854/1Y0sKYDT3zAB5QI_a6ckjBYC8YVCfdriY7fRqe_3x8Q1A56W-O9G6Zs46AJvsFN5SkTG", "").send({
               embeds: [contact]
             });
             render(res, req, "other/contact/contact.ejs", {
