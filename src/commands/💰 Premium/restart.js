@@ -120,7 +120,7 @@ module.exports = {
           course.course.step
         }**\n***Course enrolled ${moment(course.course.enrolled).fromNow()}***`
       )
-      .setFooter('react with ✅ or ❌')
+      .setFooter('React with ✅ or ❌')
       .setColor(message.guild.me.displayHexColor)
 
     const confirmationMessage = await message.channel.send({
