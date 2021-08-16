@@ -26,6 +26,7 @@ const embed = new MessageEmbed()
     '    🔎**Information**',
     '•  I am here to teach you Coding, I have many languages you can choose from',
     '•  From the Basic/Beginner Level to the advanced World of **JavaScript** - **Python** and more!',
+    '•  You can configurate me trough my [Dashboard](https://www.google.com)',
     '',
     '',
     '**Have a great day! 😎**',
