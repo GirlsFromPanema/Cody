@@ -162,7 +162,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n{ let a = 100 } // a cannot **NOT** be used on the outside\n\nWith var, you can! Example:\n{ var a = 100 } // a CAN be used here!"
+          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n```js\n{ let a = 100\n}``` // Variable a **CANNOT** be used on the outside\n\nWith var, you can! Example:\n```js\n{ var a = 100\n}``` // a CAN be used on the outside!"
         }
       ]
 
