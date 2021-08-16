@@ -52,11 +52,11 @@ module.exports = {
             ? userDatabase.courses.map(c => UpperCase(c.name)).join(' - ')
             : 'None'
         }\`\n**Level:** \`${
-          userDatabase.courses.length
-            ? userDatabase.courses.reduce((a, b) => {
-                return a.course.Level + b.course.Level
-              })
-            : 0
+          userDatabase.courses && userDatabase.courses.length > 1
+                ? userDatabase.courses.reduce((a, b) => {
+                    return a.course.Level || 0 + b.course.Level || 0;
+                  })
+                : userDatabase.courses.Level || 0,
         }\`\n**XP:** \`${userDatabase.xp}\``
       )
 
