@@ -18,10 +18,10 @@
           "time": 60000,
           "tries": 2,
           "premiumTries": 3,
+          "premium": true,
           "xp": 10,
           "type": "answer",
-          "correct": "Great job! Now let's take a look at outputs to console",
-          "premium": true
+          "correct": "Great job! Now let's take a look at outputs to console"
         }
       ],
 
