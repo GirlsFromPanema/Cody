@@ -54,9 +54,9 @@ module.exports = {
         }\`\n**Level:** \`${
           userDatabase.courses && userDatabase.courses.length > 1
                 ? userDatabase.courses.reduce((a, b) => {
-                    return a.course.course.Level || 0 + b.course.Level || 0;
+                    return a.course.Level || 0 + b.course.Level || 0;
                   })
-                : userDatabase.courses.Level || 0
+                : userDatabase.courses.course.Level || 0
         }\`\n**XP:** \`${userDatabase.xp}\``
       )
 
