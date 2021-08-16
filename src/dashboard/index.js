@@ -733,10 +733,6 @@ module.exports = async client => {
       embeds: [contact],
     });
 
-    new Discord.WebhookClient('', '').send({
-      embeds: [contact]
-    })
-
 
     render(res, req, 'other/contact/contact.ejs', {
       alert: true
