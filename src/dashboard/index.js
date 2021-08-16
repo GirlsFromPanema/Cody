@@ -729,15 +729,14 @@ module.exports = async client => {
       .setTimestamp()
 
     //fill contact webhook here
-<<<<<<< HEAD
     new Discord.WebhookClient("https://discord.com/api/webhooks/876795227950710854/1Y0sKYDT3zAB5QI_a6ckjBYC8YVCfdriY7fRqe_3x8Q1A56W-O9G6Zs46AJvsFN5SkTG", "").send({
       embeds: [contact],
     });
-=======
+
     new Discord.WebhookClient('', '').send({
       embeds: [contact]
     })
->>>>>>> 7d6a34b50735827ae5c6a875621285f6991687f7
+
 
     render(res, req, 'other/contact/contact.ejs', {
       alert: true
