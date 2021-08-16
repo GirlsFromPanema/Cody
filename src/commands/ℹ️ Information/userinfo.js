@@ -29,6 +29,19 @@ module.exports = {
         'I could not find any data for ' + mentionedUser.user.tag
       )
 
+    let level = 0
+    if (userDatabase.courses && userDatabase.courses.length > 0) {
+      if (userDatabase.courses.length === 1) {
+        level = userDatabase.courses[0].course.Level
+      } else {
+        if (userDatabase.courses.length > 1) {
+          level = userDatabase.courses.reduce((a, b) => {
+            return a.course.Level || 0 + b.course.Level || 0
+          })
+        }
+      }
+    }
+
     const embed = new Discord.MessageEmbed()
       .setTitle(mentionedUser.user.tag + "'s Information")
       .setColor(message.guild.me.displayHexColor)
@@ -51,13 +64,7 @@ module.exports = {
           userDatabase.courses.length
             ? userDatabase.courses.map(c => UpperCase(c.name)).join(' - ')
             : 'None'
-        }\`\n**Level:** \`${
-          userDatabase.courses && userDatabase.courses.length > 1
-                ? userDatabase.courses.reduce((a, b) => {
-                    return a.course.Level || 0 + b.course.Level || 0;
-                  })
-                : userDatabase.courses.course.Level || 0
-        }\`\n**XP:** \`${userDatabase.xp}\``
+        }\`\n**Level:** \`${level}\`\n**XP:** \`${userDatabase.xp || 0}\``
       )
 
     return message.channel.send({ embed: embed })
