@@ -1,10 +1,10 @@
 const client = require("../index");
-const { Discord, MessageEmbed } = require("discord.js");
+const { Discord, MessageEmbed, Guild } = require("discord.js");
 
 
 
 const embed = new MessageEmbed()                              
-  .setAuthor(guild.name, guild.iconURL({ dynamic: true}))
+  //.setAuthor(guild.name, guild.iconURL({ dynamic: true}))
   .setImage("https://cdn.discordapp.com/attachments/876477209186017340/876820442562822184/Rd0c07cb2486f8c6aa515c4f9fc608357.png")
   .setColor("BLURPLE")
   .setDescription([
