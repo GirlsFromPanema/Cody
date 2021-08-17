@@ -5,7 +5,7 @@ const prefix = "$"
 module.exports = {
   name: "say",
   category: '📚 Utility',
-  description: "Display the Users avatar",
+  description: "Let the Bot talk for you!",
   /**
    * @param {Client} client
    * @param {Message} message
