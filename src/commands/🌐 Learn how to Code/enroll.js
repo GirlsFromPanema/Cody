@@ -36,7 +36,7 @@ module.exports = {
       try {
         await message.author.send({embed: timeover})
       } catch {
-        message.channel.send('Cancelled')
+        message.channel.send('Cancelled - Your dms are closed')
       }
       return
     }
