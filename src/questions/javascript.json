@@ -102,7 +102,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example: var x = 10;\nvar y = 5\nvar z = 3\n\nVariable **x** is storing **10**, **y** **5** and **z** is storing **3**"
+          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example:\n```js\nconst x = 10;```\n```js\nlet y = 5```\n```js\nvar z = 3```\n\nVariable **x** is storing **10**, **y**is storing **5** and **z** is storing **3**"
         }
       ],
 
@@ -125,13 +125,13 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let cannot be Redeclared and they have an **Block scope**\n\nHere are some Examples:\nlet number = 5000\nlet favouritenumber = 10\n\n**Warning!** You cannot declare the **same** Value **2** or **more** times, example:\nlet **x** = 5, let **x** = 500"
+          "question": "**let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let **cannot** be Redeclared and they have an **Block scope**\n\nHere are some Examples:\n```js\nlet number = 5000```\n```js\nlet favouritenumber = 10```\n\n**Warning!**\nYou cannot declare the **same** Value **2** or **more** times, example:\n```js\nlet **x** = 5```\n```js\nlet **x** = 500```"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\nvar **x** = 'Cody is cool!', var **x** = 0;",
+          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\n```js\nvar **x** = 'Cody is cool!```'\n```js\nvar **x** = 0;```",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
@@ -159,12 +159,85 @@
       [
         {
           "xp": 0,
-          "time": 60000,
+          "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n```js\n{ let a = 100\n}``` // Variable a **CANNOT** be used on the outside\n\nWith var, you can! Example:\n```js\n{ var a = 100\n}``` // a CAN be used on the outside!"
+          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n```js\n{ \nlet a = 100\n  }``` // Variable a **CANNOT** be used on the outside\n\nWith **var**, you can!\nExample:\n```js\n{  \nvar a = 100\n  }``` // a CAN be used on the outside!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Const Variables**\n\nConst **cannot** be reassigned\nJavaScript introduced **const** and **let** at the same time!\nExample:\n\n```js\nconst name;```\n\n\n```js\nname = 'Dave Brown'``` // This would give an Error\nGood Example:\n\n```js\nconst name = 'Dave Brown'``` // Thats my name - and it's working!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**When should we use Const?**\n\nAs we know const **cannot** be reassigned\nWe use them when we know, that the Value won't change\nExample:\n\n```js\nconst name = 'Maxime Dark'``` // This probably will not change\n\nMost of the time we use **const** when we declare\n- Functions\n- Objects\n- Arrays"
+        }
+      ],
+
+      [
+        {
+          "question": "**Answer with yes or no**\n\nCan I add const to another variable I have already declared?\n\nExample:\n```js\nconst x = 5```\n```js\nx = 'It's my favourite letter!'",
+          "answers": "no",
+          "time": 60000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Perfect!" 
+        }
+      ],
+
+      [
+        {
+          "question": "**Answer with yes or no**\n\nCan I add **const** to another variable I have **already** declared?\n\nExample:\n```js\nconst x = 5```\n```js\nx = 'It's my favourite letter!'",
+          "answers": "no",
+          "time": 60000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Double dice, congrats!" 
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Operators?**\n\nJavaScript has many Operators we can use\nWe can assign variables and use Arithmetic Ooperators\n**+** = Addition\n**-** = Subtraction\n** * ** = Multiplication\n**/** = Division\n**++** = Increment\n**--** = Decrement\nExample:\n\n```js\nlet x = 500 + 250``` // Output: 750\n\nThe most used Arithmetic Operators are **+**, **-**, ** *** and **/**"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\nIn JavaScript we can multiply variables\nExample:\n```js\nlet a = b * c```",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 5,
+          "xp": 10,
+          "type": "reaction",
+          "correct": "Nice!"
         }
       ]
+
+
+
+
 
     ]
   }
