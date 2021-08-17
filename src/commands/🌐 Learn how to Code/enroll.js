@@ -26,7 +26,7 @@ module.exports = {
     .setTitle(":x: | Error")
     .setDescription("The time ran out and the Process got canceled, rerun the Command to start again")
     .setColor("RED")
-    .setFooter("Visit us at cody.com")
+    .setFooter("Visit us at • cody-bot.xyz")
     .setTimestamp()
 
 

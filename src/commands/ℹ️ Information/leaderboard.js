@@ -56,7 +56,7 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
       .setTitle(`Global Cody Leaderboard`)
       .setColor(message.guild.me.displayHexColor)
-      .setFooter(`Showing Top 10 Users`)
+      .setFooter(`Showing Top 10 Users | cody-bot.xyz`)
       .setDescription(array.length ? array.join('\n') : "No users found")
 
     message.channel.send({ embed: embed })

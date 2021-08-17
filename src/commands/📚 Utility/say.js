@@ -4,6 +4,7 @@ const prefix = "$"
 
 module.exports = {
   name: "say",
+  category: '📚 Utility',
   description: "Display the Users avatar",
   /**
    * @param {Client} client
