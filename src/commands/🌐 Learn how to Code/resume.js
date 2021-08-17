@@ -426,7 +426,7 @@ module.exports = {
                 info.courses.find(
                   n => n.name.toLowerCase() === args[0].toLowerCase()
                 ).course.Level
-              } **(+${newXP} XP)**\n\nTo start the level, make sure to re-run the command!\n\n**Level ${
+              } **(+${newXP} XP)**\n\nTo start the level, make sure your rerun the resume Command!\n\n**Level ${
                 info.courses.find(
                   n => n.name.toLowerCase() === args[0].toLowerCase()
                 ).course.Level

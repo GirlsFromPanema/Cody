@@ -125,13 +125,13 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let **cannot** be Redeclared and they have an **Block scope**\n\nHere are some Examples:\n```js\nlet number = 5000```\n```js\nlet favouritenumber = 10```\n\n**Warning!**\nYou cannot declare the **same** Value **2** or **more** times, example:\n```js\nlet **x** = 5```\n```js\nlet **x** = 500```"
+          "question": "**let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let **cannot** be Redeclared and they have an **Block scope**\n\nHere are some Examples:\n```js\nlet number = 5000```\n```js\nlet favouritenumber = 10```\n\n**Warning!**\nYou cannot declare the **same** Value **2** or **more** times, example:\n```js\nlet x = 5```\n```js\nlet x = 500```"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\n```js\nvar **x** = 'Cody is cool!```'\n```js\nvar **x** = 0;```",
+          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\n```js\nvar x = 'Cody is cool!```'\n```js\nvar x = 0;```",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
@@ -144,7 +144,7 @@
 
       [
         {
-          "question": "**Answer with yes or no**\n\nQUESTION\n\nExample:\nEXAMPLE",
+          "question": "**Answer with yes or no**\n\nWhen we redeclare variables, can we have the same output?\n\nExample:\n```js\nvar x = 5\n```\n\n```js\nvar y = 5\n```",
           "answers": "yes",
           "time": 60000,
           "tries": 2,
