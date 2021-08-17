@@ -318,7 +318,8 @@ module.exports = async client => {
     for (let user of users) {
       const db = client.userSettings.get(user.Id)
       if (db) {
-        const fetch = await guild.members.fetch(user.Id)
+        const fetch = guild.members.cache.get(user.Id)
+        return console.log(fetch)
         if (fetch && fetch.user.username) {
           let level = 0
           if (user.courses && user.courses.length > 0) {
