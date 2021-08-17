@@ -28,7 +28,7 @@ module.exports = {
             '',
             '',
             '    ➜**Other Recources**',
-            '• **[JS Tutorials(https://developer.mozilla.org/en-US/docs/Web/JavaScript)**',
+            '• **[JS Tutorials](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**',
             '• **[Py Tutorials](https://developer.mozilla.org/en-US/docs/Glossary/Python)**',
             '',
             '',
