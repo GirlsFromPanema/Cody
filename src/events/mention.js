@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-module.exports = (client, instance) => {
+const client = require("../index");
     
     client.on('message', async (message) => {
 
@@ -13,4 +13,3 @@ module.exports = (client, instance) => {
             return message.channel.send({ embeds: [embed] })
         }
     })
-}
