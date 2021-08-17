@@ -41,7 +41,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')``` // Yeee ha! Math is saved."
+          "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')``` Yeee ha! Math is saved."
         }
       ]
 
