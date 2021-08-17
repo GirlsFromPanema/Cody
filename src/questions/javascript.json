@@ -102,7 +102,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example:\n```js\nconst x = 10;```\n```js\nlet y = 5```\n```js\nvar z = 3```\n\nVariable **x** is storing **10**, **y**is storing **5** and **z** is storing **3**"
+          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example:\n```js\nconst x = 10;```\n```js\nlet y = 5```\n```js\nvar z = 3```\n\nVariable **x** is storing **10**, **y** is storing **5** and **z** is storing **3**"
         }
       ],
 
