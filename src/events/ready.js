@@ -5,7 +5,7 @@ const Guild = require('../database/schemas/Guild')
 client.on('ready', async () => {
   console.log(`${client.user.tag} is now online!`)
 
-  client.user.setActivity('$help | cody.com', { type: 'PLAYING' })
+  client.user.setActivity('$help | cody-bot.eu', { type: 'PLAYING' })
 
   const users = await User.find()
   for (let user of users) {
