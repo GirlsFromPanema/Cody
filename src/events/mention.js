@@ -8,7 +8,10 @@ const client = require("../index");
         if (message.content.match(mentionRegex)) {
 
             const embed = new MessageEmbed()
-                .setDescription("Something")
+            .setTitle("Hey, Cody here!")
+            .setDescription("Need help? Join our Support Server or contact us trough our Panel")
+            .setColor("BLURPLE")
+            
 
             return message.channel.send({ embeds: [embed] })
         }
