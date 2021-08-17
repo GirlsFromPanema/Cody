@@ -141,7 +141,7 @@ module.exports = async client => {
 
   //discord endpoint
   app.get('/discord', (req, res) => {
-    res.redirect('https://discord.gg/7aHr9kJBxy')
+    res.redirect('https://discord.gg/apJM8wmwBT')
   })
 
   //invite endpoint
