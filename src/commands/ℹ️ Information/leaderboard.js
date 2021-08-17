@@ -1,3 +1,4 @@
+/*
 const Discord = require('discord.js')
 const moment = require('moment')
 const User = require('../../database/schemas/User')
@@ -14,7 +15,7 @@ module.exports = {
    * @param {Message} message
    * @param {String[]} args
    */
-
+/*
   run: async (client, message, args, user, guild) => {
     const users = await User.find({ hide: false })
       .sort({ xp: -1 })
@@ -52,7 +53,7 @@ module.exports = {
         )
       i++
     }
-
+/*
     const embed = new Discord.MessageEmbed()
       .setTitle(`Global Cody Leaderboard`)
       .setColor(message.guild.me.displayHexColor)
@@ -62,3 +63,4 @@ module.exports = {
     message.channel.send({ embed: embed })
   }
 }
+*/
