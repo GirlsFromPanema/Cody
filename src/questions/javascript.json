@@ -201,7 +201,7 @@
 
       [
         {
-          "question": "**Answer with yes or no**\n\nCan I add **const** to another variable I have **already** declared?\n\nExample:\n```js\nconst x = 5```\n```js\nx = 'It's my favourite letter!'",
+          "question": "**Answer with yes or no**\n\nQuick training, could this work within const?\n\nExample:\n```js\nconst name = Davie Brown```\n```js\nnumber = 55500323''```",
           "answers": "no",
           "time": 60000,
           "tries": 3,
