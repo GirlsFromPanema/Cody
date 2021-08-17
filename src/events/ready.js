@@ -6,7 +6,7 @@ client.on('ready', async () => {
   console.log(`${client.user.tag} is now online!`)
 
 
-  client.user.setActivity('$help • cody-bot.xyz', { type: 'PLAYING' })
+  client.user.setActivity('$info • cody-bot.xyz', { type: 'PLAYING' })
 
 
   const users = await User.find()
