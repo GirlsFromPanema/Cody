@@ -56,6 +56,6 @@ module.exports = {
 
     
 
-    message.channel.send(args[0]);
+    message.channel.send(args[0])
   },
 };
