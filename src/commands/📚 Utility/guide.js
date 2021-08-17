@@ -34,7 +34,7 @@ module.exports = {
             '',
             '    ➜**Basic Tipps**',
             '•  The best thing you can do is **learning by doing**',
-            '•  Programming is not easy, it takes a while! With many recources you can get the best experience',
+            '•  Programming is not easy, it takes a while! With many resources you can get the best experience',
             '•  By the way, you can invite me [here](https://cody-bot.xyz)',
             '',
             '',
