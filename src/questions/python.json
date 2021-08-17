@@ -18,7 +18,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Printing Text!**\n\nLet’s learn how to create a program that will display \"Hello World\" using the `print` statement.\n\n__Looking like this:__\n```js\nprint('Hello World')```"
+          "question": "**Printing Text!**\n\nLet’s learn how to create a program that will display \"Hello World\" using the `print` statement.\n\n__Looking like this:__\n```py\nprint('Hello World')```"
         }
       ],
 
@@ -33,9 +33,19 @@
           "type": "reaction",
           "correct": "Nice, great job!"
         }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')``` // Yeee ha! Math is saved."
+        }
       ]
+
+
     ]
-
-
   }
 ]
