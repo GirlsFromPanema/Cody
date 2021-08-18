@@ -43,6 +43,105 @@
           "answers": ["continue"],
           "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')``` Yeee ha! Math is saved."
         }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Variables**\n\nPython does not have any command for declaring a variable\n\nExample:\n__Looking like this:__\n```py\nx = 5```\n\n```py\ny = 'Dave'```\n\n```py\nprint (x)\nprint (y)```"
+        }
+      ],
+
+      [
+        {
+          "question": "**Lets give it a try!**\n\nWe have variable **x** - add the name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\nnumber = 1234```",
+          "answers": "x = 'Suzie'",
+          "time": 60000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Easy! Nice : ) "
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Python Casting**\n\nLet’s learn how specify the data type of a variable\"x , y and z\" using the `str`, `int`, `float` statement.\n\n__Looking like this:__\n```py\nx = strg(3)```\n**x** would be **'3'**\n\n```py\ny = int(5)```\n**y** would be **5**\n\n```py\nz = float(3)```\n**z** would be **3.0**"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Case-Sensitive**\n\nLets create two variables ...\"a and A\"\n\n__Looking like this:__\n```py\na = 123```\n\n```py\nA = 'Mason'```\nA would not overwrite a in this Case"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\n```py\nLara = 'Strawberry'```\n\n```py\nLara_age = 18```\nWould this overwrite Lara_age with String Name **Lara**?",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Nice, great job!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Valid Variable Names**\n\nThey can a have short name like **x**, **y**, **z**\nBut also a descriptive one like **name**, **age**, **number**\n\nVariables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nLets give it a shot!\n\n```py\nmyname = 'Luis'```\n```py\nmy_name = 'Dave'```\n```py\n_my_name = 'Francisco'```\n```py\nmyName = 'John'```\n```py\nMYNAME = 'Susie'```\n\nAs you can see, there are many different ways - that's awesome!"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\n```py\n123myVar = 'Cake'```\n\n```py\nmy Age = 22```\n```py\nmy-Age = 30```\n\n**Would these typo of variable names work?**",
+          "answers": ["❌"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Nice, great job!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Illegal Variable Names**\n\nThere are variable names, that are not possible to be used within Python Programs\n\nAs we said, Variables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nExample:\n\n```py\n99name = 'Moo'```\n```py\nmy-name = 'Clara'```\n```py\nhis name = 'Tanja'```\n\nAs you can see, there are many illegal variable names - it's very important to know them."
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Camel Case - Pascal Case - Snake Case**\n\nCamel Case variables are variables, each word start with an capital letter except the first one:\n```py\nmyFriendsName = 'Max'```\n\nPascal Case variables - each word start with an capital letter:\n\n```py\nMyFriendsName = 'Toni'```\n\nSnake Case variables are separated with an underscore character:\n```py\nmy_dads_name = 'Gerald'```\n\n*Thats easy!*"
+        }
       ]
 
 

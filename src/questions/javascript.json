@@ -92,10 +92,7 @@
           "answers": ["continue"],
           "question": "**Comments:**\n\nAs we write our Code, we can write comments in our code that the computer will ignore as our program runs. These comments exist just for us humans.Comments can explain what the code is doing, leave instructions for developers using the code, or add any other useful annotations.\n\n`1- Single Line Comments`\n> comment on a single line using `//`\n```js\nconsole.log('Hello World') //Logs hello world```\n\n`2- Multi-Line Comments`\n> comment on a many lines using `/* */`\n```js\n/*\nconsole.log('Hello World')\n*/\nconsole.log('hello!') //this will log hello! the other will be ignored```"
         }
-      ]
-    ],
-
-    "level1": [
+      ],
       [
         {
           "xp": 0,
@@ -152,7 +149,6 @@
           "xp": 5,
           "type": "answer",
           "correct": "Awesome! Good Job :=)"
-          
         }
       ],
 
@@ -195,7 +191,7 @@
           "premiumTries": 5,
           "xp": 5,
           "type": "answer",
-          "correct": "Perfect!" 
+          "correct": "Perfect!"
         }
       ],
 
@@ -208,7 +204,7 @@
           "premiumTries": 5,
           "xp": 5,
           "type": "answer",
-          "correct": "Double dice, congrats!" 
+          "correct": "Double dice, congrats!"
         }
       ],
 
@@ -235,8 +231,7 @@
         }
       ]
 
-
-
+      
     ]
   }
 ]
