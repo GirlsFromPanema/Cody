@@ -23,17 +23,15 @@ module.exports = {
       .setTitle("Cody's Information")
       .setColor(message.guild.me.displayHexColor)
       .setTimestamp()
-      .setFooter("Visit us at • cody-bot.xyz")
+      .setFooter("cody-bot.xyz",  message.author.displayAvatarURL({ dynamic: true }))
       .setDescription(
         `**Ping:** \`${client.ws.ping}ms\`\n
         **Uptime:** \`${moment.duration(client.uptime).format("H [hours and] m [minutes]")}\`\n
         **Servers:** \`${client.guilds.cache.size}\`\n
         **Users:** \`${client.users.cache.size}\`\n
         **Channels:** \`${client.channels.cache.size}\`\n
-        **Library:**\`[Discord.jl](https://github.com/Xh4H/Discord.jl)\`\n
-        **Database:**\`[MongoDB](https://www.mongodb.com)\`\n
-        **CPU / RAM:**\`AMD Ryzen 5 5600X 6-Core | 3.85GB / 16GB\`\n\n
-        **__Database Information:__**\n
+        **CPU / RAM:** \`AMD Ryzen 5 5600X 6-Core | 3.85GB / 16GB\`\n\n
+        **♨️ __Database Information:__ ♨️**\n
         **Users:** \`${users.length} users\`\n
         **Total XP:** \`${users.length > 1 ? users.reduce((a, b) => {return a.xp || 0 + b.xp || 0;}): users.xp || 0} XP\``);
 
