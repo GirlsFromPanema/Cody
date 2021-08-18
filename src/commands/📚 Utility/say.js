@@ -44,7 +44,7 @@ module.exports = {
     for (let i = 0; i < forbidden.length; i++) {
         if (message.content.includes(forbidden[i])) {
           message.delete();
-          message.channel.send(`${message.author.username} you are not allowed to use that Word! I have blocked your last Input: ||${args[0]}||`);
+          message.channel.send(`${message.author.username} you are not allowed to use that Word! I have blocked your last Input:\n||${args[0]}||`);
           return; 
         }
       }

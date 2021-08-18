@@ -3,6 +3,8 @@ const { Client, Message, MessageEmbed, Discord } = require('discord.js');
 module.exports = {
     name: 'info',
     cooldown: 60,
+    category: 'ℹ️ Information',
+    description: "Dunno what to do?",
     /** 
     * @param {Client} client 
     * @param {Message} message 
