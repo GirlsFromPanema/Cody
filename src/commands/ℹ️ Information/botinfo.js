@@ -34,7 +34,8 @@ module.exports = {
     	
     const embed = new Discord.MessageEmbed()
       .setTitle("Cody's Information")
-      .setColor(message.guild.me.displayHexColor)
+      .setColor("#2f3136")
+      //.setColor(message.guild.me.displayHexColor)
       .setTimestamp()
       .setFooter("cody-bot.xyz",  message.author.displayAvatarURL({ dynamic: true }))
       .setDescription(`\`\`\`diff\n${infos}\`\`\``)
