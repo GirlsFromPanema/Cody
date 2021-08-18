@@ -1,3 +1,4 @@
+/*
 const client = require("../index");
 const { Discord, MessageEmbed, Guild } = require("discord.js");
 
@@ -37,3 +38,4 @@ const embed = new MessageEmbed()
 client.on('guildCreate', (guild) => {
     guild.systemChannel.send({ embed: embed }).catch(() => {});
   });
+  */
