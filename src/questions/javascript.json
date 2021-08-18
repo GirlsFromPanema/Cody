@@ -128,7 +128,7 @@
 
       [
         {
-          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\n```js\nvar x = 'Cody is cool!```'\n```js\nvar x = 0;```",
+          "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\n```js\nvar x = 'Cody is cool!```\n```js\nvar x = 0;```",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
@@ -158,7 +158,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n```js\n { \nlet a = 100\n  }``` a **CANNOT** be used on the outside\n\nWith **var**, you can!\nExample:\n```js\n  {  \nvar a = 100\n  }``` a CAN be used on the outside!"
+          "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n```js\n { \nlet a = 100\n }``` a **CANNOT** be used on the outside\n\nWith **var**, you can!\nExample:\n```js\n {  \nvar a = 100\n  }``` a CAN be used on the outside!"
         }
       ],
 
