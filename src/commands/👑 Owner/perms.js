@@ -41,7 +41,7 @@ const permissions = [
 
 module.exports = {
     name: "perms",
-    description: "perms hh",
+    description: "Lists the Users Perms",
     category: "👑 Owner",
     run: async(client, message, args) => {
 

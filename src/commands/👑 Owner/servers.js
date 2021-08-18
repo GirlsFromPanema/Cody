@@ -4,6 +4,7 @@ module.exports = {
   name: "servers",
   cooldown: 10,
   category: "👑 Owner",
+  description:"Lists Codys Servers",
   /**
    * @param {Client} client
    * @param {Message} message
