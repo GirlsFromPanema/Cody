@@ -30,8 +30,7 @@ module.exports = {
     • Channels : ${client.channels.cache.size}\n
     Database Information: 
     - Users    : ${users.length} users
-    - Total XP : ${users.length > 1 ? users.reduce((a, b) => {return a.xp || 0 + b.xp || 0;}): users.xp || 0} XP\`
-    `;
+    - Total XP : ${users.length > 1 ? users.reduce((a, b) => {return a.xp || 0 + b.xp || 0;}): users.xp || 0} XP`;
     	
     const embed = new Discord.MessageEmbed()
       .setTitle("Cody's Information")
