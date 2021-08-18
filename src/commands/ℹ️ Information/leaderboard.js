@@ -1,4 +1,3 @@
-/*
 const Discord = require('discord.js')
 const moment = require('moment')
 const User = require('../../database/schemas/User')
@@ -15,7 +14,7 @@ module.exports = {
    * @param {Message} message
    * @param {String[]} args
    */
-/*
+
   run: async (client, message, args, user, guild) => {
     const users = await User.find({ hide: false })
       .sort({ xp: -1 })
@@ -25,42 +24,42 @@ module.exports = {
     let i = 1
     for (let user of users) {
       const db = client.userSettings.get(user.Id)
+      let level = 0
+      if (user.courses && user.courses.length > 0) {
+        if (user.courses.length === 1) {
+          level = user.courses[0].course.Level
+        } else {
+          if (user.courses.length > 1) {
+            level = user.courses.reduce((a, b) => {
+              return a.course.Level || 0 + b.course.Level || 0
+            })
+          }
+        }
+      }
+
       if (db) {
         const fetch = client.users.cache.get(user.Id)
         if (fetch && fetch.username) {
           array.push(
-            `\`${i}-\` **${fetch.username}** - \`${
-              user.xp
-            } XP | Level ${user.courses.reduce((a, b) => {
-              return a.course.Level || 0 + b.course.Level || 0
-            })}\``
+            `\`${i}-\` **${fetch.username}** - \`${user.xp} XP | Level ${level}\``
           )
         } else
           array.push(
-            `\`${i}-\` **Unknown User** - \`${
-              user.xp
-            } XP | Level ${user.courses.reduce((a, b) => {
-              return a.course.Level || 0 + b.course.Level || 0
-            })}\` `
+            `\`${i}-\` **Unknown User** - \`${user.xp} XP | Level ${level}\` `
           )
       } else
         array.push(
-          `\`${i}-\` **Unknown User** - \`${
-            user.xp
-          } XP | Level ${user.courses.reduce((a, b) => {
-            return a.course.Level || 0 + b.course.Level || 0
-          })}\` `
+          `\`${i}-\` **Unknown User** - \`${user.xp} XP | Level ${level}\` `
         )
       i++
     }
-/*
+
     const embed = new Discord.MessageEmbed()
       .setTitle(`Global Cody Leaderboard`)
       .setColor(message.guild.me.displayHexColor)
       .setFooter(`Showing Top 10 Users | cody-bot.xyz`)
-      .setDescription(array.length ? array.join('\n') : "No users found")
+      .setDescription(array.length ? array.join('\n') : 'No users found')
 
     message.channel.send({ embed: embed })
   }
 }
-*/

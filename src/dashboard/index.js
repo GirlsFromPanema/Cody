@@ -17,6 +17,7 @@ const port = config.PORT || 8000
 const User = require('../database/schemas/User')
 const minifyHTML = require('express-minify-html-terser')
 const Guild = require('../database/schemas/Guild')
+const contactCooldown = new Set()
 const rateLimiter = rateLimit({
   windowMs: 60 * 1000,
   statusCode: 429,
@@ -319,7 +320,6 @@ module.exports = async client => {
       const db = client.userSettings.get(user.Id)
       if (db) {
         const fetch = guild.members.cache.get(user.Id)
-        return console.log(fetch)
         if (fetch && fetch.user.username) {
           let level = 0
           if (user.courses && user.courses.length > 0) {
@@ -714,6 +714,11 @@ module.exports = async client => {
 
   //contact post
   app.post('/contact', checkAuth, (req, res) => {
+    if (contactCooldown.has(req.user.id)) {
+      return render(res, req, 'other/error/error.ejs', {
+        error: 'You recently contacted us. Please wait a little and try again.'
+      })
+    }
     const contact = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle(`📬 Contact Form`)
@@ -730,11 +735,17 @@ module.exports = async client => {
       .setTimestamp()
 
     //fill contact webhook here
-    new Discord.WebhookClient("877216405093748756","pOqEHHGOLhQ7XWEUIk0o_ouPLWFplpQb1jgQdCeJWnFVuZEkAdkNNCeju-W2vw07whA2").send({
-      embeds: [contact],
-    });
+    new Discord.WebhookClient(
+      '877216405093748756',
+      'pOqEHHGOLhQ7XWEUIk0o_ouPLWFplpQb1jgQdCeJWnFVuZEkAdkNNCeju-W2vw07whA2'
+    ).send({
+      embeds: [contact]
+    })
 
-
+    contactCooldown.add(req.user.id)
+    setTimeout(() => {
+      contactCooldown.delete(req.user.id)
+    }, 60000)
     render(res, req, 'other/contact/contact.ejs', {
       alert: true
     })
