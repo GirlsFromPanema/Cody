@@ -1,3 +1,16 @@
 {
-    "compile-hero.disable-compile-files-on-did-save-code": false
+  "deno.enable": true,
+  "deno.lint": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "editor.tabCompletion": "on",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "deno.suggest.imports.hosts": {
+    "https://deno.land": false,
+    "https://denopkg.com": false
+  }
 }
