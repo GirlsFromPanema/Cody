@@ -11,7 +11,6 @@
         }
       ],
 
-      
       [
         {
           "xp": 0,
@@ -57,7 +56,7 @@
 
       [
         {
-          "question": "**Lets give it a try!**\n\nWe have variable **x** - add the name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\nnumber = 1234```",
+          "question": "**Lets give it a try!**\n\nWe have variable x - add the name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\naebd = 'Marie Park'```",
           "answers": "x = 'Suzie'",
           "time": 60000,
           "tries": 3,
@@ -127,7 +126,7 @@
       [
         {
           "xp": 0,
-          "time": 60000,
+          "time": 90000,
           "type": "continue",
           "answers": ["continue"],
           "question": "**Illegal Variable Names**\n\nThere are variable names, that are not possible to be used within Python Programs\n\nAs we said, Variables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nExample:\n\n```py\n99name = 'Moo'```\n```py\nmy-name = 'Clara'```\n```py\nhis name = 'Tanja'```\n\nAs you can see, there are many illegal variable names - it's very important to know them."
@@ -137,14 +136,51 @@
       [
         {
           "xp": 0,
-          "time": 60000,
+          "time": 90000,
           "type": "continue",
           "answers": ["continue"],
           "question": "**Camel Case - Pascal Case - Snake Case**\n\nCamel Case variables are variables, each word start with an capital letter except the first one:\n```py\nmyFriendsName = 'Max'```\n\nPascal Case variables - each word start with an capital letter:\n\n```py\nMyFriendsName = 'Toni'```\n\nSnake Case variables are separated with an underscore character:\n```py\nmy_dads_name = 'Gerald'```\n\n*Thats easy!*"
         }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\nSnake Case Variable:\n```py\nmy_dadsName = 'Gerald'```\n\n**Would this Snake Case Variable work?**",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Nice, great job!"
+        }
+      ],
+
+      [
+        {
+          "question": "**Camel Case Variables**\n\nRewrite the following Variable to Camel Case - check my Cheatsheet above if you need Hints\n\nExample:\n```py\ncody_is_cool = 'that is true'```\n",
+          "answers": "codyIsCool = 'true'",
+          "time": 90000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Wow! Nice"
+        }
+      ],
+
+      [
+        {
+          "question": "**Pascal Case Variables**\n\nRewrite the following Variable to Pascal Case - check my Cheatsheet above if you need Hints\n\nExample:\n```py\nilovecoding = '2021'```\n",
+          "answers": "ILoveCoding = '2021'",
+          "time": 90000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Wow! Nice"
+        }
       ]
-
-
     ]
   }
 ]
