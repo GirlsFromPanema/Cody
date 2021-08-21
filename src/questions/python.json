@@ -180,6 +180,49 @@
           "type": "answer",
           "correct": "Wow! Nice"
         }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Assign Multiple Values**\n\nPython allows us to assign values to multiple variables in a single line\n\n```py\nx, y, z = 'Apple', 'Banana', 'Cola'\nprint(x)\nprint(y)\nprint(z)```\n\n**Make sure your number of variables are matching the numbers of the values, otherwise it's an error**"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Another Method for multi line Values**\n\nYou can assign the same value to multiple variables in a single line!\n\n```py\nx = y =  z = 'Cola'```\nprint(x)\nprint(y)\nprint(z)\n\n**Easy, right?**"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\nRevision from the last task:\n```py\nx + y = z = 'Apple'```\n\n**Would this work?**",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Nice, great job!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Unpacking a Collection**\n\nPython allows you extract the values into variables, unpacking!\n\n```py\nanimals = ['Dog', 'Cat', 'Bird']\nx, y, z = 'animals'```\nprint(x)\nprint(y), print(z)"
+        }
       ]
     ]
   }
