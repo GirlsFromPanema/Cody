@@ -229,9 +229,30 @@
           "type": "reaction",
           "correct": "Nice!"
         }
-      ]
+      ],
 
-      
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Javascript Objects**\nJavaScript has many options to assign simple values\nn```js\nconst car = {type: 'Mercedes', model: 'AMG 500', age: 1995, color: 'black'}```"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\nAssigning Values also can go wrong, is this wrong?\nExample:\n```js\nlet car = 'Fiat', {type: 'Mercedes', model: 'AMG 500', age: 1995, color: 'black'}```",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 5,
+          "xp": 10,
+          "type": "reaction",
+          "correct": "Nice!"
+        }
+      ]
     ]
   }
 ]

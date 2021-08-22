@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak@v8.0.0/mod.ts";
+import { Application, Router } from 'https://deno.land/x/oak@v8.0.0/mod.ts';
 
 const port = 3000;
 const app = new Application();
