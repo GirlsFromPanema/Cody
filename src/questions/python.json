@@ -56,8 +56,8 @@
 
       [
         {
-          "question": "**Lets give it a try!**\n\nWe have variable x - add the name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\naebd = 'Marie Park'```",
-          "answers": "x = 'Suzie'",
+          "question": "**Lets give it a try!**\n\nWe have variable x - and we add the Name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\nx = 'Suzie'```\nAnswer with yes or no",
+          "answers": ["yes"],
           "time": 60000,
           "tries": 3,
           "premiumTries": 5,

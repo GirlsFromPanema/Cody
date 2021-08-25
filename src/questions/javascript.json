@@ -201,7 +201,7 @@
           "answers": ["no"],
           "time": 60000,
           "tries": 3,
-          "premiumTries": 5,
+          "premiumTries": 3,
           "xp": 5,
           "type": "answer",
           "correct": "Double dice, congrats!"
@@ -224,7 +224,7 @@
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
-          "premiumTries": 5,
+          "premiumTries": 2,
           "xp": 10,
           "type": "reaction",
           "correct": "Nice!"
@@ -247,7 +247,7 @@
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
-          "premiumTries": 5,
+          "premiumTries": 3,
           "xp": 10,
           "type": "reaction",
           "correct": "Nice!"
