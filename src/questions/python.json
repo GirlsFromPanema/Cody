@@ -50,14 +50,44 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Variables**\n\nPython does not have any command for declaring a variable\n\nExample:\n__Looking like this:__\n```py\nx = 5```\n\n```py\ny = 'Dave'```\n\n```py\nprint (x)\nprint (y)```"
+          "question": "**Variables**\n\nPython does not have any command for declaring a variable\n\nExample:\n__Looking like this:__\n```py\nx = 5```\n\n```py\ny = 'Dave'```\n\n```py\nprint (x)\nprint (y)```\n\nUpperCase:\n```py\napple = 'Delicious'```\n```py\npythonis = 'Easy'```"
         }
       ],
 
       [
         {
-          "question": "**Lets give it a try!**\n\nWe have variable x - and we add the Name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\nx = 'Suzie'```\nAnswer with yes or no",
-          "answers": ["yes"],
+          "question": "**Upper and Lowercase**\nFirst we have the Lowercase, the initial letter is on lowerCase (h)\n```py\nprint('hello julia')```\n```py\nname = 'mason'```\n\nNext, we have upperCase, we are starting with a capital letter (T)\nExample:\n```py\nfavoritegame = 'TruckersMP'```",
+          "answers": ["continue"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 5,
+          "xp": 0,
+          "type": ["continue"]
+        }
+      ],
+
+      [
+        {
+          "question": "**Lets give it a try!**\n\nWe have variable x - and we want to add the name 'Suzie' to it, but on lowercase!\n\nExample:\n```py\nabcde = 'davie'```\n```py\nxyz = 12343```\nCan you solve it?",
+          "answers": ["x = 'suzie'", "x= 'suzie'", "x ='suzie'", "x='suzie'"],
+          "time": 60000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Easy! Nice : ) "
+        }
+      ],
+
+      [
+        {
+          "question": "**Another one!**\n\nRight now, we have the variable Discord, we want to add the name 'cody' to it, but now on upperCase!\n\nExample:\n```py\nabcde = 'Magrete'```\n```py\nfood = Pizza```\nCheck the last message if you are stuck!",
+          "answers": [
+            "Discord = 'Cody'",
+            "Discord= 'Cody'",
+            "Discord ='Cody'",
+            "Discord='Cody'"
+          ],
           "time": 60000,
           "tries": 3,
           "premiumTries": 5,
@@ -145,13 +175,13 @@
 
       [
         {
-          "question": "**True, or false?**\n\nSnake Case Variable:\n```py\nmy_dadsName = 'Gerald'```\n\n**Would this Snake Case Variable work?**",
-          "answers": ["❌"],
+          "question": "**Answer**\n\nSnake Case Variable:\n```py\nmy_dadsName = 'Gerald'```\n\n**Would this Snake Case Variable work?**",
+          "answers": ["yes"],
           "time": 90000,
           "tries": 2,
           "premiumTries": 3,
           "xp": 2,
-          "type": "reaction",
+          "type": "answer",
           "correct": "Nice, great job!"
         }
       ],
@@ -172,12 +202,12 @@
       [
         {
           "question": "**Pascal Case Variables**\n\nDoes the following rewrite to Pascal Case Variables work? - check my Cheatsheet above if you need Hints\n\nExample:\n```py\nilovecoding = '2021'```\n",
-          "answers": ["❌"],
+          "answers": ["no"],
           "time": 90000,
           "tries": 3,
           "premiumTries": 5,
           "xp": 5,
-          "type": "reaction",
+          "type": "answer",
           "correct": "Wow! Nice"
         }
       ],
