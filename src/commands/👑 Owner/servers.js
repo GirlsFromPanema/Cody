@@ -4,7 +4,7 @@ module.exports = {
   name: "servers",
   cooldown: 10,
   category: "👑 Owner",
-  description:"Lists Codys Servers",
+  description: "Lists Codys Servers",
   /**
    * @param {Client} client
    * @param {Message} message
@@ -30,7 +30,7 @@ module.exports = {
       .setTimestamp()
       .setColor(message.guild.me.displayHexColor);
 
-    if (servers.length <= 10) {
+    if (servers.length <= 20) {
       const range = servers.length == 1 ? "[1]" : `[1 - ${servers.length}]`;
       message.channel.send(
         embed
