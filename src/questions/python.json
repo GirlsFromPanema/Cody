@@ -158,26 +158,26 @@
 
       [
         {
-          "question": "**Camel Case Variables**\n\nRewrite the following Variable to Camel Case - check my Cheatsheet above if you need Hints\n\nExample:\n```py\ncody_is_cool = 'that is true'```\n",
-          "answers": "codyIsCool = 'true'",
+          "question": "**Camel Case Variables**\n\nDoes the following rewrite to Camel Case work? - check my Cheatsheet above if you need Hints\n\nExample:\n```py\ncody_is_cool = 'that is true'```\n",
+          "answers": ["❌"],
           "time": 90000,
           "tries": 3,
           "premiumTries": 5,
           "xp": 5,
-          "type": "answer",
+          "type": "reaction",
           "correct": "Wow! Nice"
         }
       ],
 
       [
         {
-          "question": "**Pascal Case Variables**\n\nRewrite the following Variable to Pascal Case - check my Cheatsheet above if you need Hints\n\nExample:\n```py\nilovecoding = '2021'```\n",
-          "answers": "ILoveCoding = '2021'",
+          "question": "**Pascal Case Variables**\n\nDoes the following rewrite to Pascal Case Variables work? - check my Cheatsheet above if you need Hints\n\nExample:\n```py\nilovecoding = '2021'```\n",
+          "answers": ["❌"],
           "time": 90000,
           "tries": 3,
           "premiumTries": 5,
           "xp": 5,
-          "type": "answer",
+          "type": "reaction",
           "correct": "Wow! Nice"
         }
       ],
