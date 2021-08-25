@@ -50,7 +50,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Variables**\n\nPython does not have any command for declaring a variable\n\nExample:\n__Looking like this:__\n```py\nx = 5```\n\n```py\ny = 'Dave'```\n\n```py\nprint (x)\nprint (y)```\n\nUpperCase:\n```py\napple = 'Delicious'```\n```py\npythonis = 'Easy'```"
+          "question": "**Variables**\n\nPython does not have any special method for declaring a variable\n\nExample:\n__Looking like this:__\n```py\nx = 5```\n\n```py\ny = 'Dave'```\n\n```py\nprint (x)\nprint (y)```\n"
         }
       ],
 
@@ -59,7 +59,7 @@
           "question": "**Upper and Lowercase**\nFirst we have the Lowercase, the initial letter is on lowerCase (h)\n```py\nprint('hello julia')```\n```py\nname = 'mason'```\n\nNext, we have upperCase, we are starting with a capital letter (T)\nExample:\n```py\nfavoritegame = 'TruckersMP'```",
           "answers": ["continue"],
           "time": 60000,
-          "tries": 2,
+          "tries": 1,
           "premiumTries": 5,
           "xp": 0,
           "type": ["continue"]
