@@ -57,7 +57,7 @@
       [
         {
           "question": "**Lets give it a try!**\n\nWe have variable x - add the name 'Suzie' to it!\n\nExample:\n```py\nabcde = 'Davie Brown'```\n```py\naebd = 'Marie Park'```",
-          "answers": "x = 'Suzie'",
+          "answers": ["x = 'Suzie'", "x='Suzie'"],
           "time": 60000,
           "tries": 3,
           "premiumTries": 5,
@@ -159,7 +159,7 @@
       [
         {
           "question": "**Camel Case Variables**\n\nRewrite the following Variable to Camel Case - check my Cheatsheet above if you need Hints\n\nExample:\n```py\ncody_is_cool = 'that is true'```\n",
-          "answers": "codyIsCool = 'true'",
+          "answers": ["codyIsCool = 'true'", "codyIsCool='true'"],
           "time": 90000,
           "tries": 3,
           "premiumTries": 5,
@@ -172,7 +172,7 @@
       [
         {
           "question": "**Pascal Case Variables**\n\nRewrite the following Variable to Pascal Case - check my Cheatsheet above if you need Hints\n\nExample:\n```py\nilovecoding = '2021'```\n",
-          "answers": "ILoveCoding = '2021'",
+          "answers": ["ILoveCoding = '2021'", "ILoveCoding='2021'"],
           "time": 90000,
           "tries": 3,
           "premiumTries": 5,
