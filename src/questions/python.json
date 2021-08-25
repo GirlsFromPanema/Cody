@@ -68,7 +68,7 @@
 
       [
         {
-          "question": "**Lets give it a try!**\n\nWe have variable x - and we want to add the name 'Suzie' to it, but on lowercase!\n\nExample:\n```py\nabcde = 'davie'```\n```py\nxyz = 12343```\nCan you solve it?",
+          "question": "**Lets give it a try!**\n\nWe have variable x - and we want to add the name 'Suzie' to it, but on (l)owercase!\n\nExample:\n```py\nabcde = 'davie'```\n```py\nxyz = 12343```\nCan you solve it?",
           "answers": ["x = 'suzie'", "x= 'suzie'", "x ='suzie'", "x='suzie'"],
           "time": 60000,
           "tries": 3,
@@ -81,7 +81,7 @@
 
       [
         {
-          "question": "**Another one!**\n\nRight now, we have the variable Discord, we want to add the name 'cody' to it, but now on upperCase!\n\nExample:\n```py\nabcde = 'Magrete'```\n```py\nfood = Pizza```\nCheck the last message if you are stuck! And answer correctly if this is true",
+          "question": "**Another one!**\n\nRight now, we have the variable Discord, we want to add the name 'cody' to it, but now on upperCase!\n\nExample:\n```py\nDiscord = 'Cody'```\n```py\nfood = Pizza```\nCheck the cheatsheet if you are stuck! And answer correctly if this is true",
           "answers": ["✅"],
           "time": 60000,
           "tries": 3,
