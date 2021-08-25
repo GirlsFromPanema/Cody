@@ -1,8 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const ms = require("ms");
-/**
- * Peter's Reaction Menu class
- */
+
 module.exports = class ReactionMenu {
   /**
    
@@ -37,19 +35,19 @@ module.exports = class ReactionMenu {
     this.client = client;
 
     /**
-     * The text channel
+     *  text channel
      * @type {TextChannel}
      */
     this.channel = channel;
 
     /**
-     * The member ID snowflake
+     *  member ID snowflake
      * @type {string}
      */
     this.memberId = member.id;
 
     /**
-     * The embed passed to the Reaction Menu
+     *  embed passed to the Reaction Menu
      * @type {MessageEmbed}
      */
     this.embed = embed;
