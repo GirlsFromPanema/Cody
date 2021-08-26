@@ -38,8 +38,8 @@ module.exports = {
     • Servers  : ${client.guilds.cache.size}
     • Users    : ${client.users.cache.size}
     • Channels : ${client.channels.cache.size}
-    • Library  : [DiscordJS](https://discord.js.org/#/)
-    • LoC      : 15.576 .js | 457 .ts | 4566 .css\n
+    • Library  : NodeJS 
+    • LoC      : Roughly 15.576 .js | 4457 .tsx | 4566 .css\n
     Database Information: 
     - Users    : ${users.length} users
     - Courses  : JavaScript, Python
