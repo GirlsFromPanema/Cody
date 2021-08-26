@@ -37,12 +37,9 @@ module.exports = {
     • Uptime   : ${moment.duration(client.uptime).format("H [hours and] m [minutes]")}
     • Servers  : ${client.guilds.cache.size}
     • Users    : ${client.users.cache.size}
-    • Channels : ${client.channels.cache.size}
-    • Library  : NodeJS 
-    • LoC      : Roughly 15.576 .js | 4457 .tsx | 4566 .css\n
+    • Channels : ${client.channels.cache.size}\n
     Database Information: 
     - Users    : ${users.length} users
-    - Courses  : JavaScript, Python
     - Total XP : ${users.length > 1 ? users.reduce((a, b) => {return a.xp || 0 + b.xp || 0;}): users.xp || 0} XP`;
     	
     const embed = new Discord.MessageEmbed()
