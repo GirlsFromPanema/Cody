@@ -14,6 +14,10 @@ module.exports = {
     })
 
     mongoose.set('useFindAndModify', false)
+    
+    //debugging
+    mongoose.set('debug', true)
+    
     mongoose.Promise = global.Promise
 
     mongoose.connection.on('err', err => {

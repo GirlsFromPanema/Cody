@@ -18,7 +18,17 @@ module.exports = {
    */
 
   run: async (client, message, args, user, guild) => {
-    const users = await User.find();
+    const users = await User.find(); 
+
+    let totalXP = 0;
+    if(users.length && users.length > 0){
+      for(let i = 0; i < users.length; i++){
+        const user = users[i];
+        if(user && user.xp){
+          totalXP = totalXP + user.xp
+        }
+      }
+    }
 
 
     const infos = stripIndent`
@@ -32,8 +42,12 @@ module.exports = {
     • LoC      : 15.576 .js | 457 .ts | 4566 .css\n
     Database Information: 
     - Users    : ${users.length} users
+<<<<<<< HEAD
     - Courses  : JavaScript, Python
     - Total XP : ${users.length > 1 ? users.reduce((a, b) => {return a.xp || 0 + b.xp || 0;}): users.xp || 0} XP`;
+=======
+    - Total XP : ${totalXP} XP`;
+>>>>>>> 986c5ee93125b0f1d17e3ff65d018c2d6de2030a
     	
     const embed = new Discord.MessageEmbed()
       .setTitle("Cody's Information")
