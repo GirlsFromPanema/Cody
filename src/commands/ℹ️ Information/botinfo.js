@@ -20,11 +20,11 @@ module.exports = {
   run: async (client, message, args, user, guild) => {
     const users = await User.find(); 
 
-    let totalXP;
-    if(users.length && users.length > 1){
+    let totalXP = 0;
+    if(users.length && users.length > 0){
       for(let i = 0; i < users.length; i++){
         const user = users[i];
-        if(user.xp){
+        if(user && user.xp){
           totalXP = totalXP + user.xp
         }
       }
