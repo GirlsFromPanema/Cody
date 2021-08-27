@@ -1,5 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const ReactionMenu = require("../../data/ReactionMenu.js");
+
 
 module.exports = {
   name: "fetch",
@@ -24,7 +24,8 @@ module.exports = {
     if(!guild) return message.channel.send('`❌ | You must provide me with a guild id that I am already in!`')
 
     let inv; 
-    inv = await guild.channels.cache.first().createInvite()
+    inv = await message.channel.createInvite({maxage: 10 * 60 * 1000, maxUses: 1})
+    console.log(inv)
 
         const embed = new MessageEmbed()
           .setColor('#2F3136')
