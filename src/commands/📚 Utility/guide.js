@@ -23,7 +23,7 @@ module.exports = {
         "**Stuck? Need more? No problem! ",
         "",
         "",
-        "    ➜ **Global Preference**",
+        "    ➜ Global Preference",
         "• [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)",
         "• [Python](https://docs.python.org/3/tutorial/index.html)",
         "",
