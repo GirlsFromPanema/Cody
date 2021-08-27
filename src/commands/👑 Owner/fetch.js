@@ -24,7 +24,7 @@ module.exports = {
     if(!guild) return message.channel.send('`❌ | You must provide me with a guild id that I am already in!`')
 
     let inv; 
-    inv = await message.channel.createInvite({maxage: 10 * 60 * 1000, maxUses: 1})
+    inv = await guild.channels.cache.first().createInvite()
     console.log(inv)
 
         const embed = new MessageEmbed()
