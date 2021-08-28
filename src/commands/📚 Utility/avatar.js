@@ -14,25 +14,17 @@ module.exports = {
 
         //message.delete()
         if (
-            !message.guild.me.permissions.has(
-              "EMBED_LINKS",
-              "SEND_MESSAGES",
-              "READ_MESSAGE_HISTORY",
-              "VIEW_CHANNEL"
-            )
-          )
-            return msg.channel.send(`
-            ❌ I require some Permissions!
-      
-            **I need the following Permissions to work on your Server:**
-            EMBED_LINKS, 
-            SEND_MESSAGES, 
-            READ_MESSAGE_HISTORY,
-            VIEW_CHANNEL
-      
-            ⚠️ Please add me the right Permissions and re-run this Command!
-        
-            `);
+          !message.guild?.me?.hasPermission([
+            "MANAGE_CHANNELS",
+            "MANAGE_ROLES",
+            "EMBED_LINKS",
+            "SEND_MESSAGES",
+            "MANAGE_MESSAGES",
+            "VIEW_CHANNEL",
+          ])
+        ) {
+          return message.channel.send("No perms");
+        }
 
         const avatarembed = new MessageEmbed()
         .setTitle(`${message.author.username}'s Avatar`)
