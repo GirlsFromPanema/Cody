@@ -13,6 +13,27 @@ module.exports = {
   run: async (client, message, args) => {
     //message.delete()
 
+    if (
+      !message.guild.me.permissions.has(
+        "EMBED_LINKS",
+        "SEND_MESSAGES",
+        "READ_MESSAGE_HISTORY",
+        "VIEW_CHANNEL"
+      )
+    )
+      return msg.channel.send(`
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
+  
+      `);
+
     const infoembed = new MessageEmbed()
       .setTitle(`Cody's Advice`)
       .setFooter("Visit us at • cody-bot.xyz")

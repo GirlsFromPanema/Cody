@@ -9,6 +9,28 @@ module.exports = {
   cooldown: 10,
 
   run: async (client, message, args, user, guild) => {
+
+    if (
+      !message.guild.me.permissions.has(
+        "EMBED_LINKS",
+        "SEND_MESSAGES",
+        "READ_MESSAGE_HISTORY",
+        "VIEW_CHANNEL"
+      )
+    )
+      return msg.channel.send(`
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
+  
+      `);
+
     //if the user isn't premium block the command
     if (!user || !user.isPremium) {
       const embed = new MessageEmbed()
