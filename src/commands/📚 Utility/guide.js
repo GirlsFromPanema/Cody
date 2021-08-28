@@ -13,14 +13,7 @@ module.exports = {
   run: async (client, message, args) => {
     //message.delete()
 
-    if (
-      !message.guild.me.hasPermission(
-        "EMBED_LINKS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL"
-      )
-    )
+    if (!message.guild.me.hasPermission("EMBED_LINKS","SEND_MESSAGES","READ_MESSAGE_HISTORY","VIEW_CHANNEL")) {
       return message.channel.send(`
       ❌ I require some Permissions!
 
@@ -33,6 +26,8 @@ module.exports = {
       ⚠️ Please add me the right Permissions and re-run this Command!
   
       `);
+    }
+      
 
     const infoembed = new MessageEmbed()
       .setTitle(`Cody's Advice`)
