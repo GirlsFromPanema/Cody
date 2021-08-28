@@ -14,7 +14,7 @@ module.exports = {
 
         //message.delete()
         if (
-          !message.guild?.me?.hasPermission([
+          !message.guild.me.hasPermission([
             "MANAGE_CHANNELS",
             "MANAGE_ROLES",
             "EMBED_LINKS",
