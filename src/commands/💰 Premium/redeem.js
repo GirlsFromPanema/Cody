@@ -12,25 +12,28 @@ module.exports = {
   run: async (client, message, args, user, guild) => {
 
     if (
-      !message.guild.me.permissions.has(
+      !message.guild.me.hasPermission([
         "EMBED_LINKS",
+        "ADD_REACTIONS",
         "SEND_MESSAGES",
         "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL"
-      )
-    )
-      return msg.channel.send(`
-      ❌ I require some Permissions!
-
-      **I need the following Permissions to work on your Server:**
-      EMBED_LINKS, 
-      SEND_MESSAGES, 
-      READ_MESSAGE_HISTORY,
-      VIEW_CHANNEL
-
-      ⚠️ Please add me the right Permissions and re-run this Command!
+        "VIEW_CHANNEL",
+      ])
+    ) {
+      return message.channel.send(`
+        ❌ I require some Permissions!
   
-      `);
+        **I need the following Permissions to work on your Server:**
+        EMBED_LINKS,
+        ADD_REACTIONS, 
+        SEND_MESSAGES, 
+        READ_MESSAGE_HISTORY,
+        VIEW_CHANNEL
+  
+        ⚠️ Please add me the right Permissions and re-run this Command!
+    
+        `);
+    }
 
     user = await User.findOne({
       Id: message.author.id
