@@ -18,8 +18,7 @@ module.exports = {
    */
 
   run: async (client, message, args, user, guild) => {
-    const users = await User.find(); 
-
+    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
     if (
       !message.guild.me.hasPermission([
         "EMBED_LINKS",
@@ -43,6 +42,10 @@ module.exports = {
     
         `);
     }
+
+
+    const users = await User.find(); 
+
 
     let totalXP = 0;
     if(users.length && users.length > 0){

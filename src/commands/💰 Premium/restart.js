@@ -9,7 +9,7 @@ module.exports = {
   cooldown: 10,
 
   run: async (client, message, args, user, guild) => {
-
+    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
     if (
       !message.guild.me.hasPermission([
         "EMBED_LINKS",
