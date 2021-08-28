@@ -53,7 +53,7 @@ client.on('message', async message => {
     }
 
     if (
-      !message.guild.me.hasPermission([
+      !message.guild.me.permissions.has([
         "EMBED_LINKS",
         "SEND_MESSAGES",
         "READ_MESSAGE_HISTORY",
