@@ -14,7 +14,7 @@ module.exports = {
     //message.delete()
 
     if (
-      !message.guild.me.permissions.has(
+      !message.guild.me.hasPermission(
         "EMBED_LINKS",
         "SEND_MESSAGES",
         "READ_MESSAGE_HISTORY",
