@@ -20,7 +20,7 @@ module.exports = {
         "VIEW_CHANNEL"
       ])
     )
-      return msg.channel.send(`
+      return message.channel.send(`
       ❌ I require some Permissions!
 
       **I need the following Permissions to work on your Server:**
