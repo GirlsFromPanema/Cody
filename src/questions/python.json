@@ -248,6 +248,74 @@
           "answers": ["continue"],
           "question": "**Unpacking a Collection**\n\nPython allows you extract the values into variables, unpacking!\n\n```py\nanimals = ['Dog', 'Cat', 'Bird']\nx, y, z = 'animals'```\nprint(x)\nprint(y), print(z)"
         }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Output Variables**\n\nPython print() option is often used to output something into the Console here\n\n```py\nxyz = 'awesome'\nprint('Python is: ' + xyz)```\n\n```py\na = 'Sam is '\nb = 'cute'\nz = a + b\nprint(z)```\nRemember, you cannot combine a String with a Number!"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\nRevision from the last task:\n```py\ny = 'John'\n x = 5\nprint(x + y)```\n\n**Logically, can this work?**",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "That's true! Awesome"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Global Variables**\n\nVariables - created outside of a function, used inside of the function\n\n```py\nme = 'cool'\ndef myfunction():\n   print('I am ' + me)\n\nmyfunction()```\n\nDon't forget the (): after your def!"
+        }
+      ],
+
+      [
+        {
+          "question": "**True, or false?**\n\nRevision from the last task:\n```py\njoshtype = 'friendly'\ndef myfunction()\nprint('My friend is ' + joshtype)\n\nmyfunction():```\n\nRead the Code carefully, are there any Errors?",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "That's true! Awesome"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Global Variables Functions**\n\n```py\nkoni = 'awesome'\n\ndef myfunc():\n  global koni\n  koni = 'cool'\nmyfunc()\n\nprint('People like Koni are: ' + koni)```\nEasy Peasy!"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\n*Quick Revision about the last task*:\n\nTo **change** the value of a **Global Variable** inside of a function, we refer to use the `gobal` keyword.\n\n",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Perfect, well done!"
+        }
       ]
     ]
   }
