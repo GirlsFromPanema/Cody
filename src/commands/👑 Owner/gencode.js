@@ -53,7 +53,7 @@ module.exports = {
       }
     }
 
-    message.author.send(
+    message.channel.send(
       `\`\`\`Generated +${codes.length}\n\n--------\n${codes.join(
         '\n'
       )}\n--------\n\nType - ${plan}\nExpires - ${moment(time).format(
