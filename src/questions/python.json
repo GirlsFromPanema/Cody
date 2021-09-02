@@ -316,6 +316,39 @@
           "type": "reaction",
           "correct": "Perfect, well done!"
         }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Python Data Types**\n\nThere are many important data type concepts\n\n**Text Type**: str\nNumeric Types: `int`, `float`, `complex`\n**Sequence Types**: list, tuple, range\n**Mapping Type**: `dict`\nSet Types: `set`, `frozenset`\n**Boolean Type**: `bool`\n**Binary Types**: bytes, bytearray, memoryview\n\n```py\nx = 150\nprint(type(x))```\nThat is very important to know."
+        }
+      ],
+      [
+        {
+          "question": "**Lets give it a try!**\n\nSetting data types, Part 1: **Strings**\nUse Data type `str` to create variable x with the value Hello World\n\nRemember to use lower case.\n\nHint: ||x = is your value, a string is always declared with ''||",
+          "answers": ["x = 'hello world'", "x= 'hello world'", "x ='hello world'", "x='hello world'"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Easy! Nice : ) "
+        }
+      ],
+      [
+        {
+          "question": "**Another one!**\n\nSetting data types, Part 2: **Integar**\nUse Data type `int` to create variable y with the result of 5 + 25\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
+          "answers": ["y = 30", "y= 30", "y =30", "y=30"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Easy! Nice : ) "
+        }
       ]
     ]
   }

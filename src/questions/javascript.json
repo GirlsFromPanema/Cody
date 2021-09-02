@@ -243,7 +243,7 @@
 
       [
         {
-          "question": "**True, or false?**\n\nAssigning Values also can go wrong, is this wrong?\nExample:\n```js\nlet car = 'Fiat', {type: 'Mercedes', model: 'AMG 500', age: 1995, color: 'black'}```",
+          "question": "**True, or false?**\n\nAssigning Values also can go wrong, is this wrong?\nExample:\n```js\nlet car = 'Fiat', {type: 'Mercedes', model: 'AMG 500', age: '1995', color: 'black'}```",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
@@ -251,6 +251,78 @@
           "xp": 10,
           "type": "reaction",
           "correct": "Nice!"
+        }
+      ],
+
+      [
+        {
+          "question": "**Lets give it a try!**\n\nSetting data types with values: **Integar**\nUse Data type `int` to create variable a with the result of 15 + 25\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
+          "answers": ["a = 40", "a= 40", "a =40", "a=40"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Easy! Nice : ) "
+        }
+      ],
+
+      [
+        {
+          "question": "**Another one!**\n\nSetting data types with values: **string**\nUse Data type `string` to create variable **b** with the result of Apple\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
+          "answers": ["b = 'apple'", "b= 'apple'", "b ='apple'", "b='apple'"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Awesome!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Javascript Functions**\nJavaScripts function is executed when your Program is calling it (invokes it)\nn```js\nfunction myFirstFunction(a1, a2) {\n  return a1 + a2;\n\n}```\n*The function returns the product of a1 and a2*!"
+        }
+      ],
+
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Javascript Functions - Return**\nWhen there is an `return` statement, the Program will stop executing there.\nn```js\nlet z = mySecondFunction(2, 2)\n\nfunction mySecondFunction(a, b) {\n\n  return a * b; // Function returns the Product of a and b\n\n}```\nWhen there is an `return` statement, the Program will stop executing there.\nThe result here is `4`"
+        }
+      ],
+
+      [
+        {
+          "question": "**Declare your own Function!**\n\nCheck the last two Examples about Functions\nCreate a function called myfunction and assign two variables called a and b into it\n\nRemember to use lower case variables\n\nHint: ||Your function always starts with the keyword function, + with the following function name -> myfunction(). Inside of your Function, declare two variables||",
+          "answers": ["function myfunction(a, b) {", "function myfunction(a, b)", "function myfunction(a,b)", "function myfunction(a , b)"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Thats right!"
+        }
+      ],
+
+      [
+        {
+          "question": "**Returning the function**\n\nNow lets use the keyword **return** to return your declared variables above\nWe will mix this up with some math, your return function should add 5 to 55\n\nRemember to use lower case variables\n\nHint: ||Returning a function is very easy, use the keyword return + two numbers to multiply, add or remove etc.||",
+          "answers": ["return 5 + 55", "return 5+55", "return 5+ 55", "return 5 +55"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Congrats, your solution is correct!"
         }
       ]
     ]
