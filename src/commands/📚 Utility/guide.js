@@ -44,7 +44,7 @@ module.exports = {
         message.author.displayAvatarURL({ dynamic: true, size: 1024 })
       )
       .setDescription([
-        "**Stuck? Need more? No problem! ",
+        "Stuck? Need more? No problem! ",
         "",
         "",
         "    ➜ Global Preference",

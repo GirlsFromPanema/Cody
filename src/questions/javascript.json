@@ -184,7 +184,7 @@
 
       [
         {
-          "question": "**Answer with yes or no**\n\nCan I add const to another variable I have already declared?\n\nExample:\n```js\nconst x = 5```\n```js\nx = It's my favourite letter!```",
+          "question": "**Answer with yes or no**\n\nCan I add const to another variable I have already declared?\n\nExample:\n```js\nconst x = 5```\n```js\nx = Its my favourite letter!```",
           "answers": ["no"],
           "time": 60000,
           "tries": 3,
@@ -271,7 +271,7 @@
         {
           "question": "**Another one!**\n\nSetting data types with values: **string**\nUse Data type `string` to create variable **b** with the result of Apple\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
           "answers": ["b = 'apple'", "b= 'apple'", "b ='apple'", "b='apple'"],
-          "time": 60000,
+          "time": 90000,
           "tries": 5,
           "premiumTries": 10,
           "xp": 10,
@@ -304,7 +304,7 @@
         {
           "question": "**Declare your own Function!**\n\nCheck the last two Examples about Functions\nCreate a function called myfunction and assign two variables called a and b into it\n\nRemember to use lower case variables\n\nHint: ||Your function always starts with the keyword function, + with the following function name -> myfunction(). Inside of your Function, declare two variables||",
           "answers": ["function myfunction(a, b) {", "function myfunction(a, b)", "function myfunction(a,b)", "function myfunction(a , b)"],
-          "time": 60000,
+          "time": 90000,
           "tries": 5,
           "premiumTries": 10,
           "xp": 10,
@@ -317,12 +317,48 @@
         {
           "question": "**Returning the function**\n\nNow lets use the keyword **return** to return your declared variables above\nWe will mix this up with some math, your return function should add 5 to 55\n\nRemember to use lower case variables\n\nHint: ||Returning a function is very easy, use the keyword return + two numbers to multiply, add or remove etc.||",
           "answers": ["return 5 + 55", "return 5+55", "return 5+ 55", "return 5 +55"],
-          "time": 60000,
+          "time": 90000,
           "tries": 5,
           "premiumTries": 10,
           "xp": 10,
           "type": "answer",
           "correct": "Congrats, your solution is correct!"
+        }
+      ],
+      [
+        {
+          "question": "**Revision about JavaScript Objects**\n\nUse keyword `const` and variable **person** with Parenthesis {} and assign firstname (Carl) within a String, a lastname (Book) within a string and age (55) as an Integar (number)\n\nUse lower case letters in your Solution! And spaces for a better overview\nHint: ||const person = {myvaluegoeshere: 'Miley', age: 19, more ...} this is used to declare multiple values at once - strings and Ints||",
+          "answers": ["const person = {firstname: 'Carl', lastname: 'Book', age: 55}", "const person= {firstname: 'Carl', lastname: 'Book', age: 55}", "const person ={firstname: 'Carl', lastname: 'Book', age: 55}", "const person={firstname: 'Carl', lastname: 'Book', age: 55}"],
+          "time": 120000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Perfect! Double dice."
+        }
+      ],
+      [
+        {
+          "question": "**Revision about JavaScript Objects 2.0**\n\nUse keyword `let` and variable **person** with Parenthesis {} and assign haircolor (Brown), eyecolor (Blue)\n\nUse lower case letters in your Solution! And spaces for a better overview\nHint: ||let person = {myvaluegoeshere: 'Miley', age: 19, more ...} this is used to declare multiple values at once - strings and Ints in a Lower Case Syntax||",
+          "answers": ["let person = {haircolor: 'brown', eyecolor: 'blue'}", "let person= {haircolor: 'brown', eyecolor: 'blue'}", "let person ={haircolor: 'brown', eyecolor: 'blue'}", "let person={haircolor: 'brown', eyecolor: 'blue'}"],
+          "time": 120000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Right!"
+        }
+      ],
+      [
+        {
+          "question": "**Alerting Objects**\n\nExample:\n```js\nconst person = {firstname: 'john', lastname: 'brook'};\n\nalert();```\nUse alert() and inside extract the persons firstname!\n\nHint: ||alert() is our function - now we take the function name (person) + value firstname to return 'john' as the firstname. Use a dot inbetween!||\nHint 2: ||person. + value of persons firstname||",
+          "answers": ["alert(person.firstname)"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Right!"
         }
       ]
     ]
