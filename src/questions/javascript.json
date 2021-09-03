@@ -360,6 +360,18 @@
           "type": "answer",
           "correct": "Right!"
         }
+      ],
+      [
+        {
+          "question": "**Alerting Functions**\nWe have declared a Function before, we now want to alert a Hello for every new User on our Site\nExample:\n\n```js\nfunction greetingUsers() {\n// Here we want to alert a hello within a String\n }\n\nWhat is the solution to alert the string 'hello' within the Function?\n\nHint: ||alert() will create our Function, Strings are declared with '' + a message of your choice",
+          "answers": ["alert('hello')", "alert ('hello')"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Right!"
+        }
       ]
     ]
   }
