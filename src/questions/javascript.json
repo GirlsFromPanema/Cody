@@ -315,7 +315,7 @@
 
       [
         {
-          "question": "**Returning the function**\n\nNow lets use the keyword **return** to return your declared variables above\nWe will mix this up with some math, your return function should add 5 to 55\n\nRemember to use lower case variables\n\nHint: ||Returning a function is very easy, use the keyword return + two numbers to multiply, add or remove etc.||",
+          "question": "**Returning the function**\n\nNow lets use the keyword **return** to return your declared variables above\nWe will mix this up with some math, your return function should add 5 to 55. Only write the answer without the function!\n\nRemember to use lower case variables\n\nHint: ||Returning a function is very easy, use the keyword return + two numbers to multiply, add or remove etc.||",
           "answers": ["return 5 + 55", "return 5+55", "return 5+ 55", "return 5 +55"],
           "time": 90000,
           "tries": 5,
