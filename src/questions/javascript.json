@@ -327,8 +327,8 @@
       ],
       [
         {
-          "question": "**Revision about JavaScript Objects**\n\nUse keyword `const` and variable **person** with Parenthesis {} and assign firstname (Carl) within a String, a lastname (Book) within a string and age (55) as an Integar (number)\n\nUse lower case letters in your Solution! And spaces for a better overview\nHint: ||const person = {myvaluegoeshere: 'Miley', age: 19, more ...} this is used to declare multiple values at once - strings and Ints||",
-          "answers": ["const person = {firstname: 'Carl', lastname: 'Book', age: 55}", "const person= {firstname: 'Carl', lastname: 'Book', age: 55}", "const person ={firstname: 'Carl', lastname: 'Book', age: 55}", "const person={firstname: 'Carl', lastname: 'Book', age: 55}"],
+          "question": "**Revision about JavaScript Objects**\n\nUse keyword `const` and variable **person** with Parenthesis {} and assign firstname (Carl) within a String, a lastname (Book) within a string and age (55) as an Integar (number)\n\nUse lower case letters in your Solution! And spaces for a better overview\nHint: ||const person = {myvaluegoeshere: 'miley', age: 19, more ...} this is used to declare multiple values at once - strings and Ints||",
+          "answers": ["const person = {firstname: 'carl', lastname: 'cook', age: 55}", "const person= {firstname: 'carl', lastname: 'book', age: 55}", "const person ={firstname: 'carl', lastname: 'book', age: 55}", "const person={firstname: 'carl', lastname: 'book', age: 55}"],
           "time": 120000,
           "tries": 5,
           "premiumTries": 10,
