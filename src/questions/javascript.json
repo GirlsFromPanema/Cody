@@ -375,7 +375,7 @@
       ],
       [
         {
-          "question": "**Build your own Car!**\nCar name: Honda | age: 1993 | color: white | country: Australia | seats: 4\nRemember to use lowercase names etc. + strings if needed. Declare your car with `const car`\nHint: || const car is your entry point, use curly brackets to declare informations such as {name: 'honda', age: 1993, etc...}",
+          "question": "**Build your own Car!**\nCar name: Honda | age: 1993 | color: white | country: Australia | seats: 4\nRemember to use lowercase names etc. + strings if needed. Declare your car with `const car`\nHint: || const car is your entry point, use curly brackets to declare informations such as {name: 'honda', age: 1993, etc...}||",
           "answers": ["const car = {name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car={name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car= {name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car ={name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car={name: 'honda', age: 1993, color: 'white', country: 'australia'}"],
           "time": 90000,
           "tries": 5,
