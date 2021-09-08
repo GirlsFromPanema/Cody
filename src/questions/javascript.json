@@ -387,7 +387,7 @@
       ],
       [
         {
-          "question": "**True, or false?**\n\nJavaScript would throw an Error when we would not use Strings within Objects\nExample:\n```js\nconst myself = {\n  name: Gerald,\n  age: 32```",
+          "question": "**True, or false?**\n\nJavaScript would throw an Error when we would not use Strings within Objects\nExample:\n```js\nconst myself = {\n  name: Gerald,\n  age: 32\n}```",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
