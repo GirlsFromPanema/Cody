@@ -349,6 +349,51 @@
           "type": "answer",
           "correct": "Easy! Nice : ) "
         }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Python Numbers**\n\nPython has three (3) numeric types\n\n➜ x = 1 # int\n➜ y = 3.5 # float\n➜ z = 1a # complex\n\nIf you want to verify the object, use the `type()` function\n\n```py\nprint(type(a))```\n Int or Integar, is a whole number, positive or negative, w/o decimals inclusive unlimited length"
+        }
+      ],
+      [ 
+        {
+          "question": "**Declare your own Python Number!**\n\nLast example, we had three numeric types! Go ahead and declare your own complex number.\n**Some important rules:**\nOnly use variables between `a` - `b` (a, b), numbers between 1 and 3 (1, 2, 3)\n```py\na = 2c```\nAs an example\n\nHint: || Choose a variable, for example a, now declare a complex number to it, for example 1b / 2a / 3a||",
+          "answers": ["a = 1a", "a= 1a", "a =1a", "a=1a", "a = 2a", "a= 2a", "a =2a", "a=2a", "a = 3a", "a= 3a", "a =3a", "a=3a", "a = 3a", "a= 3a", "a =3a", "a=3a","b = 1a", "b= 1a", "b =1a", "b=1a", "b = 2a", "b= 2a", "b =2a", "b=2a", "b = 3a", "b= 3a", "b =3a", "b=3a", "b = 3a", "b= 3a", "b =3a", "b=3a", "b= 1b", "b =1b", "b=1b", "b = 2b", "b= 2b", "b =2b", "b=2b", "b = 3b", "b= 3b", "b =3b", "b=3b", "b = 3b", "b= 3b", "b =3b", "b=3b"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 15,
+          "type": "answer",
+          "correct": "Good!"
+        }
+      ],
+      [ 
+        {
+          "question": "**Revision**\n\nLast example, we had three numeric types! We have successfully declared an Complex Number. Now we want to log the type into the Console!\nExample:\n```py\nx = 3.14444444563```\nPrint the type of **x**\nHint: ||Use the print and type statement within (variable name here) like print(type(abcdefg))||",
+          "answers": ["print(type(x))"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 6,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [ 
+        {
+          "question": "**Revision 2.0**\n\nUse the Cheatsheet above if needed, we will use more variables within complex Numbers. Go ahead and log it again!\nExample:```py\nz = -87.7e400```\nHint: || Use the print statement with the type declaration + ()) ||",
+          "answers": ["print(type(x))"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 8,
+          "type": "answer",
+          "correct": "Double dice! Wow"
+        }
       ]
     ]
   }

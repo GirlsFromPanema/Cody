@@ -99,7 +99,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example:\n```js\nconst x = 10;```\n```js\nlet y = 5```\n```js\nvar z = 3```\n\nVariable **x** is storing **10**, **y** is storing **5** and **z** is storing **3**"
+          "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example:\n```js\nconst x = 10;```\n```js\nlet y = 5;```\n```js\nvar z = 3;```\n\nVariable **x** is storing **10**, **y** is storing **5** and **z** is storing **3**"
         }
       ],
 
@@ -371,6 +371,30 @@
           "xp": 10,
           "type": "answer",
           "correct": "Right!"
+        }
+      ],
+      [
+        {
+          "question": "**Build your own Car!**\nCar name: Honda | age: 1993 | color: white | country: Australia | seats: 4\nRemember to use lowercase names etc. + strings if needed. Declare your car with `const car`\nHint: || const car is your entry point, use curly brackets to declare informations such as {name: 'honda', age: 1993, etc...}",
+          "answers": ["const car = {name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car={name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car= {name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car ={name: 'honda', age: 1993, color: 'white', country: 'australia'}", "const car={name: 'honda', age: 1993, color: 'white', country: 'australia'}"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 20,
+          "type": "answer",
+          "correct": "Congrats!"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nJavaScript would throw an Error when we would not use Strings within Objects\nExample:\n```js\nconst myself = {\n  name: Gerald,\n  age: 32```",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 2,
+          "xp": 5,
+          "type": "reaction",
+          "correct": "Nice!"
         }
       ]
     ]
