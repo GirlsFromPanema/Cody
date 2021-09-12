@@ -680,7 +680,7 @@ module.exports = async client => {
 
     const obj = {
       guilds: client.guilds.cache.size,
-      members: client.guilds.cache.size,
+      members: client.users.cache.size,
       roles: client.guilds.cache.size,
       channels: client.channels.cache.size,
       ping: client.ws.ping,
