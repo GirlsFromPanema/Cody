@@ -18,6 +18,14 @@
     />
     <meta name="title" content="Cody • The best coding bot for discord" />
     <meta property="og:image" content="<%=domain%>/logo.png" />
+    <meta
+      property="og:title"
+      content="Cody • The best coding bot for discord"
+    />
+    <meta
+      property="og:description"
+      content="Learn Programming the easy way, without any resources!"
+    />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/dashboard/dashboard.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -239,7 +247,7 @@
                     %>
                   </li>
                   <li>
-                    Expires in <%= moment.duration(settings.premium.expiresAt - Date.now()).format("d [days,] h [hours,] m [minutes and] s [seconds]") %>
+                    Expires in <%= moment.duration(settings.premium.expiresAt -Date.now()).format("d [days,] h [hours,] m [minutes and] s [seconds]") %>
                   </li>
                 </ul>
               </div>
