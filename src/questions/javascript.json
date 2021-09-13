@@ -10,7 +10,6 @@
           "question": "Welcome to **JavaScript!**\n\nJavascript is one of the `most popular` programming languages. \n\nIt's useful for `Websites`, `Process data`, `mobile and desktop apps`, and `games`"
         }
       ],
-
       [
         {
           "question": "Which is the correct statement?\n\n`1-` JavaScript is only for web apps\n`2-` JavaScript can be used to create interactive web elements\n`3-` JavaScript is not a client-side language",
@@ -23,7 +22,6 @@
           "correct": "Great job! Now let's take a look at outputs to console"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -33,7 +31,6 @@
           "question": "**Output to Console!**\n\nLet’s learn how to output something to a console using the `console.log()` function.\n\n__Looking like this:__\n```js\nconsole.log('Hello World')```"
         }
       ],
-
       [
         {
           "question": "**True, or false?**\n\nThe `console.log()` is a function in JavaScript which is used to print any kind of variables defined before in it or to just print any message that needs to be displayed.",
@@ -46,7 +43,6 @@
           "correct": "Wow!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -56,7 +52,6 @@
           "question": "**Looking at Data Types:**\n\n`1- Number:` Any number.\n`2- String:` Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by single quotes: ' ... ' or double quotes \" ... \".\n`3- Boolean:` This data type only has two possible values `true` or `false` (without quotes).\n`4- Null:` This data type represents the intentional absence of a value, and is represented by the keyword `null` (without quotes).\n`5- Undefined:` This data type is denoted by the keyword `undefined` (without quotes). It also represents the absence of a value though it has a different use than null.\n`6- Object:` Collections of related data.\n\nWe refer as these datatypes as primitive data types, each of them can only store a single type of data."
         }
       ],
-
       [
         {
           "xp": 0,
@@ -66,7 +61,6 @@
           "question": "Let's ignore the others for now and start with `strings` and `numbers`\n\n```js\nconsole.log('Today is a sunny day'); // includes lowercase and upercase, prints a string\nconsole.log(40); // logged without quotes, logs as a number```"
         }
       ],
-
       [
         {
           "question": "How can we log the **string** \"Hello World\" to console?",
@@ -83,7 +77,6 @@
           "correct": "Good job!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -102,7 +95,6 @@
           "question": "**Variables**\n\nWe have 3 ways to declare variables in JavaScript\n\nThe following are:\n**var**, **let** and **const**\nHere is an quick Example:\n```js\nconst x = 10;```\n```js\nlet y = 5;```\n```js\nvar z = 3;```\n\nVariable **x** is storing **10**, **y** is storing **5** and **z** is storing **3**"
         }
       ],
-
       [
         {
           "question": "**True, or false?**\n\nIn JavaScript, we can use variables in combination with Algebra (Math)",
@@ -115,7 +107,6 @@
           "correct": "Wow!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -125,7 +116,6 @@
           "question": "**let in JavaScript**\n\nThe **let** keyword is our best friend in JavaScript, let was introduced back in 2015\nVariables defined with let **cannot** be Redeclared and they have an **Block scope**\n\nHere are some Examples:\n```js\nlet number = 5000```\n```js\nlet favouritenumber = 10```\n\n**Warning!**\nYou cannot declare the **same** Value **2** or **more** times, example:\n```js\nlet x = 5```\n```js\nlet x = 500```"
         }
       ],
-
       [
         {
           "question": "**True, or false?**\n\nCan we **redeclare** variables with **var**?\n\nExample:\n```js\nvar x = 'Cody is cool!```\n```js\nvar x = 0;```",
@@ -138,7 +128,6 @@
           "correct": "Awesome!"
         }
       ],
-
       [
         {
           "question": "**Answer with yes or no**\n\nWhen we redeclare variables, can we have the same output?\n\nExample:\n```js\nvar x = 5\n```\n\n```js\nvar y = 5\n```",
@@ -151,7 +140,6 @@
           "correct": "Awesome! Good Job :=)"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -161,7 +149,6 @@
           "question": "**Block Scope in JavaScript**\n\nBefore 2015, JavaScript only had **Function Scope** and **Global Scope**\nJavaScript introduced two new keywords **let** and **const**\nExample:\n\n```js\n { \nlet a = 100\n }``` a **CANNOT** be used on the outside\n\nWith **var**, you can!\nExample:\n```js\n {  \nvar a = 100\n  }``` a CAN be used on the outside!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -171,7 +158,6 @@
           "question": "**Const Variables**\n\nConst **cannot** be reassigned\nJavaScript introduced **const** and **let** at the same time!\n\nExample:\n```js\nconst name;```\n\n```js\nname = 'Dave Brown'``` This would give an Error\n\nGood Example:\n```js\nconst name = 'Dave Brown'``` Thats my name - and it's working!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -181,7 +167,6 @@
           "question": "**When should we use Const?**\n\nAs we know const **cannot** be reassigned\nWe use them when we know, that the Value won't change\nExample:\n\n```js\nconst name = 'Maxime Dark'``` // This probably will not change\n\nMost of the time we use **const** when we declare\n- Functions\n- Objects\n- Arrays"
         }
       ],
-
       [
         {
           "question": "**Answer with yes or no**\n\nCan I add const to another variable I have already declared?\n\nExample:\n```js\nconst x = 5```\n```js\nx = Its my favourite letter!```",
@@ -194,7 +179,6 @@
           "correct": "Perfect!"
         }
       ],
-
       [
         {
           "question": "**Answer with yes or no**\n\nQuick training, could this work within const?\n\nExample:\n```js\nconst name = Davie Brown```\n```js\nnumber = '55500323'```",
@@ -207,7 +191,6 @@
           "correct": "Double dice, congrats!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -217,7 +200,6 @@
           "question": "**Operators?**\n\nJavaScript has many Operators we can use\nWe can assign variables and use Arithmetic Ooperators\n**+** = Addition\n**-** = Subtraction\n** * ** = Multiplication\n**/** = Division\n**++** = Increment\n**--** = Decrement\nExample:\n\n```js\nlet x = 500 + 250``` // Output: 750\n\nThe most used Arithmetic Operators are **+**, **-**, ** *** and **/**"
         }
       ],
-
       [
         {
           "question": "**True, or false?**\n\nIn JavaScript we can multiply variables\nExample:\n```js\nlet a = b * c```",
@@ -230,7 +212,6 @@
           "correct": "Nice!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -240,7 +221,6 @@
           "question": "**Javascript Objects**\nJavaScript has many options to assign simple values\nn```js\nconst car = {type: 'Mercedes', model: 'AMG 500', age: 1995, color: 'black'}```"
         }
       ],
-
       [
         {
           "question": "**True, or false?**\n\nAssigning Values also can go wrong, is this wrong?\nExample:\n```js\nlet car = 'Fiat', {type: 'Mercedes', model: 'AMG 500', age: '1995', color: 'black'}```",
@@ -253,7 +233,6 @@
           "correct": "Nice!"
         }
       ],
-
       [
         {
           "question": "**Lets give it a try!**\n\nSetting data types with values: **Integar**\nUse Data type `int` to create variable a with the result of 15 + 25\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
@@ -266,7 +245,6 @@
           "correct": "Easy! Nice : ) "
         }
       ],
-
       [
         {
           "question": "**Another one!**\n\nSetting data types with values: **string**\nUse Data type `string` to create variable **b** with the result of Apple\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
@@ -279,7 +257,6 @@
           "correct": "Awesome!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -289,7 +266,6 @@
           "question": "**Javascript Functions**\nJavaScripts function is executed when your Program is calling it (invokes it)\nn```js\nfunction myFirstFunction(a1, a2) {\n  return a1 + a2;\n\n}```\n*The function returns the product of a1 and a2*!"
         }
       ],
-
       [
         {
           "xp": 0,
@@ -299,7 +275,6 @@
           "question": "**Javascript Functions - Return**\nWhen there is an `return` statement, the Program will stop executing there.\nn```js\nlet z = mySecondFunction(2, 2)\n\nfunction mySecondFunction(a, b) {\n\n  return a * b; // Function returns the Product of a and b\n\n}```\nWhen there is an `return` statement, the Program will stop executing there.\nThe result here is `4`"
         }
       ],
-
       [
         {
           "question": "**Declare your own Function!**\n\nCheck the last two Examples about Functions\nCreate a function called myfunction and assign two variables called a and b into it\n\nRemember to use lower case variables\n\nHint: ||Your function always starts with the keyword function, + with the following function name -> myfunction(). Inside of your Function, declare two variables||",
@@ -312,7 +287,6 @@
           "correct": "Thats right!"
         }
       ],
-
       [
         {
           "question": "**Returning the function**\n\nNow lets use the keyword **return** to return your declared variables above\nWe will mix this up with some math, your return function should add 5 to 55. Only write the answer without the function!\n\nRemember to use lower case variables\n\nHint: ||Returning a function is very easy, use the keyword return + two numbers to multiply, add or remove etc.||",
@@ -396,7 +370,82 @@
           "type": "reaction",
           "correct": "Nice!"
         }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Javascript Events**\nJavaScript is used in HTML Pages, JS can **react** on these Events!\nn```js\n<element event='my JavaScript'```\n\nAnother example:\n```js\n<button onClick='document.getElementById('demo').innerHTML = Date()'>What time is it?<button>```\nJavaScript is most of the time several lines long, it is more common to see event attributes calling functions:\n```js\n<button onclick='displayDate()'>The time is?</button>```"
+        }
       ]
+    ],
+    "level1": [
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Javascript String / Lengths**\nGiven a string, either with one quote or two, you can access the length using the built-in **length** property!\nn```js\nlet mytext ='abcdefghijklmnopqrstuvwxyz'\nmytext.length; // will return 26```\nThis is because the Alphabet has 26. Letters, `.length` counts them!"
+        }
+      ],
+      [
+        {
+          "question": "**Length Property**\nGiven is the variable mynameisjohnparkinson1234567799999\nGo ahead and show us how people could know the length without actually counting it!\nCheck the last exercise if you need help!\n\nHint: || Use the variable name + .length; to show the length!||",
+          "answers": ["mynameisjohnparkinson1234567799999.length;"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 20,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "question": "**Length Property 2.0**\nGiven is the variable let mytext = parkeymarakeychickenwingvikingvictory0913\nAgain, go ahead and show us how people could **print** the length of **parkeymarakeychickenwingvikingvictory0913** without actually counting it!\nCheck the last exercises if you need help!\n\nHint: || Use the variable name + .length; to show the length within the console.log()||",
+          "answers": ["console.log(parkeymarakeychickenwingvikingvictory0913.length)"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Good!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Javascript Events**\nJavaScript is used in HTML Pages, JS can **react** on these Events!\nn```js\n<element event='my JavaScript'```\n\nAnother example:\n```js\n<button onClick='document.getElementById('demo').innerHTML = Date()'>What time is it?<button>```\nJavaScript is most of the time several lines long, it is more common to see event attributes calling functions:\n```js\n<button onclick='displayDate()'>The time is?</button>```"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Breaking Long Code Snippets/Lines**\nEvery Developer knows this feeling, when a line is too long for your Code Editor / Screen. Of course there are some tricks to fix this issue!\nExample 1:```js\ndocument.getElementById('demo').innerHTML ='Hello\nCody!';```\n\nExample 2:```js\ndocument.getElementById('demo').innerHTML = 'Hello' + \n 'Cody!'```\nYou could possibly also use backslashed withing the Strings, the most common and best way is using a backlash + n.\nIf the `n` is marked blue/colored, you are in the next line of Code!"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nRevision from the last task:\n```js\nmylongvariable = 'John +' Park\n\n**Logically, can this work?**",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "That's true! Because we did not used any Method to cut off Park!"
+        }
+      ]
+      
     ]
   }
 ]
