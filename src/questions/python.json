@@ -395,6 +395,72 @@
           "correct": "Double dice! Wow"
         }
       ]
+    ],
+    "level1": [
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Python Strings**\nYou are able to assign a multiline string to a variable by using three quotes:\n```py\ntext = '''Lorem ipsum dolor\nsit amet consectetur adipiscing elit'''\nprint(text)```\nIf you want to use the common strings, you have to use 3x2 of them."
+        }
+      ],
+      [
+        {
+          "question": "**Python Strings**\nWe have variable **text** with the value **'Hello, Program!'**\nWe now want to log the first letter of the Text with the Index of **1**.\nRemember, the first index is always **0**!\n```py\na = 'Hello, Program!'\n# here we want to print using the Index of 1```\nStuck? Here is a Hint: ||With the help of an array [] and the Index Number, you can easily log it using print||\nMore help: ||test[12] would print the 12th letter of the given text, can you solve it?||",
+          "answers": ["print(a[1])"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Looping trough Strings & String Length**\nSince strings are arrays, we can loops trough the characters within a string, using the **for** loop!\n```py\nfor heathly in 'banana':\n print(healthy)```\n**String Length**\nTo get the length of an string, we can use the `len()` function!\n```py\nmytext = 'Test, MyCoolTest!'\n  print(len(mytext))```\nEasy!"
+        }
+      ],
+      [
+        {
+          "question": "**True or False?**\nI can also use the String length withing an Index Array\n```py\ntesttext = 'abcdefghijklmnopqrstuvwxyz'\n  print(testtext[4])(len)",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**String Checks**\nYou can check if a phrase or character is present in a string, we will use the keyword `in`\n```py\ntext = 'I love to use Cody!'\nprint('Cody' in text)```\nIf its presenting, it will get logged. Very useful!"
+        }
+      ],
+      [
+        {
+          "question": "We can also check if its **NOT** in the text, do you think this could work?\n```py\ntext = 'I love to code all day!'\nprint('codyiscool' not in text)",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ]
+      
     ]
   }
 ]
