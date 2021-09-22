@@ -8,9 +8,10 @@ const embed = new MessageEmbed()
 .setColor("BLURPLE")
 
 client.on("message", (message) => {
-    if(message.content === `<@${client.user.id}>`) {
+    if(message.content.startsWith === `<@${client.user.id}>`) {
         message.channel.send(embed)
     }
+    //if(message.mentions.has(client.user)) 
   
         
     
