@@ -435,7 +435,7 @@
       ],
       [
         {
-          "question": "**True, or false?**\n\nRevision from the last task:\n```js\nmylongvariable = 'John +' Park\n\n**Logically, can this work?**",
+          "question": "**True, or false?**\n\nRevision from the last task:\n```js\nmylongvariable = 'John +' Park```\n\n**Logically, can this work?**",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -443,6 +443,48 @@
           "xp": 2,
           "type": "reaction",
           "correct": "That's true! Because we did not used any Method to cut off Park!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**String Search!**\nWe have a situation, someone tells us to locate a variable within an Array. The problem is, we dont know how ...\nThat's why JavaScript has the Method `indexOf`!\n\nExample:\n```js\nlet example = 'Please use indexOf to locate the Word **apple**'\nexample.lastIndexOf('apple') // Will return 37```\n\nThat's because the Progam counts the letters + space (beginning from index 0) until the actual word we'd like to locate!\nThere are two more Methods called `indexOf()` & `lastIndexOf()` => this would return `-1` if the Word is not given. "
+        }
+      ],
+      [
+        {
+          "question": "**String Search 2.0**\nNow go ahead and use the `lastIndexOf()` Method to return the Number for the following Text:\n\n```js\nlet text = 'jamie is living in the united states' // locate **United**```\nWarning: You have to use lowercase letters due to the Discord API restrictions. Would look like this:\nlastindexof()\n\nHint: ||Use the variable name **text** with the **lastIndexOf('word in here')** Method to locate the searched Word!||",
+          "answers": ["text.lastindexof('united')"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**String Search 3.0**\nWe now want to Search for a specific word within your text, here we are able to use `search` with the given Variable Name!\n\n```js\nlet mytext = 'hello world i love bananas'\nmytext.search('bananas') // Returns 9```\nThat's because we are couting Words + Spaces before the actual searched Word **bananas**\n\nDo you think, **indexOf()** and **search()** are equal?\nBecause they accept the same arguments (parameters) and return the same Value?\n\nThe two methods are **NOT** the same, here are the differences:\n- `search()` cannot take a second start position argument\n- `indexOf()` method cannot take powerful search values (regular expressions)\n\n**You will learn more about regular expressions in a later chapter.**"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nRevision from the last task:\n```js\nlet myvariable = 'hello mister variable'\nreturn myvariable.indexOf('mister')```\n\n**Logically, can this work?**",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "reaction",
+          "correct": "That's true! Because we cannot use a `return` there!"
         }
       ]
       
