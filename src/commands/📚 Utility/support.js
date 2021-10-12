@@ -38,7 +38,7 @@ module.exports = {
         .setTitle("Support Server")
         .setColor("GREEN")
         .setDescription(
-          "[Click this to join our support server](https://discord.gg/nBF9GRcq8c)"
+          "[Click this to join our Support Server](https://discord.gg/wQ9cKHwZ86)"
         ),
     });
   },

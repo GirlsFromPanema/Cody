@@ -17,7 +17,7 @@ try {
     '',
     '    🌐 **Help & Support**',
     '• **[Status](https://cody-bot.xyz/status)**',
-    '• **[Support Server](https://docs.Aeo.com)**',
+    '• **[Support Server](https://discord.gg/wQ9cKHwZ86)**',
     '• **[Contact us](https://cody-bot.xyz/contact)**',
     '',
     '',
