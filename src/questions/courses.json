@@ -4,8 +4,7 @@
     "premium_courses":[""],
     "course_descriptions": {
         "javascript":"Learn Javascript",
-        "python":"Learn Python",
-        "java": "Learn Java"
+        "python":"Learn Python"
     },
     "premium_levels":{
         "javascript":[],
