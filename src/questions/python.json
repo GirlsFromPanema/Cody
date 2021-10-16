@@ -386,7 +386,7 @@
       [ 
         {
           "question": "**Revision 2.0**\n\nUse the Cheatsheet above if needed, we will use more variables within complex Numbers. Go ahead and log it again!\nExample:```py\nz = -87.7e400```\nHint: || Use the print statement with the type declaration + ()) ||",
-          "answers": ["print(type(x))"],
+          "answers": ["print(type(z))"],
           "time": 90000,
           "tries": 5,
           "premiumTries": 10,
