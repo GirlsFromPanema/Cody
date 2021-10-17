@@ -12,6 +12,8 @@ module.exports = {
      */
     run: async(client, message, args) => {
 
+      const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+
         if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
 
         if (
@@ -39,12 +41,11 @@ module.exports = {
         }
 
         const avatarembed = new MessageEmbed()
-        .setTitle(`${message.author.username}'s Avatar`)
-        .setImage(message.author.displayAvatarURL({dynamic: true, size: 1024}))
+        .setTitle(`${message.member.username}'s Avatar`)
+        .setImage(message.member.displayAvatarURL({dynamic: true, size: 1024}))
         .setFooter("Visit us at • cody-bot.xyz")
         //.setTimestamp()
 
         await message.channel.send({embed: avatarembed}).then(( m => m.react("👻")))
-        message.react("✅")
     }
 }
