@@ -5,6 +5,7 @@ module.exports = {
   name: "servers",
   cooldown: 10,
   category: "👑 Owner",
+ // ownerOnly: true, 
   description: "Lists Codys Servers",
   /**
    * @param {Client} client
