@@ -1,6 +1,5 @@
 const client = require('../../src/index')
 const config = require('../../src/config.json')
-const prefix = client.prefix
 const { Collection } = require('discord.js')
 const Timeout = new Collection()
 const ms = require('ms')
@@ -9,6 +8,20 @@ const Guild = require('../database/schemas/Guild')
 
 client.on('message', async message => {
   if (message.author.bot) return
+  
+   let guild = message.client.guildSettings.get(message.guild.id)
+
+   if (!guild) {
+      const findGuild = await Guild.findOne({ Id: message.guild.id })
+      if (!findGuild) {
+        const newGuild = await Guild.create({ Id: message.guild.id })
+        message.client.guildSettings.set(message.guild.id, newGuild)
+        guild = newGuild
+      } else return
+  }
+  
+  const prefix = guild.prefix || client.prefix;
+  
   if (!message.content.startsWith(prefix)) return
   if (!message.guild) return
   const args = message.content
@@ -31,17 +44,7 @@ client.on('message', async message => {
       } else return
     }
 
-    let guild = message.client.guildSettings.get(message.guild.id)
-
-    if (!guild) {
-      const findGuild = await Guild.findOne({ Id: message.guild.id })
-      if (!findGuild) {
-        const newGuild = await Guild.create({ Id: message.guild.id })
-        message.client.guildSettings.set(message.guild.id, newGuild)
-        guild = newGuild
-      } else return
-    }
-
+  
     if (guild.disabledChannels.includes(message.channel.id)) return
     if (guild.disabledCommands.includes(command.name || command)) return
 
