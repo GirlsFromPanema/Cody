@@ -41,8 +41,8 @@ module.exports = {
         }
 
         const avatarembed = new MessageEmbed()
-        .setTitle(`${message.member.username}'s Avatar`)
-        .setImage(message.member.displayAvatarURL({dynamic: true, size: 1024}))
+        .setTitle(`${member.username}'s Avatar`)
+        .setImage(member.displayAvatarURL({dynamic: true, size: 1024}))
         .setFooter("Visit us at • cody-bot.xyz")
         //.setTimestamp()
 
