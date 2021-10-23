@@ -63,7 +63,7 @@
       ],
       [
         {
-          "question": "How can we log the **string** \"Hello World\" to console?",
+          "question": "How can we log the **string** \"hello world\" to console?",
           "answers": [
             "console.log(\"hello world\")",
             "console.log('hello world')",

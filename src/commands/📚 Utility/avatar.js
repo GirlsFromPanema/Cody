@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'avatar',
-    description: "Display the Users avatar",
+    description: "Display a Discord Users Avatar",
     category: '📚 Utility',
     aliases: "av",
     /** 

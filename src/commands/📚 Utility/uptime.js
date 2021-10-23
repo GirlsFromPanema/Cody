@@ -5,7 +5,7 @@ const { msToTimeObj } = require("../../handlers/util");
 module.exports = {
     name : 'uptime',
     category : 'info',
-    description : 'Returns uptime',
+    description : 'When did Cody came online?',
 
     /**
      * @param {Client} client

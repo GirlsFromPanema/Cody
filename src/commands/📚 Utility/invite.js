@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 module.exports = {
   name: 'invite',
   category: '📚 Utility',
-  description: "Sends you Cody's bot invite link",
+  description: "Sends you Cody's bot invite link.",
   cooldown: 3,
 
   run: async (client, message, args, user, guild) => {

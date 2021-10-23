@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "guide",
-  description: "Display the Users avatar",
+  description: "Guide how the Bot works.",
   category: "📚 Utility",
   aliases: "av",
   /**
