@@ -1,6 +1,6 @@
 {
 
-    "courses": ["javascript", "python"],
+    "courses": ["javascript", "python", "java"],
     "premium_courses":[""],
     "course_descriptions": {
         "javascript":"Learn Javascript",
