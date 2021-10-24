@@ -7,9 +7,16 @@ const User = require('../database/schemas/User')
 const Guild = require('../database/schemas/Guild')
 
 client.on('message', async message => {
+  
   if (message.author.bot) return
   
-   let guild = message.client.guildSettings.get(message.guild.id)
+   let guild;
+  
+   try {
+     guild = message.client.guildSettings.get(message.guild.id)
+   } catch (err) {
+     return;
+   }
 
    if (!guild) {
       const findGuild = await Guild.findOne({ Id: message.guild.id })
