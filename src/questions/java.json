@@ -1,0 +1,445 @@
+[
+  {
+    "level0": [
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "Welcome to **Java!**\n\nJava is/was one of the `most popular` programming languages. \n\nIt's useful for `back-end development`, `desktop computing`, `Android Apps`, and `Games`"
+        }
+      ],
+      [
+        {
+          "question": "Which is the correct statement?\n\n`1-` Java is only for web apps\n`2-` Java mostly used to create backend Systems\n`3-` Java is a function Programming Language",
+          "answers": ["2"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Great job! Now let's take a look at outputs to console"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Output to Console!**\n\nLet’s learn how to output something to a console using the `System.out.println('');` function.\n\n__Looking like this:__\n```java\nSystem.out.println('Hello World');```"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nThe `System.out.println();` is a function in Java which is used to print any kind of variables defined before in it or to just print any message that needs to be displayed.",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Wow!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Looking at the Java Syntax**\n\nWe have to define a public class with curly brackets `{}` and a static void function. Looks like this: \n```java\npublic class Main {\n public static void main(String[] args) {\n System.out.println('Hello, World!');\n }\n}'```\n\nEvery line of code that runs in Java, must be inside a `class`.\nWe named our Class `Main`, a class should always start with a uppercase first letter.\nThe name of the Java File must match the class name, here we would call our File `main.java`."
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "Let's start with `strings` and `numbers`\n\n```java\nSystem.out.println('Today is a rainy day'); // includes lowercase and upercase, prints a string\nSystem.out.println(40); // logged without quotes, logs as a number, also called integer```"
+        }
+      ],
+      [
+        {
+          "question": "**Lets make our very first print in Java!** Go ahead and print `today is a cool day` into the Console!\n\nWarning: Due to some security reasons, you have to use lowercase letters as the first letter.",
+          "answers": [
+            "system.out.println(\"today is a cool day\");",
+            "system.out.println('today is a cool day');",
+            "system.out.println(`today is a cool day`);"
+          ],
+          "time": 60000,
+          "tries": 1,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "answer",
+          "correct": "today is a cool day\nAwesome!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Comments in Java**\nTo add some explanations into your Code, it's useful to use Comments.\nIn Java, you are using `//`\n\nExample:\n```java\nSystem.out.println('Hello World'); // This is our Comment, yay!```\n\nThe program is not executing these Lines, you can write anything you want without getting errors.\nYou can also use multi-line Comments using `/* Comment Line 1 */`.\nYou can do it like this:\n```java\nSystem.out.println('Hello there!'); /* Hey Lines! \n */```\n"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 60000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Variables**\nLets start declaring (creating) varibles and printing them into the Console!\n\n- `String` = Stores text, such as 'Hello'.\n- `int` = Stores integers (whole numbers), without decimals, such as 145, -145.\n- `float` = Stores floating point numbers, with decimals, such as 14,33 or -14,33.\n- `char` = Stores single characters such as **a** or **C** (Surrounded by single quotes).\n- `boolean` = Stores values with two statues, either `true` or `false`.\n\nExample:\n```java\nString myname = 'John';\nSystem.out.println(myname);```"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nCan Java print integer (numbers) without quotes?\n\nExample: \n```java\nint number = 15;\nSystem.out.println(number);",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 5,
+          "xp": 10,
+          "type": "reaction",
+          "correct": "That's right, lets learn how to do it on our own!"
+        }
+      ],
+      [
+        {
+          "question": "**Create your own Integer!**\n\nGo ahead, declare your own variable called mynumber and assign the number 50 to it!\n\nHint: ||Declare your variable with int, add the name (mynumber) to it. We want the number `50` so we do equal 50.|| ",
+          "answers": ["int mynumber = 50;"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Awesome! Good Job :=)"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nThe int method cannot output comma numbers.\nExample:\n\n```java\nint newnumber = 12,34;\nSystem.out.println(number);```",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 5,
+          "xp": 8,
+          "type": "reaction",
+          "correct": "Awesome!"
+        }
+      ],
+      [
+        {
+          "question": "**Changing Values!**\n\nWe now want to change the value from a variables number!\n\nExample:\n```java\nint ournumber = 50;\n ournumber = 55;  // myNum is now 55 instead of 50\nSystem.out.println(ournumber);```\nNow, go ahead and create the variable mynumber with the value of 20, redeclare it to 200!\n\nHint: ||Use the example and change the numbers and the variable name to the ones given.||",
+          "answers": ["int mynumber = 20; mynumber = 200;"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Awesome! Good Job :=)"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Final Variables**\n\nif you don't want others (or yourself) to overwrite existing values (this will declare the variable as 'final' or 'constant', which means unchangeable and read-only):\n\n```java\nfinal int mynumber = 15;\nThis will generate a error saying something like: cannot assign a value to a final variable```"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Different Types**\n\nIn Java, we have a lot more Types and Methods. Use this as a Cheatsheet for the upcoming tasks.\n\n- `int myNum = 15;`\n- `float myFloatNumber = 3.33f;`\n- char myLetter = 'A';\nString myName = 'Johnnie';\nWe will learn more about data types in the upcoming chapter."
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Displaying Variables**\n\nWhat if we want to greet and display the users name at the same time? Well, that's very easy!\n\nExample:\n```java\nString customer = 'John';\nSystem.out.println('Hello ' + customer); // Output: Hello John```\n\nDisplaying the full name with three variables:\n```java\nString firstname = 'Jassie';\nString lastname = 'Parker';\nString fullname = firstname + lastname;\nSystem.out.println(fullName); // Output: Jassie Parker```"
+        }
+      ],
+      [
+        {
+          "question": "**Adding Variables/Integers**\n\nCan Java add two variables within a print?\n\nExample:\n```java\n int a = 5;\nint b = 4;\nSystem.out.println(a + b); // Will this display 9 in the Console?```",
+          "answers": ["yes"],
+          "time": 60000,
+          "tries": 3,
+          "premiumTries": 5,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Perfect! This is possible in most of the programming languages we use!"
+        }
+      ],
+      [
+        {
+          "question": "**Adding Variables Part 2**\n\nCan we multiply, remove and add variables at the same time? Think logically!\n\n```java\nint a = 1;\nint b = 2;\nint c = 3;\nint d = 4;\nSystem.out.println(a - b + c * d);",
+          "answers": ["no"],
+          "time": 60000,
+          "tries": 3,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Double dice, congrats!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Adding Variables**\n\nThe last task could not work due to logical syntax errors.\n\n```java\nint a = 1;\nint b = 2;\nint c = 3;\nint d = 4;\nSystem.out.println(a + b + c + d); // Output: 10```\n\nYou can either use the plus (+), minus (-), multiply (*) or the divide sign (/). But you cannot mix them (use them all at once in the same print)!!"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nWhile adding variables, you cannot add Comments to it.\n\nExample:\n```java\nSystem.out.println('This is my print' // yeah that's cool dude);",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 2,
+          "xp": 10,
+          "type": "reaction",
+          "correct": "Correct! It has to be on the outside of the braces ()"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Java Identifiers**\n\nHow can we declare variables that everyone can understand?\n\nThat's selfexplaining, most of the developers use self-explaning variable names so they won't forget what it was about.\n\nExample:\n```java\nint hoursPerDay = 24; // good\nint d = 24; // Bad```\nThat's because we don't know what `m` really means. This is very bad for later changes if we want to know what the variable is about."
+        }
+      ],
+      [
+        {
+          "question": "**General Rules**\n\nThere are some general rules to follow within variable names in Java.\n- Names can contain letters, digits, underscores, and dollar signs.\n- Names must begin with a letter.\n- Names should start with a lowercase letter and it cannot contain whitespace.\n- Names can also begin with $ and _ (we will use them later).\n- Names are case sensitive ('myVar' and 'myvar' are different variables).\n- Reserved words (like Java keywords, such as `int` or `boolean`) cannot be used as names.\n\nPress ✅ to continue :D.",
+          "answers": ["✅"],
+          "time": 60000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 10,
+          "type": "reaction",
+          "correct": "Nice!"
+        }
+      ],
+      [
+        {
+          "question": "**Answer with yes or no**\n\nIs it possible to declare big numbers within a variable and print them with a space?\n\n```java\nint number = 9999999 9999999;\nSystem.out.println(number);```",
+          "answers": ["no"],
+          "time": 60000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Easy! Nice :) "
+        }
+      ],
+      [
+        {
+          "question": "**Answer with yes or no**\n\nVariables can start with a symbol.\nExample: ```java\nint #number = 21",
+          "answers": ["no"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 4,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Awesome!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Java Type Casting**\nType casting is when you assign a value of one primitive data type to another type.\nIn Java, there are two types of casting."
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "The two types of type casting are: Widening Casting, Narrowing Casting\n\n__Widening Casting:__\nWidening casting is done automatically when passing a smaller size type to a larger size type.\n\n__Narrowing Casting:__\nNarrowing casting must be done manually by placing the type in parentheses in front of the value."
+        }
+      ],
+      [
+        {
+          "question": "**Questions about casting**\n\nHow many types of casting are there in Java? Answer with the number!",
+          "answers": [
+            "2"
+          ],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 6,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Thats right!"
+        }
+      ],
+      [
+        {
+          "question": "**Casting Part 2**\n\nAnswer with the correct Java Casting Method.\n\n`???` casting is done automatically when passing a smaller size type to a larger size type.\n\nHint: ||It's starting with w...||",
+          "answers": ["widening casting", "wideningcasting", "widening"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Congrats, your solution is correct!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Widening Casting**\n\nWidening casting is done automatically when passing a smaller size type to a larger size type:"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Narrow Casting**\n\nNarrow casting means: Narrowing casting must be done manually by placing the type in parentheses in front of the value.\n\n```java\npublic class Main {\n public static void main(String[] args) {\n double = myDouble = 5.34d;\nint myInt = (int) myDouble;\n\nSystem.out.println(myDouble); // Output 5.34\nSystem.out.println(myInt); // Output: 5\n }\n}"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Arithmetic Operators**\n\nArithmetic operators are used to perform common mathematical operations.\n\n- `+ Addition`\n- `- Substraction`\n- `* Multiplication`\n- `/ Division`\n- `% Modulus`\n- ´++ Increment`\n- `-- Decrement`."
+        }
+      ]  
+    ],
+    "level1": [
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Java Conditions and If Statements**\nJava supports the usual logical conditions from mathematics:\n\n- Less than: `a < b`\n- Less than or equal to: a <= b`\n- Greater than: `a > b`\nGreat than or equal to: `a >= b`\n- Equal to: `a == b`\nN- Not Equal: `a != b`.\n\n```java\nif (6 > 5) {\n System.out.println('6 is great than 5!');\n}"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Java else Statement**\nUse the `else` statement to specify a block of code to be executed if the condition is `false`.\n\n```java\nint time = 500;\nif (time <= 50) {\nSystem.out.println('Good Morning');\n} else {\n System.out.println('Good night');\n}```"
+        }
+      ],
+      [
+        {
+          "question": "**Java Switch Statement**\n\nUse the `switch` statement to select one of many code blocks to be executed.\n\n```java\nswitch(expression) {\n case x:\n // Code Block\n break;\ncase y:\n // Code Block 2\n break;\ndefault:\n  // Code Block 3\n}```\nThe break keyword stops the Code in a specific line.\n\nTo continue, type `yes`.",
+          "answers": [
+            "yes"
+          ],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Lets move on to a cool Task!"
+        }
+      ],
+      [
+        {
+          "question": "**Java If Statements/Conditions**\n\nGo ahead and return a if statement that checks if a is greater than b.\nPlease answer in lowercase sentences",
+          "answers": ["if(a > b)"],
+          "time": 90000,
+          "tries": 3,
+          "premiumTries": 4,
+          "xp": 20,
+          "type": "answer",
+          "correct": "Nice Job!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Java While Loop**\n\nLoops can execute a block of code as long as a specified condition is reached.\nLoops are handy because they save time, reduce errors, and they make code more readable.\n\n```java\nint a = 5;\nwhile(i < 5) {\n System.out.println('i is smaller than 5!');\ni++;\n}```\nThis will print the Text 4 times until its counted till 5."
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nJava Loops are usually used for big Code Blocks",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "That's true! Many people also use them in smaller Programs to handle their Program better."
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**The Do/While Loop**\n\nThe do/while loop is a variant of the while loop.\nThis loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.\nSyntax:\n\n```java\ndo {\n // Code block to be exectued\n}\n while (condition);```\n\n```java\nint i = 0;\ndo {\n  System.out.prinln(i);\ni++;\n}\nwhile (i < 5);```"
+        }
+      ],
+      [
+        {
+          "question": "**What is missing here?**\n\nThe while loop loops through a block of code as long as a specified condition is `??`.\n\nCheck the cheatsheet above if you need Hints.\nHint: ||When it's false, it cannot be executed :D||",
+          "answers": ["true"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 20,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Java for Loop**\n\nWhen you know exactly how many times you want to loop through a block of code, use the for `loop` instead of a while loop.\n\n```java\nfor (int i = 0; i < 5; i++) {\n  System.out.println(i);\n}\n// Output: 1 - 4 (1, 2, 3, 4)```"
+        }
+      ],
+      [
+        {
+          "question": "**True, or false?**\n\nWithin the Java for Loop, you are able to use the `break` keyword to stop the Code on a specific line/part.",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "reaction",
+          "correct": "Awesome, congrats!"
+        }
+      ]
+    ]
+  }
+]
