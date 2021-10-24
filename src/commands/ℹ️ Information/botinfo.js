@@ -59,13 +59,14 @@ module.exports = {
 
 
     const infos = stripIndent`
-    Bot Information
+    Bot Information:
     • Ping     : ${client.ws.ping}ms
     • Uptime   : ${moment.duration(client.uptime).format("H [hours and] m [minutes]")}
     • Servers  : ${client.guilds.cache.size}
     • Users    : ${client.users.cache.size}
-    • Channels : ${client.channels.cache.size}\n
+    • Library :  DiscordGo\n
     Database Information: 
+    - Database : Mongoose
     - Users    : ${users.length} users
     - Total XP : ${totalXP} XP`;
     	
