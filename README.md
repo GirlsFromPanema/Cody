@@ -1,5 +1,5 @@
 # Cody - Learn Programming the easy way!
-- Discord.js | Mongoose
+- Discord.js | Mongoose.
 
 # Setup
 
