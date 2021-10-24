@@ -56,6 +56,10 @@ module.exports = {
           level = user.courses[0].course.Level
         } else {
           if (user.courses.length > 1) {
+            console.log('----')
+            console.log(`${i}- Getting user data`)
+            console.log(user);
+            console.log('----')
             level = user.courses.reduce((a, b) => {
               return a.course.Level || 0 + b.course.Level || 0
             })
