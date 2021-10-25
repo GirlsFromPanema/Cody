@@ -4,17 +4,17 @@ const { Discord, MessageEmbed, Guild } = require("discord.js");
 try {
 
 
- client.on('guildCreate', async (guild, message) => {
+ client.on('guildCreate', async (guild) => {
 
   const adminchannel = await client.channels.fetch("901571515244482570");
+  const bots = guild.members.cache.filter((m) => m.user.bot).size;
+  const owner = guild.owner.user.tag
 
   const newserver = new MessageEmbed()
-  .setTitle("New Server!")
-  .setDescription("New Server: " + `\`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members`)
+  .setTitle("New Server")
+  .setDescription(`${owner} - \`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members - \`${bots}\` bots`)
   .setColor("GREEN")
   .setTimestamp()
-
-
 
   const embed = new MessageEmbed()                              
   .setThumbnail("https://cdn.discordapp.com/attachments/876477209186017340/876820442562822184/Rd0c07cb2486f8c6aa515c4f9fc608357.png", {size: 1024})
@@ -46,6 +46,7 @@ try {
     ]);
 
     guild.owner.send(embed).catch(() => {})
+    adminchannel.send("<@578678204890349594>");
     adminchannel.send(newserver)
   });
 } catch(error) {
