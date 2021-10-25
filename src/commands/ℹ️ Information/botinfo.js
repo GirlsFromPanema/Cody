@@ -64,9 +64,9 @@ module.exports = {
     • Uptime   : ${moment.duration(client.uptime).format("H [hours and] m [minutes]")}
     • Servers  : ${client.guilds.cache.size}
     • Users    : ${client.users.cache.size}
-    • Library :  DiscordPHP\n
+    • Library  : v${Discord.version}
+    • RAM      : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB / ${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)} MB\n
     Database Information: 
-    - Database : Mongoose
     - Users    : ${users.length} users
     - Total XP : ${totalXP} XP`;
     	
