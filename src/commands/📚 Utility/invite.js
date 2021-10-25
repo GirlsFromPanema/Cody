@@ -38,7 +38,7 @@ module.exports = {
         .setFooter(`Thanks ${message.author.username} for supporting me!`)
         .setTimestamp()
         .setDescription(
-          '[Click this to invite me](https://discord.com/api/oauth2/authorize?client_id=858311918447099925&permissions=141667728625&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fapi%2Finvite&scope=bot)'
+          '[Click this to invite me](https://discord.com/oauth2/authorize?client_id=858311918447099925&scope=bot&permissions=388160)'
         )
     })
   }
