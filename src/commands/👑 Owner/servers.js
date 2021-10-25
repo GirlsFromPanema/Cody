@@ -19,8 +19,10 @@ module.exports = {
       );
     }
 
+    const bots = message.guild.members.cache.filter((m) => m.user.bot).size;
+
     const servers = message.client.guilds.cache.array().map((guild) => {
-      return `\`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members`;
+      return `\`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members - \`${bots}\` bots`;
     });
 
     const embed = new MessageEmbed()
