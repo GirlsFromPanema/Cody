@@ -12,7 +12,7 @@ module.exports = {
    * @param {Message} message
    * @param {String[]} args
    */
-  run: async (client, message, args) => {
+  run: async (client, message, args, guild) => {
     if (message.author.id !== "578678204890349594") {
       return message.channel.send(
         ":x: | You are not allowed to use this Command"
@@ -20,10 +20,12 @@ module.exports = {
     }
 
     const bots = message.guild.members.cache.filter((m) => m.user.bot).size;
-    const owner = message.guild.owner.user.tag
+    const owner = await message.guild.members.fetch(guild.ownerID) 
+    .then(guildMember => sOwner = guildMember) 
+
 
     const servers = message.client.guilds.cache.array().map((guild) => {
-      return `${owner} - \`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members - \`${bots}\` bots`;
+      return `${guild.member(sOwner) ? sOwner.toString() : guild.owner.user.tag} - \`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members - \`${bots}\` bots`;
     });
 
     const embed = new MessageEmbed()
