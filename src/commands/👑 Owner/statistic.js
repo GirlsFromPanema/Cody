@@ -13,7 +13,7 @@ module.exports = {
    */
   run: async (client, message, args) => {
 
-    const bots = message.guild.members.cache.filter((m) => m.user.bot).size;
+    const bots = guild.members.cache.filter((m) => m.user.bot).size;
     
     const guildId = args[0];
     if (!rgx.test(guildId)) return message.channel.send(`:x: | Provide a guild`);
