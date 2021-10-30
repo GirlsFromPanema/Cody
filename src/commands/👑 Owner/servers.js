@@ -5,7 +5,7 @@ module.exports = {
   name: "servers",
   cooldown: 10,
   category: "👑 Owner",
- // ownerOnly: true, 
+  ownerOnly: true, 
   description: "Lists Codys Servers",
   /**
    * @param {Client} client
@@ -13,12 +13,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args, guild) => {
-    if (message.author.id !== "578678204890349594") {
-      return message.channel.send(
-        ":x: | You are not allowed to use this Command"
-      );
-    }
-
+    
     const bots = message.guild.members.cache.filter((m) => m.user.bot).size;
     const owner = await message.guild.members.fetch(guild.ownerID) 
     .then(guildMember => sOwner = guildMember) 
