@@ -14,7 +14,6 @@ module.exports = {
   run: async (client, message, args) => {
 
     const guildId = args[0];
-
     if (!rgx.test(guildId)) return message.channel.send(`:x: | Provide a guild`);
 
     const guild = message.client.guilds.cache.get(guildId);

@@ -14,13 +14,14 @@ module.exports = {
    */
   run: async (client, message, args, guild) => {
     
-    const bots = guild.members.cache.filter((m) => m.user.bot).size;
+
+    const bots = message.guild.members.cache.filter((m) => m.user.bot).size;
     const owner = await message.guild.members.fetch(guild.ownerID) 
     .then(guildMember => sOwner = guildMember) 
 
 
     const servers = message.client.guilds.cache.array().map((guild) => {
-      return `${guild.member(sOwner) ? sOwner.toString() : guild.owner.tag} - \`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members - \`${bots}\` bots`;
+      return `${guild.member(sOwner) ? sOwner.toString() : guild.owner.user.tag} - \`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members - \`${bots}\` bots`;
     });
 
     const embed = new MessageEmbed()
