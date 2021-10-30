@@ -22,7 +22,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
       .setTitle("Guild Stats")
-      .setDescription(`**Name:** ${guild.name}.\n**Owner:** ${guild.owner.user.tag}\n**Total Members:** ${guild.memberCount}\n**Total Bots:** ${bots}\n**Created:** ${guild.createdAt}\n**Channels:** ${message.guild.channels.cache.size}\n**Roles:** ${message.guild.roles.cache.size}`)
+      .setDescription(`**Name:** ${guild.name}.\n**Owner:** ${guild.owner.user.tag}\n**Total Members:** ${guild.memberCount}\n**Total Bots:** ${bots}\n**Created:** ${guild.createdAt}\n**Channels:** ${guild.channels.cache.size}\n**Roles:** ${guild.roles.cache.size}`)
       .setThumbnail(guild.iconURL({ dynamic: true }))
       .setFooter(
         message.member.displayName,

@@ -14,7 +14,7 @@ module.exports = {
    */
   run: async (client, message, args, guild) => {
     
-    const bots = message.guild.members.cache.filter((m) => m.user.bot).size;
+    const bots = guild.members.cache.filter((m) => m.user.bot).size;
     const owner = await message.guild.members.fetch(guild.ownerID) 
     .then(guildMember => sOwner = guildMember) 
 
