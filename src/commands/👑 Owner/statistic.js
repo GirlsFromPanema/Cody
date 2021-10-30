@@ -13,12 +13,14 @@ module.exports = {
    */
   run: async (client, message, args) => {
 
-    const bots = guild.members.cache.filter((m) => m.user.bot).size;
-    
     const guildId = args[0];
+
     if (!rgx.test(guildId)) return message.channel.send(`:x: | Provide a guild`);
+
     const guild = message.client.guilds.cache.get(guildId);
     if (!guild) return message.channel.send(`:x: | Invalid guild ID`);
+
+    const bots = guild.members.cache.filter((m) => m.user.bot).size;
 
     const embed = new MessageEmbed()
       .setTitle("Guild Stats")
