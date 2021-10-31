@@ -61,9 +61,9 @@ module.exports = {
         level = userDatabase.courses[0].course.Level
       } else {
         if (userDatabase.courses.length > 1) {
-          level = userDatabase.courses.reduce((a, b) => {
-            return a.course.Level || 0 + b.course.Level || 0
-          })
+          for (let courseLevel of userDatabase.courses){
+           if(courseLevel.course.Level) level = level + courseLevel.course.Level
+           }
         }
       }
     }
