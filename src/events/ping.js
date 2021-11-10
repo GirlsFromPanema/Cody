@@ -7,10 +7,9 @@ const embed = new MessageEmbed()
 .setColor("BLURPLE")
 
 client.on("message", (message) => {
-
+    if(message.author.bot) return;
     if(message.mentions.has(client.user))  {
-        if(message.author.bot) return;
-        if (message.content.includes(`<@858311918447099925>`)) 
+        if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
         message.channel.send(embed)
     }
 })
