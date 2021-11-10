@@ -1,8 +1,5 @@
 const client = require("../index")
 const { MessageEmbed } = require("discord.js")
-const mentionRegex = RegExp(`^<@!?${client.user.id}>$`);
-const mentionRegexPrefix = RegExp(`^<@!?${client.user.id}>`);
-
 
 const embed = new MessageEmbed()
 .setTitle("Cody")
