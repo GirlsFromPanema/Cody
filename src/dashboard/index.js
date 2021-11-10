@@ -327,9 +327,9 @@ module.exports = async client => {
               level = user.courses[0].course.Level
             } else {
               if (user.courses.length > 1) {
-                level = user.courses.reduce((a, b) => {
-                  return a.course.Level || 0 + b.course.Level || 0
-                })
+              for (let courseLevel of user.courses){
+               if(courseLevel.course.Level) level = level + courseLevel.course.Level
+              }
               }
             }
           }
