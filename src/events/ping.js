@@ -13,7 +13,7 @@ client.on("message", (message) => {
 
     if(message.mentions.has(client.user))  {
         if(message.author.bot) return;
-        if (message.content.includes("@here") || message.content.includes("@everyone") || message.content.includes(mentionRegexPrefix)) return false;
+        if (message.content.includes("@here") || message.content.includes("@everyone") || message.content.includes(`<@!858311918447099925>`)) return false;
         message.channel.send(embed)
     }
 })
