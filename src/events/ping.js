@@ -12,7 +12,7 @@ client.on("message", (message) => {
     if(message.mentions.has(client.user))  {
         if(message.author.bot) return;
         if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
-        message.channel.send(embed)
+        message.author.send(embed)
     }
     
   
