@@ -486,6 +486,36 @@
           "type": "reaction",
           "correct": "That's true! Because we cannot use a `return` there!"
         }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Variable Substitutions**\nTemplate literals allow variables in strings:\n```js\nlet firstname = 'Marie'\nlet lastname = 'Park'\n\nlet name = `Hey ${firstname} ${lastname};```\nIt is important to use the special Back-Tics, otherwise it can not work like expected!`"
+        }
+      ],
+      [
+        {
+          "question": "**Substitutions**\nNow go ahead and use the back tics to create variable `name` using const with the value `javascript`.\n\nHint: || `` - use these back tics to finish off this task with const [variable name] = value with back tics.||",
+          "answers": ["const name = `javascript`", "const name= `javascript`;"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 5,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**HTML Templates**\n\nHere is a small Example within HTML:\n\n```js\nlet header = 'Templates Literals';\nlet tags = ['template literals', 'javascript'];\n\nlet html = `<h2>${header}</h2><ul>`;\nfor (const x of tags) {\n  html += `<li>${x}</li>`;\n}\n\nhtml += `</ul>`;"
+        }
       ]
       
     ]
