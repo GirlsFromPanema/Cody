@@ -5,7 +5,7 @@ module.exports = {
   name: 'enroll',
   category: '🌐 Learn how to Code',
   description: 'Signs you up!',
-  cooldown: 1000 * 60 * 60 * 3,
+  cooldown: 360000,
 
   run: async (client, message, args, user, guild) => {
     if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;

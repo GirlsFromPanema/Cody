@@ -8,7 +8,7 @@ module.exports = {
   name: "botinfo",
   category: "ℹ️ Information",
   description: "Sends you Cody's information",
-  cooldown: 1000 * 60 * 60 * 30,
+  cooldown: 360000,
   aliases: ["bi", "stats"],
 
   /**

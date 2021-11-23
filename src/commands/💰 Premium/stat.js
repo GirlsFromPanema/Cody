@@ -6,7 +6,7 @@ module.exports = {
   name: "stat",
   category: "💰 Premium",
   description: "Display detailed statistics",
-  cooldown: 1000 * 60 * 60 * 24,
+  cooldown: 360000,
   aliases: ["st"],
 
   run: async (client, message, args, user, guild) => {

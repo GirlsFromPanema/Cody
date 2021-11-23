@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "fetch",
-  cooldown: 10,
+  cooldown: 360000,
   category: "👑 Owner",
   ownerOnly: true,
   description: "Cody Server Stats",

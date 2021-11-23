@@ -4,7 +4,6 @@ module.exports = {
   name: 'eval',
   category: '👑 Owner',
   description: 'Execute a code',
-  cooldown: 0,
   ownerOnly: true,
 
   run: async (client, message, args, user, guild) => {

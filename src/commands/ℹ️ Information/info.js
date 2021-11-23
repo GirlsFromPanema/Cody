@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed, Discord } = require("discord.js");
 
 module.exports = {
   name: "info",
-  cooldown: 1000 * 60 * 60 * 5,
+  cooldown: 600000,
   category: "ℹ️ Information",
   description: "Dunno what to do?",
   /**
