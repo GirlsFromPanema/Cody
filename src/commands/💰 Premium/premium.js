@@ -4,7 +4,7 @@ module.exports = {
   name: 'premium',
   category: '💰 Premium',
   description: 'Displays what includes in Cody Premium',
-  cooldown: 3,
+  cooldown: 1000 * 60 * 60 * 5,
 
   run: async (client, message, args, user, guild) => {
     if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;

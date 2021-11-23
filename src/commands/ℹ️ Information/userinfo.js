@@ -4,8 +4,8 @@ const moment = require('moment')
 module.exports = {
   name: 'userinfo',
   category: 'ℹ️ Information',
-  description: 'Sends you information about a provided user',
-  cooldown: 3,
+  description: 'Sends you information about a user',
+  cooldown: 1000 * 60 * 60 * 5,
   aliases: ['ui'],
 
   /**

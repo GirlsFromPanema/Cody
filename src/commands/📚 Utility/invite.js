@@ -4,7 +4,7 @@ module.exports = {
   name: 'invite',
   category: '📚 Utility',
   description: "Sends you Cody's bot invite link.",
-  cooldown: 3,
+  cooldown: 1000 * 60 * 60 * 5,
 
   run: async (client, message, args, user, guild) => {
     if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;

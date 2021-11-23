@@ -6,7 +6,7 @@ module.exports = {
   name: 'subscription',
   category: '💰 Premium',
   description: 'Displays info about your premium sub',
-  cooldown: 3,
+  cooldown: 1000 * 60 * 60 * 5,
   aliases: ['sub'],
 
   run: async (client, message, args, user, guild) => {

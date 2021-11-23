@@ -4,6 +4,7 @@ module.exports = {
   name: "guide",
   description: "Guide how the Bot works.",
   category: "📚 Utility",
+  cooldown: 1000 * 60 * 60 * 10,
   aliases: "av",
   /**
    * @param {Client} client

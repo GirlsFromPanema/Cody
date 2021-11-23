@@ -5,7 +5,8 @@ const { msToTimeObj } = require("../../handlers/util");
 module.exports = {
     name : 'uptime',
     category : 'info',
-    description : 'When did Cody came online?',
+    cooldown: 1000 * 60 * 60 * 6,
+    description : 'Whats Codys Uptime?',
 
     /**
      * @param {Client} client

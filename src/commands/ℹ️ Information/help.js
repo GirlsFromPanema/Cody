@@ -3,7 +3,7 @@ module.exports = {
   name: 'help',
   category: 'ℹ️ Information',
   description: "Sends you Cody's help menu.",
-  cooldown: 3,
+  cooldown: 1000 * 60 * 60 * 5,
 
   /**
    * @param {Client} client
