@@ -44,8 +44,8 @@ module.exports = {
       .setTimestamp();
 
     const stats = new Discord.MessageEmbed()
-    .setTitle("Stats");
-    setThumbnail(message.guild.iconURL({ dynamic: true }))
+    .setTitle("Stats")
+    .setThumbnail(message.guild.iconURL({ dynamic: true }))
     .setFooter(message.member.displayName, message.author.displayAvatarURL({ dynamic: true }))
     .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
     .setDescription(
