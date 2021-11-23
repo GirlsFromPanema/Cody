@@ -4,7 +4,6 @@ module.exports = {
     name: 'avatar',
     description: "Display a Discord Users Avatar",
     category: '📚 Utility',
-    cooldown: 1000 * 60 * 60 * 5,
     aliases: "av",
     /** 
      * @param {Client} client 

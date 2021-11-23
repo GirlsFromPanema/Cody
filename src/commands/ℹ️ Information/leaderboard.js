@@ -6,7 +6,6 @@ module.exports = {
   name: 'leaderboard',
   category: 'ℹ️ Information',
   description: "Display's Cody's global coding leaderboard",
-  cooldown: 420000,
   aliases: ['lb'],
 
   /**

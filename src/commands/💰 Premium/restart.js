@@ -6,7 +6,6 @@ module.exports = {
   name: 'restart',
   category: '💰 Premium',
   description: 'Restart a course from the beginning (premium)',
-  cooldown: 360000,
 
   run: async (client, message, args, user, guild) => {
     if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;

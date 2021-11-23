@@ -7,7 +7,6 @@ module.exports = {
   name: 'redeem',
   category: '💰 Premium',
   description: 'redeem a premium code to get premium',
-  cooldown: 360000,
 
   run: async (client, message, args, user, guild) => {
     if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;

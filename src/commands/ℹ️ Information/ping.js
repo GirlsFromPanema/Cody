@@ -2,7 +2,6 @@ module.exports = {
   name: 'ping',
   category: 'ℹ️ Information',
   description: 'Returns latency and API ping',
-  cooldown: 120000,
 
   run: async (client, message, args, user, guild) => {
     // Send a "Pinging" Message
