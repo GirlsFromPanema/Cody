@@ -5,7 +5,6 @@ module.exports = {
   name: 'userinfo',
   category: 'ℹ️ Information',
   description: 'Sends you information about a user',
-  cooldown: 120000,
   aliases: ['ui'],
 
   /**
