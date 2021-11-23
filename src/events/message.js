@@ -56,7 +56,7 @@ client.on("message", async (message) => {
           "**> You do not have permission to use this command**"
         );
     }
-
+    try {
     if (command.cooldown) {
       if (Timeout.has(`${command.name}${message.author.id}`))
         return message.channel.send({
@@ -74,5 +74,10 @@ client.on("message", async (message) => {
         Timeout.delete(`${command.name}${message.author.id}`);
       }, command.cooldown);
     } else command.run(client, message, args, user, guild);
+  } catch(error) {
+    console.log(error)
+    message.channel.send("Something went wrong.")
   }
+ }
+ 
 });
