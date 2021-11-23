@@ -63,7 +63,8 @@ module.exports = {
       )
     try {
     if (user && user.isPremium) {
-      return message.author.send(stats);
+       message.react("✅").then(() =>  message.author.send(stats))
+      
     } else {
       return message.channel.send(errorembed);
     }
