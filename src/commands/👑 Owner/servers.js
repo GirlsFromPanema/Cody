@@ -3,7 +3,6 @@ const ReactionMenu = require("../../data/ReactionMenu.js");
 
 module.exports = {
   name: "servers",
-  cooldown: 10,
   category: "👑 Owner",
   ownerOnly: true, 
   description: "Lists Codys Servers",

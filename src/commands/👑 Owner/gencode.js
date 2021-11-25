@@ -7,7 +7,6 @@ module.exports = {
   name: 'gencode',
   category: '👑 Owner',
   description: 'Generates a premium code',
-  cooldown: 0,
   ownerOnly: true,
 
   run: async (client, message, args, user, guild) => {
