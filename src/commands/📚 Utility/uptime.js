@@ -20,7 +20,7 @@ module.exports = {
 
             const embed = new MessageEmbed()
             .setDescription(`**${timeObj.days}** days, **${timeObj.hours}** hours, **${timeObj.minutes}** minutes, **${timeObj.seconds}** seconds`)
-            .setFooter("cody-bot.xyz | <3")
+            .setFooter("cody-bot.xyz")
             message.channel.send(embed)
 
         } catch(error) {

@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-
 /**
  * Get the key for the given value in an object.
  * @param {Object} object 
@@ -20,8 +19,8 @@ module.exports.getKeyByValue = function (object, value)
  */
 module.exports.msToMinAndSec = function (ms)
 {
-    var minutes = Math.floor(ms / 60000);
-    var seconds = ((ms % 60000) / 1000).toFixed(0);
+    let minutes = Math.floor(ms / 60000);
+    let seconds = ((ms % 60000) / 1000).toFixed(0);
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
 };
 

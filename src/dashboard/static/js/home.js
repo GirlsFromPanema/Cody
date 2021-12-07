@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var array = ['greatest', 'prime', 'top', 'finest'],
+  var array = ['greatest', 'prime', 'top', 'finest'], // Landing Page changing Text (highlighted)
     s = 0
   setInterval(function () {
     $('h1 span').fadeOut(function () {

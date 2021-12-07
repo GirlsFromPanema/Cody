@@ -1,16 +1,19 @@
 const mongoose = require('mongoose')
 
+// Generate Premium Code
 const premiumCode = mongoose.Schema({
   code: {
     type: mongoose.SchemaTypes.String,
     default: null
   },
 
+  // Set the expire date and time. <Day, Week, Month>
   expiresAt: {
     type: mongoose.SchemaTypes.Number,
     default: null
   },
 
+  // Set the plan <Day, Week, Month>.
   plan: {
     type: mongoose.SchemaTypes.String,
     default: null

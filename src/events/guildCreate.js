@@ -45,6 +45,7 @@ try {
     '**Have a great day! 😎**',
     ]);
 
+    // Send the Embed the Guild Owner, send a log notification to the Bot Admins.
     guild.owner.send(embed).catch(() => {})
     adminchannel.send("<@578678204890349594>");
     adminchannel.send(newserver)

@@ -1,23 +1,32 @@
-const express = require('express')
-const MongoStore = require('connect-mongo')
-const app = express()
 const Discord = require('discord.js')
-const rateLimit = require('express-rate-limit')
+
+const config = require('../config.json')
+const port = config.PORT || 8000
+
+const express = require('express')
+const app = express()
+
+const url = require('url')
+const path = require('path')
+
+const MongoStore = require('connect-mongo')
 const passport = require('passport')
 const session = require('express-session')
+
 const Strategy = require('passport-discord').Strategy
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
-const url = require('url')
-const path = require('path')
-const nicknameCooldown = new Set()
 const moment = require('moment')
-const config = require('../config.json')
-const port = config.PORT || 8000
+
 const User = require('../database/schemas/User')
 const minifyHTML = require('express-minify-html-terser')
 const Guild = require('../database/schemas/Guild')
+
+// Website Ratelimit for Cooldowns
+const rateLimit = require('express-rate-limit')
 const contactCooldown = new Set()
+const nicknameCooldown = new Set()
+
 const rateLimiter = rateLimit({
   windowMs: 60 * 1000,
   statusCode: 429,
@@ -433,6 +442,7 @@ module.exports = async client => {
       })
     }
 
+    // Query database settings for blocking channels
     let settings = await Guild.findOne({
       Id: guild.id
     })
@@ -458,6 +468,7 @@ module.exports = async client => {
 
     const data = req.body
 
+    // Setting nickname, blocking category and channels (included cooldown)
     try {
       if (
         (data.nickname && data.nickname !== guild.me.nickname) ||
@@ -484,12 +495,13 @@ module.exports = async client => {
           render(res, req, 'dashboard/dashboard/settings/settings.ejs', {
             guild: guild,
             settings: settings,
-            alert: 'Nickname length must be under 32 characters'
+            alert: 'Nickname length must be under 32 characters' // If the Nickname is too long, return is
           })
-          return
+          return;
         }
       }
 
+      // Changing Prefix 
       if (data.prefix && data.prefix !== settings.prefix) {
         const prefix = data.prefix.trim().replace(/\s/g, '')
         if (!prefix || !prefix.length) {
@@ -511,6 +523,7 @@ module.exports = async client => {
       return res.send('Something seems wrong. Try again later')
     }
 
+    // Save the Guild Settings <Prefix, Blocks, Nickname>
     const newSettings = await settings.save({ new: true })
     client.guildSettings.set(guild.id, newSettings)
 
@@ -532,6 +545,7 @@ module.exports = async client => {
       })
     }
 
+    // Fetch the Servers the Member is in (with permissions)
     const member = guild.members.cache.get(req.user.id)
     if (!member) {
       res.status(500)
@@ -539,6 +553,8 @@ module.exports = async client => {
         error: 'You are not a member of this Guild'
       })
     }
+
+    // Check permissions to manage the Bot
     if (!member.permissions.has('MANAGE_GUILD')) {
       res.status(500)
       return render(res, req, 'other/error/error.ejs', {
@@ -546,6 +562,7 @@ module.exports = async client => {
       })
     }
 
+    // Loop trough the Settings of the Guild and load them (if there arent one, create it!)
     let settings = client.guildSettings.get(guild.id)
 
     if (!settings) {
@@ -719,6 +736,7 @@ module.exports = async client => {
         error: 'You recently contacted us. Please wait a little and try again.'
       })
     }
+    // Styling of the Embed being sent <username/id> + <message>
     const contact = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle(`📬 Contact Form`)
@@ -742,6 +760,7 @@ module.exports = async client => {
       embeds: [contact]
     })
 
+    // Cooldown for sending messages trough the panel.
     contactCooldown.add(req.user.id)
     setTimeout(() => {
       contactCooldown.delete(req.user.id)
@@ -769,6 +788,7 @@ module.exports = async client => {
     render(res, req, 'other/500/500.ejs')
   })
 
+  // Setting the port online (from the config || default is 5000)
   app.listen(port, null, null, () =>
     console.log('WEBSITE ONLINE AT PORT ' + port)
   )

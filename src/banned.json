@@ -1,10 +1,10 @@
 {
-    "line": [""],
-    "line": [""],
-    "line": [""],
-    "line": [""],
-    "line": [""],
-    "line": [""],
-    "line": [""],
-    "line": [""]
+    "line": ["Perl"],
+    "line": ["PHP"],
+    "line": ["Lisp"],
+    "line": ["OCaml"],
+    "line": ["Bash"],
+    "line": ["Bat"],
+    "line": ["Shell"],
+    "line": ["PowerShell"]
   }

@@ -1,0 +1,6 @@
+{
+    "data": "hashmap",
+    "config": "config.json",
+    "disabled": "config.json",
+    "example": "config.example.json"
+}

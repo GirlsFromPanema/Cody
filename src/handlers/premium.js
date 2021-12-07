@@ -5,8 +5,10 @@ module.exports = async client => {
   cron.schedule('*/60 * * * * *', async () => {
     await User.find({ isPremium: true }, async (err, users) => {
       if (users && users.length) {
+
         for (let user of users) {
           if (Date.now() >= user.premium.expiresAt) {
+
             user.isPremium = false
             user.premium.redeemedBy = []
             user.premium.redeemedAt = null

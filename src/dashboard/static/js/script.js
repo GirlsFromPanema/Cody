@@ -1,3 +1,4 @@
+// Event listener for Pop ups, Buttons etc.
 
 function PopupCenter (e, n, t, i) {
   var o = void 0 != window.screenLeft ? window.screenLeft : screen.left,

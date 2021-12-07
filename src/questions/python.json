@@ -40,7 +40,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')``` Yeee ha! Math is saved."
+          "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')```\nThese are also called booleans\n```py\na = 500\nb = 123\nif a < b:\n print('B is not greater than A')"
         }
       ],
 
@@ -459,8 +459,205 @@
           "type": "reaction",
           "correct": "Great!"
         }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**String Slicing**\nYou can return a range of characters by using the slice syntax. You specify the start and the end index, separated by a colon, to return a part of the string. In this example, the output would be 'llo':\n ```py\nb = 'Hello, World!'\nprint(b[:5])```"
+        }
+      ],
+      [
+        {
+          "question": "**Slice From the Start**\nSo let's start at the beginning. By leaving out the start index, the range will start at the first character.\n```py\nb='Hello World!'\nprint(b[:5])```In this example, the output is 'Hello'. Now solve the following code:\n```py\nx='Cody is cool!'\nprint(x[:4])```",
+          "answers": ["cody"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "question": "**Slice to the End**\nBy leaving out the end index, the range will go to the end:\n```py\nb='Hello World!'\nprint(b[2:]```\nIn this case the first 2 Letters are going to be deleted, so the output is 'llo, World!'. Do you think the ouput of the following code is 'Discord'?\n```py\na = 'I hate Discord'\nprint(a[7:])```",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "question": "**Negative Indexing**\nUse negative indexes to start the slice from the end of the string:\n```py\na='Hello, World!'\nprint(a[-5:-2])```\n The range starts at the 'o' (position -5) in 'World!' and ends at the 'd' (position -2)' If we change the first index to -13, is the ouput be 'Hello'?",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Modify Strings**\n Python has a set of built-in methods that you can use on strings to modify them. In the following examples we will just print the result, but theres a important thing: If you modify a string with any of the coming methods, notice that they only return a string. If you want it to be saved, you need to save it in any variable."
+        }
+      ],
+      [
+        {
+          "question": "**Upper Case**\nThe upper() method returns the string in upper case. What do you think is going to be the output?\n```py\na = 'Cody is cool!'\nprint(a.upper())```\nPlease answer with `yes` if the result is\n```py\nCODY IS COOL```\n\nAnswer with `no` if the Output is something else!",
+          "answers": ["yes"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "question": "**Lower Case**\nThe lower() method returns the string in upper case.\n```py\na = 'Cody is cool!'\nprint(a.lower())```\nDo you think this prints 'CODY IS COOL!'?",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 5,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "question": "**Strip String**\nThe strip() method removes any whitespace from the beginning or the end. Do you think the following Code is going to print 'Hello,World?'?\n```py\na = ' Hello, World !'\nprint(a.strip())```",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "question": "**Replace String**\nThe replace() method replaces a string with another string. So if you want to replace 'C' in 'Cody' with a 'B', you would just simply write this:\n```py\nprint('Cody'.replace('C', 'B')```\nWhat do you think is the output of this code:\n```py\na='Boat'\nprint(a.replace('a', 'o').replace('t', 'k')```\nANSWER WITH LOWERCASE LETTERS!",
+          "answers": ["book"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "question": "**Split String**\nThe split() method returns a list where the text between the specified separator becomes the list items. We didn't do anything with lists yet, so heres a small explanation. Lists can include all Datatypes and very many of them. Every item in a list is separated by a comma:```py\nmy_list = ['Hello World', 12, 1.0, {'1': 2}]```\n Do you think this will print '['Cody', 'is', 'cool!']'?```py\na = 'Cody is cool!'\nprint(a.split(' ')```",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**String Concatenation**\nTo concatenate, or combine, two strings you can use the + operator. It puts them just to each other, it isn't like in math that ```py\na='1'\nb='2'\nc=a+b``` euqals 3, it's 31 because we're doing this with Strings not Integers.'"
+        }
+      ],
+      [
+        {
+          "question": "**Merge Variables - 1**\nTo Merge two Variables together, you can just use the '+' like shown in the last explanation. What is the output of this code?\n```py\na = 'hello'\nb = 'world'\nprint(a + b)```",
+          "answers": ["helloworld"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 10,
+          "xp": 10,
+          "type": "answer",
+          "correct": "Perfect!"
+        }
+      ],
+      [
+        {
+          "question": "**Merge Variables - 2**\nString Concatenation is also a great way to add a new value between strings, for example if you want to have a space between them. Do you think this will work? ```py\na='Hello'\nb='World!\nc=a + ' ' + b\nprint(c)",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 5,
+          "premiumTries": 8,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": [ "continue" ],
+          "question": "**String Format - 1**\nAs we learned in the Python Variables chapter, we cannot combine strings and numbers like this:\n```py\nage = 36\ntxt = 'My name is John, I am ' + age\nprint(txt)```\nBut we can combine strings and numbers by using the format() method! The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are Values: ```py\nage = 36\ntxt = 'My name is John, I am {}'\nprint(txt.format(age))```"
+        }
+      ],
+      [
+        {
+          "question": "**String Format - 2**\nThe format() method takes unlimited number of arguments, and are placed into the respective placeholders:\n```py\nquantity = 3\nitemno = 567\nprice = 49.95\nyorder = I want {} pieces of item {} for {} dollars.\nprint(myorder.format(quantity, itemno, price))```\nDo you agree that the Output is 'I want 567 pieces of item 3 for 49.95 dollars.'?",
+          "answers": ["❌"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "question": "**Merge Variables - Index Numbers**If you want to have your variables in a specific order, you can just put numbers in the curly braces, for example '{1}'. Do you think this works? ```py\nquantity = 3\nitemno = 567\nprice = 49.95\nmyorder = 'I want to pay {2} dollars for {0} pieces of item {1}.'\nprint(myorder.format(quantity, itemno, price))```",
+          "answers": ["✅"],
+          "time": 90000,
+          "tries": 2,
+          "premiumTries": 3,
+          "xp": 2,
+          "type": "reaction",
+          "correct": "Great!"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": [ "continue" ],
+          "question": "**Escape Character**\nTo insert characters that are illegal in a string, use an escape character. An escape character is a backslash followed by the character you want to insert. An example of an illegal character is a double quote inside a string that is surrounded by double quotes:\n```py\ntxt = txt = \"We are the \"Astros\" from the Earth.```\nTo avoid a error, we can use the escape character 'backslash+double quote' which cant be normally written here because it's going to be a double quote just like in python.'"
+        }
+      ],
+      [
+        {
+          "xp": 0,
+          "time": 90000,
+          "type": "continue",
+          "answers": ["continue"],
+          "question": "**Evaluate Values and Variables**\nThe `bool()` function allows you to evaluate any value, and give you `True` or `False` in return,\n```py\n\nprint(bool('Hello')\nprint(bool(30)) # => Output: true```\nAlmost any value is evaluated to **True** if it has some sort of content.\nAny string is **True**, except empty strings.\nAny number is **True**, except 0.\nAny list, tuple, set, and dictionary are **True**, except empty ones.\n\n*This is important to know for later tasks!*"
+        }
       ]
-      
     ]
   }
 ]

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+// The heart of the User, here is everything saved that the User does.
+// Such as Levels, Courses, Premium, Enrolled, XP, Leaderboard.
 const user = mongoose.Schema({
   Id: {
     type: mongoose.SchemaTypes.String,

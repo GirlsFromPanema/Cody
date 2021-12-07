@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const config = require('../../config.json')
 
+// Guild Settings such as ID (unique), prefix, disabled commands and channels.
 const guild = mongoose.Schema({
   Id: {
     type: mongoose.SchemaTypes.String,

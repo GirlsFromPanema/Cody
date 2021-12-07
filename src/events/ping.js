@@ -7,7 +7,10 @@ const embed = new MessageEmbed()
 .setColor("BLURPLE")
 
 client.on("message", (message) => {
+    // If the Author is a bot, don't send anything.
     if(message.author.bot) return;
+
+    // If the Author (User) pings the Bot, except for @here and @everyone, send the embed
     if(message.mentions.has(client.user))  {
         if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
         message.channel.send(embed)
