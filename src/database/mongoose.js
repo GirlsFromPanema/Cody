@@ -17,7 +17,8 @@ module.exports = {
     mongoose.set('useFindAndModify', false)
     
     //debugging, set to false to go into Production.
-    mongoose.set('debug', true)
+    mongoose.set('debug', false)
+    // Set to false for Production by Pazi 12/7/2021 GMT +2 4.40pm
     
     mongoose.Promise = global.Promise
 
