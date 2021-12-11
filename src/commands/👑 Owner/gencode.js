@@ -13,7 +13,7 @@ module.exports = {
     let codes = []
 
     const plan = args[0]
-    const plans = ['daily', 'weekly', 'monthly']
+    const plans = ['daily', 'weekly', 'monthly', 'yearly']
 
     if (!plan) return message.channel.send(`**> Please provide plan**`)
 
@@ -26,6 +26,7 @@ module.exports = {
     if (plan === 'daily') time = Date.now() + 86400000
     if (plan === 'weekly') time = Date.now() + 86400000 * 7
     if (plan === 'monthly') time = Date.now() + 86400000 * 30
+    if(plan === 'yearly') time = Date.now() + 86400000 * 365
 
     let amount = args[1]
     if (!amount) amount = 1
@@ -57,7 +58,7 @@ module.exports = {
         '\n'
       )}\n--------\n\nType - ${plan}\nExpires - ${moment(time).format(
         'dddd, MMMM Do YYYY'
-      )}\`\`\``
+      )}\`\`\`\nTo redeem, use \`$redeem <code>\``
     )
   }
 }

@@ -36,6 +36,15 @@ module.exports = {
       .setColor(message.guild.me.displayHexColor)
       .setTitle("Cody's available Courses")
       .setTimestamp()
+      .setThumbnail(message.guild.iconURL({ dynamic: true }))
+        .setFooter(
+          message.member.displayName,
+          message.author.displayAvatarURL({ dynamic: true })
+        )
+        .setAuthor(
+            message.guild.name,
+            message.guild.iconURL({ dynamic: true })
+          )
 
     for (let course of courses.courses) {
       const description = require(`../../questions/${course}.json`)

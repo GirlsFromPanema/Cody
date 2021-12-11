@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const moment = require('moment')
+const User = require('../../database/schemas/User')
 
 module.exports = {
   name: 'userinfo',
@@ -40,6 +41,13 @@ module.exports = {
         `);
     }
 
+    // Check if the User is a premium user
+    if (user && user.isPremium) {
+      var premiumstatus = "✅"
+    } else {
+      var premiumstatus = "❌"
+    }
+
     const mentionedUser =
       message.mentions.users.first() ||
       message.guild.members.cache.get(args[0]) ||
@@ -69,7 +77,7 @@ module.exports = {
 
     const embed = new Discord.MessageEmbed()
       .setTitle(mentionedUser.user.tag + "'s Information")
-      .setColor(message.guild.me.displayHexColor)
+      .setColor("GREEN")
       .setThumbnail(mentionedUser.user.displayAvatarURL({ dynamic: true }))
       .setFooter(`ID: ${mentionedUser.id}`)
       .setDescription(
@@ -85,12 +93,11 @@ module.exports = {
           userDatabase.enrolled
             ? moment(userDatabase.enrolled).format('MMMM Do YYYY, h:mm:ss a')
             : 'Not Enrolled'
-        }\`\n**Courses:** \`${
+        }\`\n**Premium:** ${premiumstatus}\n**Courses:** \`${
           userDatabase.courses.length
             ? userDatabase.courses.map(c => UpperCase(c.name)).join(' - ')
             : 'None'
-        }\`\n**Level:** \`${level}\`\n**XP:** \`${userDatabase.xp || 0}\``
-      )
+        }\`\n**Level:** \`${level}\`\n**XP:** \`${userDatabase.xp || 0}\`\n\nBy the way, you have a new Message in your Inbox!\nType \`<prefix> inbox\` to see it!`)
 
     return message.channel.send({ embed: embed })
   }
