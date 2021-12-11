@@ -55,3 +55,41 @@ body {
     font-size: 20px;
   }
 }
+
+.button {
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  user-select: none;
+  line-height: 1;
+  font-weight: 400;
+  display: center;
+
+  border-radius: 20px;
+  font-size: 13px;
+  
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 10px 25px;
+  transition: border 180ms ease-out 0s, background 180ms ease-out 0s;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+  min-width: 60px;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.edit {
+  background: rgb(68, 179, 127);
+}
+
+.edit:hover {
+  background-color: rgb(47, 124, 88);
+}
