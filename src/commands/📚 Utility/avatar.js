@@ -44,8 +44,7 @@ module.exports = {
         .setTitle(`${member.user.username}'s Avatar`)
         .setImage(member.user.displayAvatarURL({dynamic: true, size: 1024}))
         .setFooter("Visit us at • cody-bot.xyz")
-        //.setTimestamp()
 
-        await message.channel.send({embed: avatarembed}).then(( m => m.react("👻")))
+        await message.channel.send({embed: avatarembed})
     }
 }
