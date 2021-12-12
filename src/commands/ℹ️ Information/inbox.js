@@ -42,7 +42,7 @@ module.exports = {
       .setColor("RANDOM")
       .setTimestamp()
       .setDescription(
-        `Welcome ${message.author.username}!\nLast update: ${new Date().toLocaleString()} GMT\n\n📥 **Inbox:**\n*Dear Premium Users (82), we have added a Yearly Premium Subscription!\nIf you have been a premium member for more than 2 Months, contact us [here](https://cody-bot.xyz/contact) to receive your yearly plan, totally for free!*\n\n**🤔 Why aren't there coming new levels/languages to Codys Courses?**\n-> There are, don't worry. It takes a lot of time and I cannot work all the time on it.\n\nWe hire Developers helping us updating Cody, if you think you have enough experience, click [here](https://cody-bot.xyz/contact).\n\n❤️ Thanks for 100.000+ Users, and for the great Feedback in the past months!`
+        `Welcome ${message.author.username}!\nLast update: ${new Date().toLocaleString()} GMT\n\n📥 **Inbox:**\n*Dear Premium Users (82), we have added a Yearly Premium Subscription!\nIf you have been a premium member for more than 2 Months, contact us [here](https://cody-bot.xyz/contact) to receive your yearly plan, totally for free!*\n\n**🤔 Why aren't there coming new levels/languages to Codys Courses?**\n-> There are, don't worry. It takes a lot of time and I cannot work all the time on it.\n\n❤️ Thanks for 100.000+ Users, and for the great Feedback in the past months!`
       )
       .setFooter(`${message.author.username}`)
 
