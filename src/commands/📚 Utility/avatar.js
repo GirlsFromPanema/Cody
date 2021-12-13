@@ -12,8 +12,6 @@ module.exports = {
      */
     run: async(client, message, args) => {
 
-      const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
-
         if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
 
         if (
@@ -40,11 +38,15 @@ module.exports = {
             `);
         }
 
-        const avatarembed = new MessageEmbed()
-        .setTitle(`${member.user.username}'s Avatar`)
-        .setImage(member.user.displayAvatarURL({dynamic: true, size: 1024}))
-        .setFooter("Visit us at • cody-bot.xyz")
+        const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+        if(!user) return message.channel.send("> Please provide a (valid) User to get their Avatar!");
+        if(message.author.bot) return;
 
-        await message.channel.send({embed: avatarembed})
+        const embed1 = new MessageEmbed()
+        .setImage(user.displayAvatarURL ({dynamic: true, size: 512}))
+        .setFooter("cody-bot.xyz | 😎")
+        .setTimestamp()
+      
+        await message.channel.send({embed: embed1})
     }
 }
