@@ -1,4 +1,4 @@
-const client = require("../index")
+/*const client = require("../index")
 const { MessageEmbed } = require("discord.js")
 
 const embed = new MessageEmbed()
@@ -16,3 +16,4 @@ client.on("message", (message) => {
         message.channel.send(embed)
     }
 })
+*/
