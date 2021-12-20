@@ -7,57 +7,55 @@ module.exports = {
   description: 'Signs you up!',
 
   run: async (client, message, args, user, guild) => {
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send(`
-        ❌ I require some Permissions!
+      return message.channel.send({ content: `
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS,
+      ADD_REACTIONS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
   
-        **I need the following Permissions to work on your Server:**
-        EMBED_LINKS,
-        ADD_REACTIONS, 
-        SEND_MESSAGES, 
-        READ_MESSAGE_HISTORY,
-        VIEW_CHANNEL
-  
-        ⚠️ Please add me the right Permissions and re-run this Command!
-    
-        `);
+      `})
     }
 
-    message.react("✅")
-
+    message.react('✅')
 
     //defining the valid Courses available the user can enter. You can change these once you add more courses.
     const validCourses = require('../../questions/courses.json').courses
     const answer = await ask(
       `What course would you like to enroll in!\n\n**Available Courses:**\n${validCourses.join(
-        ' - '
+        ' - ',
       )}`,
-      message
+      message,
     )
 
-
     const timeover = new MessageEmbed()
-    .setTitle(":x: | Error")
-    .setDescription("The time ran out and the Process got canceled, rerun the Command to start again")
-    .setColor("RED")
-    .setFooter("Visit us at • cody-bot.xyz")
-    .setTimestamp()
-
-
+      .setTitle(':x: | Error')
+      .setDescription(
+        'The time ran out and the Process got canceled, rerun the Command to start again',
+      )
+      .setColor('RED')
+      .setFooter('Visit us at • cody-bot.xyz')
+      .setTimestamp()
 
     //if the user doesn't respond or types 'cancel', send him a "cancelled message"
     if (!answer) {
       try {
-        await message.author.send({embed: timeover})
+        await message.author.send({ embeds: [timeover] })
       } catch {
         message.channel.send('Cancelled - Your dms are closed')
       }
@@ -67,26 +65,30 @@ module.exports = {
     //check if the user wrote a course that isn't a course in the array we defined (Not a valid course)
     if (!validCourses.includes(answer)) {
       try {
-        await message.author.send(
-          new MessageEmbed()
-            .setColor('RED')
-            .setTitle('Provide a Valid Course')
-            .setDescription(
-              `Invalid Course Provided.\n\n**Current Courses available**\n${validCourses.join(
-                ' - '
-              )}`
-            )
-        )
+        await message.author.send({
+          embeds: [
+            new MessageEmbed()
+              .setColor('RED')
+              .setTitle('Provide a Valid Course')
+              .setDescription(
+                `Invalid Course Provided.\n\n**Current Courses available**\n${validCourses.join(
+                  ' - ',
+                )}`,
+              ),
+          ],
+        })
       } catch {
         message.channel.send(` ${message.author} `, {
-          embed: new MessageEmbed()
-            .setColor('RED')
-            .setTitle('Provide a Valid Course')
-            .setDescription(
-              `Invalid Course Provided.\n\n**Current Courses available**\n${validCourses.join(
-                ' - '
-              )}`
-            )
+          embeds: [
+            new MessageEmbed()
+              .setColor('RED')
+              .setTitle('Provide a Valid Course')
+              .setDescription(
+                `Invalid Course Provided.\n\n**Current Courses available**\n${validCourses.join(
+                  ' - ',
+                )}`,
+              ),
+          ],
         })
       }
       return
@@ -98,18 +100,26 @@ module.exports = {
     //check if the user already is enrolled in the selected course
     if (validUserCourses.includes(answer)) {
       try {
-        await message.author.send(
-          new MessageEmbed()
-            .setColor('RED')
-            .setTitle('Course already enrolled')
-            .setDescription(`You are already enrolled in this course, run the resume Command to proceed here`)
-        )
+        await message.author.send({
+          embeds: [
+            new MessageEmbed()
+              .setColor('RED')
+              .setTitle('Course already enrolled')
+              .setDescription(
+                `You are already enrolled in this course, run the resume Command to proceed here`,
+              ),
+          ],
+        })
       } catch {
         message.channel.send(` ${message.author} `, {
-          embed: new MessageEmbed()
-            .setColor('RED')
-            .setTitle('Course already enrolled')
-            .setDescription(`You are already enrolled in this course, run the resume Command to proceed here`)
+          embeds: [
+            new MessageEmbed()
+              .setColor('RED')
+              .setTitle('Course already enrolled')
+              .setDescription(
+                `You are already enrolled in this course, run the resume Command to proceed here`,
+              ),
+          ],
         })
       }
       return
@@ -120,18 +130,22 @@ module.exports = {
       .premium_courses
     if (premiumcourses.includes(answer) && !user.isPremium) {
       try {
-        await message.author.send(
-          new MessageEmbed()
-            .setColor('RED')
-            .setTitle('Premium Required')
-            .setDescription(`You need premium to enroll this course`)
-        )
+        await message.author.send({
+          embeds: [
+            new MessageEmbed()
+              .setColor('RED')
+              .setTitle('Premium Required')
+              .setDescription(`You need premium to enroll this course`),
+          ],
+        })
       } catch {
         message.channel.send(` ${message.author} `, {
-          embed: new MessageEmbed()
-            .setColor('RED')
-            .setTitle('Course already enrolled')
-            .setDescription(`You need premium to enroll this course`)
+          embeds: [
+            new MessageEmbed()
+              .setColor('RED')
+              .setTitle('Course already enrolled')
+              .setDescription(`You need premium to enroll this course`),
+          ],
         })
       }
       return
@@ -154,8 +168,8 @@ module.exports = {
         enrolled: Date.now(),
         Level: 0,
         xp: 0,
-        step: 0
-      }
+        step: 0,
+      },
     }
 
     //push the object to the user's courses
@@ -173,18 +187,18 @@ module.exports = {
       .setColor(
         message.guild.me.displayHexColor === '#000000'
           ? 'GREEN'
-          : message.guild.me.displayHexColor
+          : message.guild.me.displayHexColor,
       )
       .setDescription(
-        `Sucessfully enrolled the **${answer.toLowerCase()}** course!`
+        `Sucessfully enrolled the **${answer.toLowerCase()}** course!`,
       )
 
     try {
-      await message.author.send(embed)
+      await await message.author.send({ embeds: [embed] })
     } catch {
-      message.channel.send(` ${message.author} `, { embed: embed })
+      message.channel.send(` ${message.author} `, { embeds: [embed] })
     }
-  }
+  },
 }
 
 // the function to ask the user
@@ -197,23 +211,22 @@ async function ask (question, message) {
         .setAuthor(
           message.author.tag,
           message.member.user.displayAvatarURL({
-            dynamic: true
-          })
+            dynamic: true,
+          }),
         )
-        .setDescription(`${question}\n\nNot sure yet? type \`cancel\``)
+        .setDescription(`${question}\n\nNot sure yet? type \`cancel\``),
     )
   } catch (err) {
     console.log(err)
     return false
   }
 
-  const answers = await msg.channel.awaitMessages(
-    m => m.author.id == message.author.id,
-    {
-      max: 1,
-      time: 30000
-    }
-  )
+  const answers = await msg.channel.awaitMessages({
+    filter: m => m.author.id == message.author.id,
+
+    max: 1,
+    time: 30000,
+  })
 
   if (!answers.first()) {
     return false

@@ -15,30 +15,29 @@ module.exports = {
    */
 
   run: async (client, message, args, user, guild) => {
-
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send(`
-        ❌ I require some Permissions!
+      return message.channel.send({ content: `
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS,
+      ADD_REACTIONS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
   
-        **I need the following Permissions to work on your Server:**
-        EMBED_LINKS,
-        ADD_REACTIONS, 
-        SEND_MESSAGES, 
-        READ_MESSAGE_HISTORY,
-        VIEW_CHANNEL
-  
-        ⚠️ Please add me the right Permissions and re-run this Command!
-    
-        `);
+      `})
     }
 
     const users = await User.find({ hide: false })
@@ -54,10 +53,11 @@ module.exports = {
         if (user.courses.length === 1) {
           level = user.courses[0].course.Level
         } else {
-          if (user.courses.length > 1) { 
-           for (let courseLevel of user.courses){
-           if(courseLevel.course.Level) level = level + courseLevel.course.Level
-           }
+          if (user.courses.length > 1) {
+            for (let courseLevel of user.courses) {
+              if (courseLevel.course.Level)
+                level = level + courseLevel.course.Level
+            }
           }
         }
       }
@@ -66,15 +66,15 @@ module.exports = {
         const fetch = client.users.cache.get(user.Id)
         if (fetch && fetch.username) {
           array.push(
-            `\`${i}-\` **${fetch.username}** - \`${user.xp} XP | Level ${level}\``
+            `\`${i}-\` **${fetch.username}** - \`${user.xp} XP | Level ${level}\``,
           )
         } else
           array.push(
-            `\`${i}-\` **Unknown User** - \`${user.xp} XP | Level ${level}\` `
+            `\`${i}-\` **Unknown User** - \`${user.xp} XP | Level ${level}\` `,
           )
       } else
         array.push(
-          `\`${i}-\` **Unknown User** - \`${user.xp} XP | Level ${level}\` `
+          `\`${i}-\` **Unknown User** - \`${user.xp} XP | Level ${level}\` `,
         )
       i++
     }
@@ -85,6 +85,6 @@ module.exports = {
       .setFooter(`Showing Top 10 Users | cody-bot.xyz`)
       .setDescription(array.length ? array.join('\n') : 'No users found')
 
-    message.channel.send({ embed: embed })
-  }
+    message.channel.send({ embeds: [embed] })
+  },
 }

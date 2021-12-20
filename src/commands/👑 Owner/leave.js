@@ -13,14 +13,14 @@ module.exports = {
   run: async (client, message, args) => {
 
     if(message.author.id !== "578678204890349594") {
-        return message.channel.send(":x: | You are not allowed to use this Command")
+        return message.channel.send({ content: ":x: | You are not allowed to use this Command"})
     }
 
 
     const guildId = args[0];
-    if (!rgx.test(guildId)) return message.channel.send(`Provide a guild`);
+    if (!rgx.test(guildId)) return message.channel.send({ content: `Provide a guild`});
     const guild = message.client.guilds.cache.get(guildId);
-    if (!guild) return message.channel.send(`Invalid guild ID`);
+    if (!guild) return message.channel.send({ content: `Invalid guild ID`});
     await guild.leave();
     const embed = new MessageEmbed()
       .setTitle("Leave Guild")

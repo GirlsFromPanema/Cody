@@ -19,7 +19,7 @@ module.exports = {
 
     if (!plans.includes(args[0]))
       return message.channel.send(
-        `**Invalid Plan, available plans:** ${plans.join(', ')}`
+       { content:  `**Invalid Plan, available plans:** ${plans.join(', ')}`}
       )
 
     let time
@@ -54,11 +54,12 @@ module.exports = {
     }
 
     message.channel.send(
-      `\`\`\`Generated +${codes.length}\n\n--------\n${codes.join(
+      { content: 
+        `\`\`\`Generated +${codes.length}\n\n--------\n${codes.join(
         '\n'
       )}\n--------\n\nType - ${plan}\nExpires - ${moment(time).format(
         'dddd, MMMM Do YYYY'
-      )}\`\`\`\nTo redeem, use \`$redeem <code>\``
+      )}\`\`\`\nTo redeem, use \`$redeem <code>\``}
     )
   }
 }

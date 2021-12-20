@@ -1,51 +1,44 @@
-const { Client, Message, MessageEmbed } = require("discord.js");
-const ReactionMenu = require("../../data/ReactionMenu.js");
-
+const { Client, Message, MessageEmbed } = require('discord.js')
+const ReactionMenu = require('../../data/ReactionMenu.js')
 module.exports = {
-  name: "servers",
-  category: "👑 Owner",
-  ownerOnly: true, 
-  description: "Lists Codys Servers",
+  name: 'servers',
+  category: '👑 Owner',
+  ownerOnly: true,
+  description: 'Lists Codys Servers',
   /**
    * @param {Client} client
    * @param {Message} message
    * @param {String[]} args
    */
   run: async (client, message, args, guild) => {
-    
-
-    const owner = await message.guild.members.fetch(guild.ownerID) 
-    .then(guildMember => sOwner = guildMember) 
-
-
-    const servers = message.client.guilds.cache.array().map((guild) => {
-      return `\`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members`;
-    });
+    const servers = message.client.guilds.cache.map(guild => {
+      return `\`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members`
+    })
 
     const embed = new MessageEmbed()
-      .setTitle("Server List")
+      .setTitle('Server List')
       .setFooter(
         message.member.displayName,
-        message.author.displayAvatarURL({ dynamic: true })
+        message.author.displayAvatarURL({
+          dynamic: true,
+        }),
       )
       .setTimestamp()
-      .setColor("BLURPLE");
+      .setColor(message.guild.me.displayHexColor)
 
     if (servers.length <= 10) {
-      const range = servers.length == 1 ? "[1]" : `[1 - ${servers.length}]`;
-      message.channel.send(
-        embed
-          .setTitle(`Server List ${range}`)
-          .setDescription(servers.join("\n"))
-      );
+      const range = servers.length == 1 ? '[1]' : `[1 - ${servers.length}]`
+      embed.setTitle(`Server List ${range}`).setDescription(servers.join('\n'))
+
+      message.channel.send({ embeds: [embed] })
     } else {
       new ReactionMenu(
         message.client,
         message.channel,
         message.member,
         embed,
-        servers
-      );
+        servers,
+      )
     }
   },
-};
+}

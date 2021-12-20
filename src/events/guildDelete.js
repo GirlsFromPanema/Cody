@@ -16,8 +16,8 @@ try {
       .setTimestamp();
     
     // Log guildDelete (bot leaving server) into Admin Channel with some details about the Guild
-    adminchannel.send("<@578678204890349594>");
-    adminchannel.send(newserver);
+    adminchannel.send({ content: "<@578678204890349594>"});
+    adminchannel.send({ embed: [newserver]});
   });
 } catch (error) {
   console.log(error);

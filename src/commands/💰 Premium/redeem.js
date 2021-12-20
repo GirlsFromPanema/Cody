@@ -9,33 +9,33 @@ module.exports = {
   description: 'redeem a premium code to get premium',
 
   run: async (client, message, args, user, guild) => {
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send(`
-        ❌ I require some Permissions!
+      return message.channel.send({ content: `
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS,
+      ADD_REACTIONS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
   
-        **I need the following Permissions to work on your Server:**
-        EMBED_LINKS,
-        ADD_REACTIONS, 
-        SEND_MESSAGES, 
-        READ_MESSAGE_HISTORY,
-        VIEW_CHANNEL
-  
-        ⚠️ Please add me the right Permissions and re-run this Command!
-    
-        `);
+      `})
     }
 
     user = await User.findOne({
-      Id: message.author.id
+      Id: message.author.id,
     })
 
     let code = args[0]
@@ -44,24 +44,24 @@ module.exports = {
       return message.channel.send({
         embed: new Discord.MessageEmbed()
           .setColor('0xff0000')
-          .setDescription(`**Please specify the code you want to redeem!**`)
+          .setDescription(`**Please specify the code you want to redeem!**`),
       })
 
     if (user && user.isPremium) {
       return message.channel.send({
         embed: new Discord.MessageEmbed()
           .setColor('0xff0000')
-          .setDescription(`**> You already are a premium user**`)
+          .setDescription(`**> You already are a premium user**`),
       })
     }
 
     const premium = await schema.findOne({
-      code: code.toUpperCase()
+      code: code.toUpperCase(),
     })
 
     if (premium) {
       const expires = moment(premium.expiresAt).format(
-        'dddd, MMMM Do YYYY HH:mm:ss'
+        'dddd, MMMM Do YYYY HH:mm:ss',
       )
 
       user.isPremium = true
@@ -79,19 +79,19 @@ module.exports = {
         embed: new Discord.MessageEmbed()
           .setTitle('Premium Redeemed')
           .setDescription(
-            `**You have successfully redeemed premium!**\n\n\`Expires at: ${expires}\``
+            `**You have successfully redeemed premium!**\n\n\`Expires at: ${expires}\``,
           )
           .setColor('0x5eff00')
-          .setTimestamp()
+          .setTimestamp(),
       })
     } else {
       return message.channel.send({
         embed: new Discord.MessageEmbed()
           .setColor('0xff0000')
           .setDescription(
-            `**The code is invalid. Please try and using valid one!**`
-          )
+            `**The code is invalid. Please try and using valid one!**`,
+          ),
       })
     }
-  }
+  },
 }

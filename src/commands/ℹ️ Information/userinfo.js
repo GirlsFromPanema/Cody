@@ -15,37 +15,36 @@ module.exports = {
    */
 
   run: async (client, message, args, user, guild) => {
-
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send(`
-        ❌ I require some Permissions!
+      return message.channel.send({ content: `
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS,
+      ADD_REACTIONS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
   
-        **I need the following Permissions to work on your Server:**
-        EMBED_LINKS,
-        ADD_REACTIONS, 
-        SEND_MESSAGES, 
-        READ_MESSAGE_HISTORY,
-        VIEW_CHANNEL
-  
-        ⚠️ Please add me the right Permissions and re-run this Command!
-    
-        `);
+      `})
     }
 
     // Check if the User is a premium user
     if (user && user.isPremium) {
-      var premiumstatus = "✅"
+      var premiumstatus = '✅'
     } else {
-      var premiumstatus = "❌"
+      var premiumstatus = '❌'
     }
 
     const mentionedUser =
@@ -54,12 +53,12 @@ module.exports = {
       message.member
 
     if (!mentionedUser)
-      return message.channel.send(':x: Please provide a valid User')
+      return message.channel.send({ content: ':x: Please provide a valid User'})
 
     const userDatabase = client.userSettings.get(mentionedUser.id)
     if (!userDatabase)
       return message.channel.send(
-        'I could not find any data for ' + mentionedUser.user.tag
+        { content: 'I could not find any data for ' + mentionedUser.user.tag},
       )
 
     let level = 0
@@ -68,27 +67,28 @@ module.exports = {
         level = userDatabase.courses[0].course.Level
       } else {
         if (userDatabase.courses.length > 1) {
-          for (let courseLevel of userDatabase.courses){
-           if(courseLevel.course.Level) level = level + courseLevel.course.Level
-           }
+          for (let courseLevel of userDatabase.courses) {
+            if (courseLevel.course.Level)
+              level = level + courseLevel.course.Level
+          }
         }
       }
     }
 
     const embed = new Discord.MessageEmbed()
       .setTitle(mentionedUser.user.tag + "'s Information")
-      .setColor("GREEN")
+      .setColor('GREEN')
       .setThumbnail(mentionedUser.user.displayAvatarURL({ dynamic: true }))
       .setFooter(`ID: ${mentionedUser.id}`)
       .setDescription(
         `**Name:** \`${mentionedUser.user.tag}\`\n**ID:** \`${
           mentionedUser.id
         }\`\n**Status:** \`${UpperCase(
-          mentionedUser.presence.status
+          mentionedUser.presence.status,
         )}\`\n**Joined At:** \`${moment(mentionedUser.joinedAt).format(
-          'MMMM Do YYYY, h:mm:ss a'
+          'MMMM Do YYYY, h:mm:ss a',
         )}\`\n**Created At:** \`${moment(mentionedUser.user.createdAt).format(
-          'MMMM Do YYYY, h:mm:ss a'
+          'MMMM Do YYYY, h:mm:ss a',
         )}\`\n\n**Enrolled At:** \`${
           userDatabase.enrolled
             ? moment(userDatabase.enrolled).format('MMMM Do YYYY, h:mm:ss a')
@@ -97,10 +97,12 @@ module.exports = {
           userDatabase.courses.length
             ? userDatabase.courses.map(c => UpperCase(c.name)).join(' - ')
             : 'None'
-        }\`\n**Level:** \`${level}\`\n**XP:** \`${userDatabase.xp || 0}\`\n\nBy the way, you have a new Message in your Inbox!\nType \`<prefix> inbox\` to see it!`)
+        }\`\n**Level:** \`${level}\`\n**XP:** \`${userDatabase.xp ||
+          0}\`\n\nBy the way, you have a new Message in your Inbox!\nType \`<prefix> inbox\` to see it!`,
+      )
 
-    return message.channel.send({ embed: embed })
-  }
+    return message.channel.send({ embeds: [embed] })
+  },
 }
 
 function UpperCase (inputString) {

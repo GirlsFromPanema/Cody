@@ -7,29 +7,29 @@ module.exports = {
   description: "Displays all cody's current available courses",
 
   run: async (client, message, args, user, guild) => {
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send(`
-        ❌ I require some Permissions!
+      return message.channel.send({ content: `
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS,
+      ADD_REACTIONS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
   
-        **I need the following Permissions to work on your Server:**
-        EMBED_LINKS,
-        ADD_REACTIONS, 
-        SEND_MESSAGES, 
-        READ_MESSAGE_HISTORY,
-        VIEW_CHANNEL
-  
-        ⚠️ Please add me the right Permissions and re-run this Command!
-    
-        `);
+      `})
     }
 
     const embed = new Discord.MessageEmbed()
@@ -37,14 +37,11 @@ module.exports = {
       .setTitle("Cody's available Courses")
       .setTimestamp()
       .setThumbnail(message.guild.iconURL({ dynamic: true }))
-        .setFooter(
-          message.member.displayName,
-          message.author.displayAvatarURL({ dynamic: true })
-        )
-        .setAuthor(
-            message.guild.name,
-            message.guild.iconURL({ dynamic: true })
-          )
+      .setFooter(
+        message.member.displayName,
+        message.author.displayAvatarURL({ dynamic: true }),
+      )
+      .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
 
     for (let course of courses.courses) {
       const description = require(`../../questions/${course}.json`)
@@ -53,10 +50,10 @@ module.exports = {
         course,
         `${courses.course_descriptions[course]} **(${levels} Levels)** ${
           courses.premium_courses.includes(course) ? ` \`- premium\`` : ''
-        }`
+        }`,
       )
     }
 
-    message.channel.send({ embed: embed })
-  }
+    message.channel.send({ embeds: [embed] })
+  },
 }

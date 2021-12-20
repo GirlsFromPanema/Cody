@@ -8,7 +8,7 @@ module.exports = {
 
   run: async (client, message, args, user, guild) => {
     const input = args.join(' ')
-    if (!input) return message.channel.send('Please enter a code to execute.')
+    if (!input) return message.channel.send({ content: 'Please enter a code to execute.'})
 
     const embed = new MessageEmbed()
 
@@ -22,7 +22,7 @@ module.exports = {
           'Input',
           `\`\`\`js\n${
             input.length > 1024 ? 'Too large to display.' : input
-          }\`\`\``
+          }\`\`\``,
         )
         .addField(
           'Output',
@@ -30,7 +30,7 @@ module.exports = {
             output.length > 1024
               ? 'Too large to display. Check console'
               : output
-          }\`\`\``
+          }\`\`\``,
         )
         .setColor('#66FF00')
 
@@ -43,15 +43,17 @@ module.exports = {
           'Input',
           `\`\`\`js\n${
             input.length > 1024 ? 'Too large to display.' : input
-          }\`\`\``
+          }\`\`\``,
         )
         .addField(
           'Output',
-          `\`\`\`js\n${err.length > 1024 ? 'Too large to display.' : err}\`\`\``
+          `\`\`\`js\n${
+            err.length > 1024 ? 'Too large to display.' : err
+          }\`\`\``,
         )
         .setColor('#FF0000')
     }
 
-    message.channel.send({ embed: embed })
-  }
+    message.channel.send({ embeds: [embed] })
+  },
 }

@@ -6,14 +6,14 @@ module.exports = {
   description: "Sends you Cody's bot invite link.",
 
   run: async (client, message, args, user, guild) => {
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
       return message.channel.send(`
@@ -28,7 +28,7 @@ module.exports = {
   
         ⚠️ Please add me the right Permissions and re-run this Command!
     
-        `);
+        `)
     }
     message.channel.send({
       embed: new Discord.MessageEmbed()
@@ -37,8 +37,8 @@ module.exports = {
         .setFooter(`Thanks ${message.author.username} for supporting me!`)
         .setTimestamp()
         .setDescription(
-          '[Click this to invite me](https://discord.com/oauth2/authorize?client_id=858311918447099925&scope=bot&permissions=388160)'
-        )
+          '[Click this to invite me](https://discord.com/oauth2/authorize?client_id=858311918447099925&scope=bot&permissions=388160)',
+        ),
     })
-  }
+  },
 }

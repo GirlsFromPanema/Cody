@@ -1,12 +1,12 @@
-const client = require("../../src/index");
-const config = require("../../src/config.json");
+const client = require("../index");
+const config = require("../config.json");
 const { Collection } = require("discord.js");
 const Timeout = new Collection();
 const ms = require("ms");
 const User = require("../database/schemas/User");
 const Guild = require("../database/schemas/Guild");
 
-client.on("message", async (message) => {
+client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
   let guild;
@@ -62,7 +62,7 @@ client.on("message", async (message) => {
     if (command.ownerOnly) {
       if (!config.developers.includes(message.author.id))
         return message.channel.send(
-          "**> You do not have permission to use this command**"
+          { content: "**> You do not have permission to use this command**"}
         );
     }
 
@@ -87,7 +87,7 @@ client.on("message", async (message) => {
     } else command.run(client, message, args, user, guild);
   } catch(error) {
     console.log(error)
-    message.channel.send("Something went wrong."); // If something goes wrong, log the error and error into the Channel "Something went wrong".
+    message.channel.send({ content: "Something went wrong."}); // If something goes wrong, log the error and error into the Channel "Something went wrong".
   }
  }
 });

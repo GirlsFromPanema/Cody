@@ -5,7 +5,7 @@ module.exports = {
 
   run: async (client, message, args, user, guild) => {
     // Send a "Pinging" Message
-    const msg = await message.channel.send('🏓 Pinging...')
+    const msg = await message.channel.send({ content: '🏓 Pinging...'})
 
     //Check if the message was already edited
     const timestamp = message.editedTimestamp

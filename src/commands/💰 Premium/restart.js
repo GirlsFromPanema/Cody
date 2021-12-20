@@ -8,29 +8,29 @@ module.exports = {
   description: 'Restart a course from the beginning (premium)',
 
   run: async (client, message, args, user, guild) => {
-    if(!message.guild.me.permissions.has("SEND_MESSAGES")) return;
+    if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
-      !message.guild.me.hasPermission([
-        "EMBED_LINKS",
-        "ADD_REACTIONS",
-        "SEND_MESSAGES",
-        "READ_MESSAGE_HISTORY",
-        "VIEW_CHANNEL",
+      !message.guild.me.permissions.has([
+        'EMBED_LINKS',
+        'ADD_REACTIONS',
+        'SEND_MESSAGES',
+        'READ_MESSAGE_HISTORY',
+        'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send(`
-        ❌ I require some Permissions!
+      return message.channel.send({ content: `
+      ❌ I require some Permissions!
+
+      **I need the following Permissions to work on your Server:**
+      EMBED_LINKS,
+      ADD_REACTIONS, 
+      SEND_MESSAGES, 
+      READ_MESSAGE_HISTORY,
+      VIEW_CHANNEL
+
+      ⚠️ Please add me the right Permissions and re-run this Command!
   
-        **I need the following Permissions to work on your Server:**
-        EMBED_LINKS,
-        ADD_REACTIONS, 
-        SEND_MESSAGES, 
-        READ_MESSAGE_HISTORY,
-        VIEW_CHANNEL
-  
-        ⚠️ Please add me the right Permissions and re-run this Command!
-    
-        `);
+      `})
     }
 
     //if the user isn't premium block the command
@@ -40,10 +40,10 @@ module.exports = {
         .setColor(
           message.guild.me.displayHexColor === '#000000'
             ? 'GREEN'
-            : message.guild.me.displayHexColor
+            : message.guild.me.displayHexColor,
         )
         .setDescription(`This command is only for premium users`)
-      return message.channel.send({ embed: embed })
+      return message.channel.send({ embeds: [embed] })
     }
     //if the user doesn't exist / isn't enrolled yet it will tell him to enroll
     if (!user && !user.enrolled) {
@@ -52,10 +52,10 @@ module.exports = {
         .setColor(
           message.guild.me.displayHexColor === '#000000'
             ? 'GREEN'
-            : message.guild.me.displayHexColor
+            : message.guild.me.displayHexColor,
         )
         .setDescription(`Please enroll a course before using this command`)
-      return message.channel.send({ embed: embed })
+      return message.channel.send({ embeds: [embed] })
     }
 
     //if the user is enrolled but without any joined course tell him to join a course
@@ -65,10 +65,10 @@ module.exports = {
         .setColor(
           message.guild.me.displayHexColor === '#000000'
             ? 'GREEN'
-            : message.guild.me.displayHexColor
+            : message.guild.me.displayHexColor,
         )
         .setDescription(`Please enroll a course before using this command`)
-      return message.channel.send({ embed: embed })
+      return message.channel.send({ embeds: [embed] })
     }
 
     //if the user doesn't provide the course he wants to resume, it will tell him to provide a course
@@ -76,7 +76,7 @@ module.exports = {
       //defining the user's courses (ARRAY)
       const userCourses = user.courses.map(
         c =>
-          ` - \`${c.name}\` - enrolled ${moment(c.course.enrolled).fromNow()}`
+          ` - \`${c.name}\` - enrolled ${moment(c.course.enrolled).fromNow()}`,
       )
 
       //send the embed
@@ -86,9 +86,9 @@ module.exports = {
           .setTitle('Provide a course')
           .setDescription(
             `Please provide a course you would like to restart!\n\n**Your Courses:**\n${userCourses.join(
-              '\n'
-            )}`
-          )
+              '\n',
+            )}`,
+          ),
       })
     }
 
@@ -103,9 +103,9 @@ module.exports = {
           .setTitle('Provide a Valid Course')
           .setDescription(
             `Invalid Course Provided.\n\n**Current Courses**\n${validCourses.join(
-              ' - '
-            )}`
-          )
+              ' - ',
+            )}`,
+          ),
       })
     }
 
@@ -121,16 +121,16 @@ module.exports = {
           .setTitle('Provide a Valid Course')
           .setDescription(
             `Invalid Course Provided.\n\n**Current Courses You are enrolled in**\n${validUserCourses.join(
-              ' - '
-            )}`
-          )
+              ' - ',
+            )}`,
+          ),
       })
     }
     /* ask for a confirmation */
 
     //find the course from the database
     let course = user.courses.find(
-      n => n.name.toLowerCase() === args[0].toLowerCase()
+      n => n.name.toLowerCase() === args[0].toLowerCase(),
     )
 
     const confirmation = new MessageEmbed()
@@ -142,27 +142,26 @@ module.exports = {
           course.course.Level
         }\`\n**XP:** \`${course.course.xp}\`\nPage **#${
           course.course.step
-        }**\n***Course enrolled ${moment(course.course.enrolled).fromNow()}***`
+        }**\n***Course enrolled ${moment(course.course.enrolled).fromNow()}***`,
       )
       .setFooter('React with ✅ or ❌')
       .setColor(message.guild.me.displayHexColor)
 
     const confirmationMessage = await message.channel.send({
-      embed: confirmation
+      embed: confirmation,
     })
 
     confirmationMessage.react('✅')
     confirmationMessage.react('❌')
 
-    const answer = await confirmationMessage.awaitReactions(
-      (reaction, user) =>
+    const answer = await confirmationMessage.awaitReactions({
+      filter: (reaction, user) =>
         user.id == message.author.id &&
         (reaction.emoji.name == '✅' || reaction.emoji.name == '❌'),
-      {
-        max: 1,
-        time: 30000
-      }
-    )
+
+      max: 1,
+      time: 30000,
+    })
 
     if (!answer.first()) {
       return message.channel.send('Cancelled!')
@@ -184,13 +183,15 @@ module.exports = {
         Level: 0,
         xp: 0,
         step: 0,
-        finished: false
-      }
+        finished: false,
+      },
     }
 
     //replace old course to now
     const index = enrolled.courses.indexOf(
-      enrolled.courses.find(n => n.name.toLowerCase() === args[0].toLowerCase())
+      enrolled.courses.find(
+        n => n.name.toLowerCase() === args[0].toLowerCase(),
+      ),
     )
 
     enrolled.courses[index] = newCourse
@@ -207,12 +208,12 @@ module.exports = {
       .setColor(
         message.guild.me.displayHexColor === '#000000'
           ? 'GREEN'
-          : message.guild.me.displayHexColor
+          : message.guild.me.displayHexColor,
       )
       .setDescription(
-        `Sucessfully restarted the **${args[0].toLowerCase()}** course!`
+        `Sucessfully restarted the **${args[0].toLowerCase()}** course!`,
       )
 
-    message.channel.send({ embed: embed })
-  }
+    message.channel.send({ embeds: [embed] })
+  },
 }
