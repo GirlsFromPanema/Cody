@@ -6,6 +6,7 @@ module.exports = {
   description: 'Displays what includes in Cody Premium',
 
   run: async (client, message, args, user, guild) => {
+    
     if (!message.guild.me.permissions.has('SEND_MESSAGES')) return
     if (
       !message.guild.me.permissions.has([

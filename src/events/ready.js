@@ -7,9 +7,11 @@ const fs = require("fs");
 client.on("ready", async () => {
   console.log(`${client.user.tag} is now online!`);
 
+  // Some stuff for Logging 
   const filename = `./Logs/logging.txt`;
   const date = new Date().toLocaleString();
-  const content = `Time: ${date}\nSuccessfully logged in as ${client.user.tag}!`;
+  const guildata = client.guilds.cache.map(guild => guild.id);
+  const content = `Time: ${date}\nClient Name: ${client.user.tag}\n\nData:\n${guildata}`;
 
   // The Bots status
   client.user.setActivity("$info • cody-bot.xyz", { type: "PLAYING" });

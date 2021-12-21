@@ -7,7 +7,7 @@ const premiumCode = mongoose.Schema({
     default: null
   },
 
-  // Set the expire date and time. <Day, Week, Month>
+  // Set the expire date and time. <Day, Week, Month, Year>
   expiresAt: {
     type: mongoose.SchemaTypes.Number,
     default: null

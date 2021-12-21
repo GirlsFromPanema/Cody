@@ -34,6 +34,7 @@ module.exports = {
       `})
     }
 
+    // If the user has a valid premium sub, send him the message ;)
     if (user && user.isPremium) {
       return message.channel.send({
         embed: new Discord.MessageEmbed()

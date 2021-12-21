@@ -11,6 +11,8 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args, guild) => {
+
+    // Fetch the Servers, map them and display ID / NAME / Amount of TOTAL Members
     const servers = message.client.guilds.cache.map(guild => {
       return `\`${guild.id}\` - **${guild.name}** - \`${guild.memberCount}\` members`
     })
@@ -26,11 +28,14 @@ module.exports = {
       .setTimestamp()
       .setColor(message.guild.me.displayHexColor)
 
+    // Due to limits, only show max 10 Servers at one time.
     if (servers.length <= 10) {
       const range = servers.length == 1 ? '[1]' : `[1 - ${servers.length}]`
       embed.setTitle(`Server List ${range}`).setDescription(servers.join('\n'))
 
       message.channel.send({ embeds: [embed] })
+
+    // If there are more than 10, use the ReactionMenu to display a paginated list.
     } else {
       new ReactionMenu(
         message.client,

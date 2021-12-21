@@ -12,22 +12,26 @@ module.exports = {
   run: async (client, message, args, user, guild) => {
     let codes = []
 
+    // Display available plans of the code
     const plan = args[0]
     const plans = ['daily', 'weekly', 'monthly', 'yearly']
 
     if (!plan) return message.channel.send(`**> Please provide plan**`)
 
+    // If the users input does not match the plans array in line 17, return an error.
     if (!plans.includes(args[0]))
       return message.channel.send(
        { content:  `**Invalid Plan, available plans:** ${plans.join(', ')}`}
       )
 
+    // Calculate time for the code to expire.
     let time
     if (plan === 'daily') time = Date.now() + 86400000
     if (plan === 'weekly') time = Date.now() + 86400000 * 7
     if (plan === 'monthly') time = Date.now() + 86400000 * 30
     if(plan === 'yearly') time = Date.now() + 86400000 * 365
 
+    // Generate the code with a pattern of 12 characters.
     let amount = args[1]
     if (!amount) amount = 1
 
@@ -36,12 +40,15 @@ module.exports = {
         pattern: '####-####-####'
       })
 
+      // Save the Code to the database (within the redeem users profile)
       const code = codePremium.toString().toUpperCase()
 
+      // Security check, check if the code already exists in the database.
       const find = await schema.findOne({
         code: code
       })
 
+      // If it does not exist, create it in the database.
       if (!find) {
         schema.create({
           code: code,

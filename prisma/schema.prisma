@@ -6,24 +6,45 @@ generator client {
   previewFeatures = ["mongoDb"]
 }
 
+// Other databases not compatible with Dashboard and Discord Client.
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL") 
 }
 
 model Guild {
-  id           String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  name         String    @unique
-  title        String
-  body         String
-  userId       String    @db.ObjectId
+  Id                String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  prefix            String    @default("$")
+  name              String    @unique
+  disabledCommands  String    @db.ObjectId
+  disabledChannels  String    @db.ObjectId
 }
 
 // Comments contain a comment string and connect back to the post.
 // postId must have @db.ObjectId to match up with Post's id type
 
 model User {
-  id          String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  name        String?
+  Id          String      @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  username    String?
   premium     String
+  isPremium   Boolean
+  xp          Int         @default(0)
+  hide        Boolean
+  enrolled    Boolean
+  finished    Boolean
+  courses     String
+  redeemedBy  String
+  redeemedAt  String
+  expiresAt   DateTime    @db.Date     // @default(now())
+  
 }
+
+// Premium Users redeemed through a generated Code.
+model Code {
+  id          String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  userId      String  @db.ObjectId
+  isPremium   Boolean
+  plan        String                // Day, Week, Month, Year
+  expiresAt   DateTime @db.Date     // @default(now())
+}
+

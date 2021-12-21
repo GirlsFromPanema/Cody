@@ -34,10 +34,12 @@ module.exports = {
       `})
     }
 
+    // Check if the user with a unique ID is in the database.
     user = await User.findOne({
       Id: message.author.id,
     })
 
+    // Checl Users input for a valid code
     let code = args[0]
 
     if (!code)
@@ -47,6 +49,7 @@ module.exports = {
           .setDescription(`**Please specify the code you want to redeem!**`),
       })
 
+    // If the user is already a premium user, we dont want to save that so we return it.
     if (user && user.isPremium) {
       return message.channel.send({
         embed: new Discord.MessageEmbed()
@@ -55,15 +58,18 @@ module.exports = {
       })
     }
 
+    // Check if the code is valid within the database
     const premium = await schema.findOne({
       code: code.toUpperCase(),
     })
 
+    // Set the expire date for the code
     if (premium) {
       const expires = moment(premium.expiresAt).format(
         'dddd, MMMM Do YYYY HH:mm:ss',
       )
 
+      // Once the code is expired, we delete it from the database and from the users profile
       user.isPremium = true
       user.premium.redeemedBy.push(message.author)
       user.premium.redeemedAt = Date.now()
@@ -74,7 +80,8 @@ module.exports = {
       client.userSettings.set(message.author.id, user)
 
       await premium.deleteOne().catch(() => {})
-
+      
+      // Send a success message once redeemed
       message.channel.send({
         embed: new Discord.MessageEmbed()
           .setTitle('Premium Redeemed')
@@ -84,6 +91,8 @@ module.exports = {
           .setColor('0x5eff00')
           .setTimestamp(),
       })
+
+    // Error message if the code is not valid/failed. 
     } else {
       return message.channel.send({
         embed: new Discord.MessageEmbed()
