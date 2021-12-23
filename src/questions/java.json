@@ -49,7 +49,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Looking at the Java Syntax**\n\nWe have to define a public class with curly brackets `{}` and a static void function. Looks like this: \n```java\npublic class Main {\n public static void main(String[] args) {\n System.out.println('Hello, World!');\n }\n}'```\n\nEvery line of code that runs in Java, must be inside a `class`.\nWe named our Class `Main`, a class should always start with a uppercase first letter.\nThe name of the Java File must match the class name, here we would call our File `main.java`."
+          "question": "**Looking at the Java Syntax**\n\nWe have to define a public class with curly brackets `{}` and a static void function. Looks like this: \n```java\npublic class Main {\n public static void main(String[] args) {\n System.out.println('Hello, World!');\n }\n}```\n\nEvery line of code that runs in Java, must be inside a `class`.\nWe named our Class `Main`, a class should always start with a uppercase first letter.\nThe name of the Java File must match the class name, here we would call our File `main.java`."
         }
       ],
       [
