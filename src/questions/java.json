@@ -97,7 +97,7 @@
       ],
       [
         {
-          "question": "**True, or false?**\n\nCan Java print integer (numbers) without quotes?\n\nExample: \n```java\nint number = 15;\nSystem.out.println(number);",
+          "question": "**True, or false?**\n\nCan Java print integer (numbers) without quotes?\n\nExample: \n```java\nint number = 15;\nSystem.out.println(number);```",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
