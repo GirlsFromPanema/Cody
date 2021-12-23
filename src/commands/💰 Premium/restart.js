@@ -148,7 +148,7 @@ module.exports = {
       .setColor(message.guild.me.displayHexColor)
 
     const confirmationMessage = await message.channel.send({
-      embed: confirmation,
+      embeds: [confirmation],
     })
 
     confirmationMessage.react('✅')
