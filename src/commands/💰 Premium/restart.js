@@ -164,10 +164,10 @@ module.exports = {
     })
 
     if (!answer.first()) {
-      return message.channel.send('Cancelled!')
+      return message.channel.send({ content: 'Cancelled!' })
     } else {
       if (answer.first().emoji.name === '❌')
-        return message.channel.send('Cancelled!')
+        return message.channel.send({ content: 'Cancelled!' })
     }
 
     /* time to reset */
