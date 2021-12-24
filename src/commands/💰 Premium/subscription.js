@@ -19,7 +19,8 @@ module.exports = {
         'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send({ content: `
+      return message.channel.send({
+        content: `
       ❌ I require some Permissions!
 
       **I need the following Permissions to work on your Server:**
@@ -31,21 +32,24 @@ module.exports = {
 
       ⚠️ Please add me the right Permissions and re-run this Command!
   
-      `})
+      `,
+      })
     }
 
     // If the user has a valid premium sub, send him the message ;)
     if (user && user.isPremium) {
       return message.channel.send({
-        embed: new Discord.MessageEmbed()
-          .setColor('GREEN')
-          .setDescription(
-            `**Name:** ${
-              message.author.tag
-            }\n**Subscription:** Available\n**Ends in:** ${moment(
-              Number(user.premium.expiresAt),
-            ).toNow(true)}`,
-          ),
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor('GREEN')
+            .setDescription(
+              `**Name:** ${
+                message.author.tag
+              }\n**Subscription:** Available\n**Ends in:** ${moment(
+                Number(user.premium.expiresAt),
+              ).toNow(true)}`,
+            ),
+        ],
       })
     } else {
       return message.channel.send(`**> You do not have Premium active!**`)

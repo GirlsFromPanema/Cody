@@ -36,6 +36,6 @@ module.exports = {
       .setTimestamp()
       .setColor("RED");
       
-    message.channel.send({ embed: embed});
+    message.channel.send({ embeds: [embed]});
   },
 };

@@ -35,7 +35,7 @@ module.exports = {
       .setTimestamp()
       .setColor(message.guild.me.displayHexColor);
 
-    message.channel.send({embed: embed});
+    message.channel.send({embeds: [embed]});
 
   },
 };

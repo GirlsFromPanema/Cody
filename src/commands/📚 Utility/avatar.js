@@ -47,6 +47,6 @@ module.exports = {
       .setImage(member.user.displayAvatarURL({ dynamic: true, size: 1024 }))
       .setFooter('Visit us at • cody-bot.xyz')
 
-    await message.channel.send({ embed: avatarembed })
+    await message.channel.send({ embeds: [avatarembed] })
   },
 }

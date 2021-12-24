@@ -81,7 +81,7 @@ module.exports = {
 
       //send the embed
       return message.channel.send({
-        embed: new MessageEmbed()
+        embeds: [new MessageEmbed()
           .setColor('RED')
           .setTitle('Provide a course')
           .setDescription(
@@ -89,7 +89,7 @@ module.exports = {
               '\n',
             )}`,
           ),
-      })
+        ]})
     }
 
     //defining the valid Courses available the user can enter. You can change these once you add more courses.
@@ -98,7 +98,7 @@ module.exports = {
     if (!validCourses.includes(args[0].toLowerCase())) {
       //send the message
       return message.channel.send({
-        embed: new MessageEmbed()
+        embeds: [new MessageEmbed()
           .setColor('RED')
           .setTitle('Provide a Valid Course')
           .setDescription(
@@ -106,7 +106,7 @@ module.exports = {
               ' - ',
             )}`,
           ),
-      })
+         ] })
     }
 
     //defining the user's joined courses (ARRAY)
@@ -116,7 +116,7 @@ module.exports = {
     if (!validUserCourses.includes(args[0].toLowerCase())) {
       //send embed
       return message.channel.send({
-        embed: new MessageEmbed()
+        embeds: [new MessageEmbed()
           .setColor('RED')
           .setTitle('Provide a Valid Course')
           .setDescription(
@@ -124,7 +124,7 @@ module.exports = {
               ' - ',
             )}`,
           ),
-      })
+        ]})
     }
     /* ask for a confirmation */
 

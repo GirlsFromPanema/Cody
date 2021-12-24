@@ -12,7 +12,7 @@
     "dependencies": {
         "ascii-table": "0.0.9",
         "body-parser": "^1.19.0",
-        "common-tags": "^1.8.0",
+        "common-tags": "^1.8.2",
         "connect-mongo": "^4.4.1",
         "discord.js": "^13.3.1",
         "ejs": "^3.1.6",

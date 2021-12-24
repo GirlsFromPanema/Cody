@@ -31,7 +31,7 @@ module.exports = {
         `)
     }
     message.channel.send({
-      embed: new Discord.MessageEmbed()
+      embeds: [new Discord.MessageEmbed()
         .setTitle('Invite Cody')
         .setColor('GREEN')
         .setFooter(`Thanks ${message.author.username} for supporting me!`)
@@ -39,6 +39,6 @@ module.exports = {
         .setDescription(
           '[Click this to invite me](https://discord.com/oauth2/authorize?client_id=858311918447099925&scope=bot&permissions=388160)',
         ),
-    })
+      ]})
   },
 }

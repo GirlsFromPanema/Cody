@@ -54,6 +54,6 @@ module.exports = {
 
     //.setTimestamp()
 
-    await message.channel.send({ embed: [infoembed] }).then(m => m.react('👽'))
+    await message.channel.send({ embeds: [infoembed] }).then(m => m.react('👽'))
   },
 }

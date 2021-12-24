@@ -19,7 +19,8 @@ module.exports = {
         'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send({ content: `
+      return message.channel.send({
+        content: `
       ❌ I require some Permissions!
 
       **I need the following Permissions to work on your Server:**
@@ -31,7 +32,8 @@ module.exports = {
 
       ⚠️ Please add me the right Permissions and re-run this Command!
   
-      `})
+      `,
+      })
     }
 
     // Check if the user with a unique ID is in the database.
@@ -44,17 +46,21 @@ module.exports = {
 
     if (!code)
       return message.channel.send({
-        embed: new Discord.MessageEmbed()
-          .setColor('0xff0000')
-          .setDescription(`**Please specify the code you want to redeem!**`),
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor('0xff0000')
+            .setDescription(`**Please specify the code you want to redeem!**`),
+        ],
       })
 
     // If the user is already a premium user, we dont want to save that so we return it.
     if (user && user.isPremium) {
       return message.channel.send({
-        embed: new Discord.MessageEmbed()
-          .setColor('0xff0000')
-          .setDescription(`**> You already are a premium user**`),
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor('0xff0000')
+            .setDescription(`**> You already are a premium user**`),
+        ],
       })
     }
 
@@ -80,26 +86,30 @@ module.exports = {
       client.userSettings.set(message.author.id, user)
 
       await premium.deleteOne().catch(() => {})
-      
+
       // Send a success message once redeemed
       message.channel.send({
-        embed: new Discord.MessageEmbed()
-          .setTitle('Premium Redeemed')
-          .setDescription(
-            `**You have successfully redeemed premium!**\n\n\`Expires at: ${expires}\``,
-          )
-          .setColor('0x5eff00')
-          .setTimestamp(),
+        embeds: [
+          new Discord.MessageEmbed()
+            .setTitle('Premium Redeemed')
+            .setDescription(
+              `**You have successfully redeemed premium!**\n\n\`Expires at: ${expires}\``,
+            )
+            .setColor('0x5eff00')
+            .setTimestamp(),
+        ],
       })
 
-    // Error message if the code is not valid/failed. 
+      // Error message if the code is not valid/failed.
     } else {
       return message.channel.send({
-        embed: new Discord.MessageEmbed()
-          .setColor('0xff0000')
-          .setDescription(
-            `**The code is invalid. Please try and using valid one!**`,
-          ),
+        embeds: [
+          new Discord.MessageEmbed()
+            .setColor('0xff0000')
+            .setDescription(
+              `**The code is invalid. Please try and using valid one!**`,
+            ),
+        ],
       })
     }
   },

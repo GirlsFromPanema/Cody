@@ -48,7 +48,7 @@ try {
     // Send the Embed the Guild Owner, send a log notification to the Bot Admins.
     guild.owner.send(embed).catch(() => {})
     adminchannel.send({ content: "<@578678204890349594>"});
-    adminchannel.send({ embed: [newserver]})
+    adminchannel.send({ embeds: [newserver]})
   });
 } catch(error) {
     console.log(error)

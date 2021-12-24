@@ -17,7 +17,8 @@ module.exports = {
         'VIEW_CHANNEL',
       ])
     ) {
-      return message.channel.send({ content: `
+      return message.channel.send({
+        content: `
       ❌ I require some Permissions!
 
       **I need the following Permissions to work on your Server:**
@@ -29,16 +30,19 @@ module.exports = {
 
       ⚠️ Please add me the right Permissions and re-run this Command!
   
-      `})
+      `,
+      })
     }
 
     message.channel.send({
-      embed: new Discord.MessageEmbed()
-        .setTitle('Support Server')
-        .setColor('GREEN')
-        .setDescription(
-          '[Click this to join our Support Server](https://discord.gg/wQ9cKHwZ86)',
-        ),
+      embeds: [
+        new Discord.MessageEmbed()
+          .setTitle('Support Server')
+          .setColor('GREEN')
+          .setDescription(
+            '[Click this to join our Support Server](https://discord.gg/wQ9cKHwZ86)',
+          ),
+      ],
     })
   },
 }
