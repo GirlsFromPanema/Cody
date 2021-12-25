@@ -8,7 +8,7 @@
 # Cody - made for Programmers
 A advanced Discord written in NodeJS | Discord.js Library.
 Professional Dashboard, awesome Coding Courses within a FREE Premium System.
-Never get in touch with unreadable Websites and Documenations, learn it all from Cody!
+Never get in touch with unreadable websites and documentations, learn everything from Cody!
 Doesn't matter if you want to learn Java, Python or even JavScript.
 Cody will boost your technical knowledge and programming skills.
 What are you waiting for? Try [Cody](https://cody-bot.xyz) now!
