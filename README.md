@@ -35,4 +35,13 @@ If you would see more of unique Projects like these, help us with starring the R
 * Privacy Policy - [https://cody-bot.xyz/policy](https://cody-bot.xyz/policy)
 * Discord        - [Cody Support](https://discord.gg/FJ4jda4mY4)
 
+  Contributors: 
+  - [Koni](https://github.com/vKxni)
+  - [Peter](https://github.com/peterhanania)
+  - [Patrizio234](https://github.com/Patrizio234)
+  - [Sensibale013](https://github.com/Sensibale013)
+  - [Beate-krw](https://github.com/Beate-krw)
+  - [Arnism1](https://github.com/arnism1)
+  - [zAlexEU](https://github.com/zAlexEU)
+  - [zMxnu](https://github.com/zMxnu)
 
