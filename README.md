@@ -13,6 +13,18 @@ Doesn't matter if you want to learn Java, Python or even JavScript.
 Cody will boost your technical knowledge and programming skills.
 What are you waiting for? Try [Cody](https://cody-bot.xyz) now!
   
+## Get Started
+* Invite [Cody](https://discord.com/oauth2/authorize?client_id=858311918447099925&scope=bot&permissions=270126169&response_type=code&redirect_uri=https://cody-bot.xyz/panel)
+* Access the [Dashboard](https://cody-bot.xyz/panel) (optional configs)
+
+```
+Run the following Commands:
+* $enroll, this will start the Course prompt and ask you to choose a Language (via DM)
+* $resume +course, this will start the enrolled Course and you are ready to start learning
+  
+There are some other Utility Commands that can be listed with the $help command. 
+```
+  
 ## Tech Stack
 * [Language](https://www.javascript.com/)
 * [Runtime](https://nodejs.org/en/)
