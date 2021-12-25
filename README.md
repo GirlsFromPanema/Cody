@@ -9,7 +9,7 @@
 A advanced Discord written in NodeJS | Discord.js Library.
 Professional Dashboard, awesome Coding Courses within a FREE Premium System.
 Never get in touch with unreadable websites and documentations, learn everything from Cody!
-Doesn't matter if you want to learn Java, Python or even JavScript.
+Doesn't matter if you want to learn Java, Python or even JavaScript.
 Cody will boost your technical knowledge and programming skills.
 What are you waiting for? Try [Cody](https://cody-bot.xyz) now!
   
@@ -41,7 +41,7 @@ and much more!
 ## Tech Stack
 * [Language](https://www.javascript.com/)
 * [Runtime](https://nodejs.org/en/)
-* [APi](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------)
+* [API](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------)
 * [Design](https://www.npmjs.com/package/ejs)
 * [Database](https://www.mongodb.com/) [Prisma](https://www.prisma.io/)
 * [Testing](https://jestjs.io/)
