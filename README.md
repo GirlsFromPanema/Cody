@@ -14,10 +14,16 @@ Cody will boost your technical knowledge and programming skills.
 What are you waiting for? Try [Cody](https://cody-bot.xyz) now!
   
 ## Tech Stack
-* Language/Runtime: JavaScript, [Nodejs](https://nodejs.org/en/)
-* APi:              [Discord.js](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------)
-* Design:           [EJS](https://www.npmjs.com/package/ejs)
-* MongoDB, Prisma:  [Mongoose](https://www.mongodb.com/) [Prisma](https://www.prisma.io/)
+* [Language](https://www.javascript.com/)
+* [Runtime](https://nodejs.org/en/)
+* [APi](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------)
+* [Design](https://www.npmjs.com/package/ejs)
+* [Database](https://www.mongodb.com/) [Prisma](https://www.prisma.io/)
+* [Testing](https://jestjs.io/)
+* [Tasks](https://gruntjs.com/getting-started)
+* [Ecosystem](https://pm2.keymetrics.io/docs/usage/application-declaration/)
+* [Automation](https://gulpjs.com/)
+
 
 ## Support
 If you would see more of unique Projects like these, help us with starring the Repo!
