@@ -16,16 +16,6 @@ What are you waiting for? Try [Cody](https://cody-bot.xyz) now!
 ## Get Started
 * Invite [Cody](https://discord.com/oauth2/authorize?client_id=858311918447099925&scope=bot&permissions=270126169&response_type=code&redirect_uri=https://cody-bot.xyz/panel)
 * Access the [Dashboard](https://cody-bot.xyz/panel) (optional configs)
-
-* Toggle Channels from Bot commands.
-* Toggle Commands that shouldn't be enabled.
-* Change the Nickname of Cody.
-* View the Leaderboard.
-* Hide yourself from the Leaderboard.
-* View your enrolled Courses (with exact timestamp).
-* View your premium subscription (with exact timestamp).
-
-and much more!
   
 ```
 Run the following Commands in any Channel:
@@ -35,6 +25,18 @@ $resume <+ course>, this will start the enrolled Course and you are ready to sta
 Cody will ask you many different questions you have to solve, you will earn XP and Level through it.
 ```
 There are some other utility commands that can be listed within the $help command. 
+  
+Features:
+  
+* Toggle Channels from Bot commands.
+* Toggle Commands that shouldn't be enabled.
+* Change the Nickname of Cody.
+* View the Leaderboard.
+* Hide yourself from the Leaderboard.
+* View your enrolled Courses (with exact timestamp).
+* View your premium subscription (with exact timestamp).
+
+and much more!
   
 ## Tech Stack
 * [Language](https://www.javascript.com/)
