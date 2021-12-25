@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://discord.gg/3eNaWPhWZE" target="blank"><img src="https://cdn.discordapp.com/attachments/886645288750698548/917723197229637673/Rd0c07cb2486f8c6aa515c4f9fc608357.png" width="120" alt="Cody Logo" /></a>
+  <a href="https://discord.gg/3eNaWPhWZE" target="blank"><img src="https://cdn.discordapp.com/attachments/893792219390156850/924338853509214228/Rd0c07cb2486f8c6aa515c4f9fc608357.png" width="120" alt="Cody Logo" /></a>
 </p>
 
 <p align="center">A advanced <a href="http://discord.gg" target="_blank">Discord</a> Bot to learn Programming through Courses on Discord.</p>
