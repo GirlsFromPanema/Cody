@@ -14,7 +14,6 @@ module.exports = {
     if (
       !message.guild.me.permissions.has([
         'EMBED_LINKS',
-        'ADD_REACTIONS',
         'SEND_MESSAGES',
         'READ_MESSAGE_HISTORY',
         'VIEW_CHANNEL',
@@ -25,7 +24,6 @@ module.exports = {
 
       **I need the following Permissions to work on your Server:**
       EMBED_LINKS,
-      ADD_REACTIONS, 
       SEND_MESSAGES, 
       READ_MESSAGE_HISTORY,
       VIEW_CHANNEL
