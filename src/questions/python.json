@@ -7,7 +7,7 @@
           "time": 30000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "Welcome to **python!**\n\npython is one of the `most popular` programming languages. \n\nIt's useful for `web development`, `AI`, `machine learning`, `operating systems`, `mobile application development`, and `video games`"
+          "question": "Welcome to **Python**!\n\nPython is one of the `most popular` programming languages of all time.\n\nIt can be used for a lot of things including `web development`, `artificial intelligence (AI)`, `machine learning`, `operating systems`, `mobile application development`, and `video games`."
         }
       ],
 
@@ -17,13 +17,13 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Printing Text!**\n\nLet’s learn how to create a program that will display \"Hello World\" using the `print` statement.\n\n__Looking like this:__\n```py\nprint('Hello World')```"
+          "question": "**Printing Text!**\n\nLet's have a look at creating a program that will output \"Hello World\" to the console using the `print` statement.\n\n__It's looking like this:__\n```py\nprint('Hello World')\n```"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\n`print('Hello World')` will output 'Hello World'",
+          "question": "**True, or false?**\n\n`print('Hello World')` will output 'Hello World' to the console.",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
@@ -40,7 +40,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Syntax**\n\nAs we know, Python is very flexible, it can help us in any matter\nLets say, we would like to play around with Math\nExample:\n\n```py\nif 5 > 2:\nprint('5 is greated than 2.')```\nThese are also called booleans\n```py\n a = 500\n b = 123\nif a < b:\n print('B is not greater than A')```"
+          "question": "**Python Syntax**\n\nAs we know already, Python is very flexible, it can help us in any matter\nLet's say, we would like to play around with Math.\nExample:\n```py\nif 5 > 2:\n    print('5 is greater than 2.')\n```\nThese are also called **Booleans**.\n```py\na = 500\nb = 123\n\nif a < b:\n    print('b is not greater than a')\n```"
         }
       ],
 
@@ -50,13 +50,13 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Variables**\n\nPython does not have any special method for declaring a variable\n\nExample:\n__Looking like this:__\n```py\nx = 5```\n\n```py\ny = 'Dave'```\n\n```py\nprint (x)\nprint (y)```\n"
+          "question": "**Variables**\n\nPython does not have any special method for declaring a variable. Just don't forget to name it in lowercase\n\nExample:\n__It's looking like this:__\n```py\nx = 5\n```\n```py\ny = 'Dave'\n```\n```py\nprint (x)\nprint (y)\n```\n"
         }
       ],
 
       [
         {
-          "question": "**Upper and Lowercase**\nFirst we have the Lowercase, the initial letter is on lowerCase (h)\n```py\nprint('hello julia')```\n```py\nname = 'mason'```\n\nNext, we have upperCase, we are starting with a capital letter (T)\nExample:\n```py\nfavoritegame = 'TruckersMP'```",
+          "question": "**Upper and Lowercase**\nFirst we have the Lowercase, the initial letter is on lowerCase (h)\n```py\nprint('hello julia')\n```\n```py\nname = 'mason'\n```\n\nNext, we have upperCase, we are starting with a capital letter (T)\nExample:\n```py\nfavoritegame = 'TruckersMP'\n```",
           "answers": ["continue"],
           "time": 60000,
           "tries": 1,
@@ -68,7 +68,7 @@
 
       [
         {
-          "question": "**Lets give it a try!**\n\nWe have variable x - and we want to add the name 'Suzie' to it, but on (l)owercase!\n\nExample:\n```py\nabcde = 'davie'```\n```py\nxyz = 12343```\nCan you solve it?",
+          "question": "**Lets give it a try!**\n\nWe have variable x - and we want to add the name 'Suzie' to it, but on lowercase!\n\nExample:\n```py\nabcde = 'davie'\n```\n```py\nxyz = 12343\n```\nCan you solve it?",
           "answers": ["x = 'suzie'", "x= 'suzie'", "x ='suzie'", "x='suzie'"],
           "time": 60000,
           "tries": 3,
@@ -81,7 +81,7 @@
 
       [
         {
-          "question": "**Another one!**\n\nRight now, we have the variable Discord, we want to add the name 'cody' to it, but now on upperCase!\n\nExample:\n```py\nDiscord = 'Cody'```\n```py\nfood = Pizza```\nCheck the cheatsheet if you are stuck! And answer correctly if this is true",
+          "question": "**Another one!**\n\nRight now, we have the variable discord, we want to add the name 'cody' to it, but now on upperCase!\n\nExample:\n```py\ndiscord = 'Cody'\n```\n```py\nfood = 'Pizza'\n```\nCheck the cheatsheet if you are stuck! And answer correctly if this is true",
           "answers": ["✅"],
           "time": 60000,
           "tries": 3,
@@ -98,7 +98,7 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Casting**\n\nLet’s learn how specify the data type of a variable\"x , y and z\" using the `str`, `int`, `float` statement.\n\n__Looking like this:__\n```py\nx = strg(3)```\n**x** would be **'3'**\n\n```py\ny = int(5)```\n**y** would be **5**\n\n```py\nz = float(3)```\n**z** would be **3.0**"
+          "question": "**Python Casting**\n\nLet's learn how specify the data type of the variables \"x , y and z\" using the `str`, `int` and `float` statement.\n\n__It's looking like this:__\n```py\nx = str(3)\n```\n**x** would be **'3'**\n```py\ny = int(5)\n```\n**y** would be **5**\n```py\nz = float(3)\n```\n**z** would be **3.0**"
         }
       ],
 
@@ -108,13 +108,13 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Case-Sensitive**\n\nLets create two variables ...\"a and A\"\n\n__Looking like this:__\n```py\na = 123```\n\n```py\nA = 'Mason'```\nA would not overwrite a in this Case"
+          "question": "**Case-Sensitive**\n\nLets create two variables: \"a and A\"\n\n__It's looking like this:__\n```py\na = 123\n```\n```py\nA = 'Mason'\n```\nA would not overwrite a in this Case, but you usually start variables with a lowercase character, to keep it clear"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\n```py\nLara = 'Strawberry'```\n\n```py\nLara_age = 18```\nWould this overwrite Lara_age with String Name **Lara**?",
+          "question": "**True, or false?**\n```py\nlara = 'Strawberry'\n```\n```py\nlara_age = 18\n```\nWould this overwrite lara_age with string name **Lara**?",
           "answers": ["✅"],
           "time": 60000,
           "tries": 2,
@@ -131,13 +131,13 @@
           "time": 60000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Valid Variable Names**\n\nThey can a have short name like **x**, **y**, **z**\nBut also a descriptive one like **name**, **age**, **number**\n\nVariables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nLets give it a shot!\n\n```py\nmyname = 'Luis'```\n```py\nmy_name = 'Dave'```\n```py\n_my_name = 'Francisco'```\n```py\nmyName = 'John'```\n```py\nMYNAME = 'Susie'```\n\nAs you can see, there are many different ways - that's awesome!"
+          "question": "**Valid Variable Names**\n\nVariables can a have short name like **x**, **y**, **z**\nBut also a descriptive one like **name**, **age**, **number**\n\nVariables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nLets give it a shot!\n```py\nmyname = 'Luis'\n```\n```py\nmy_name = 'Dave'\n```\n```py\n_my_name = 'Francisco'\n```\n```py\nmyName = 'John'\n```\n```py\nMYNAME = 'Susie'\n```\n\nAs you can see, there are many different ways - that's awesome!"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\n```py\n123myVar = 'Cake'```\n\n```py\nmy Age = 22```\n```py\nmy-Age = 30```\n\n**Would these typo of variable names work?**",
+          "question": "**True, or false?**\n```py\n123myVar = 'Cake'\n```\n```py\nmy Age = 22\n```\n```py\nmy-Age = 30\n```\n\n**Would all these types of variable names work?**",
           "answers": ["❌"],
           "time": 60000,
           "tries": 2,
@@ -154,7 +154,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Illegal Variable Names**\n\nThere are variable names, that are not possible to be used within Python Programs\n\nAs we said, Variables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nExample:\n\n```py\n99name = 'Moo'```\n```py\nmy-name = 'Clara'```\n```py\nhis name = 'Tanja'```\n\nAs you can see, there are many illegal variable names - it's very important to know them."
+          "question": "**Illegal Variable Names**\n\nThere are variable names, that are not possible to be used within Python Programs\n\nAs we said, Variables can only contain alpha-numeric characters + underscores (A-z, 0-9 + _)\nExample:\n```py\n99name = 'Moo'\n```\n```py\nmy-name = 'Clara'\n```\n```py\nhis name = 'Tanja'\n```\n\nAs you can see, there are many illegal variable names - it's very important to know them!"
         }
       ],
 
@@ -164,13 +164,13 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Camel Case - Pascal Case - Snake Case**\n\nCamel Case variables are variables, each word start with an capital letter except the first one:\n```py\nmyFriendsName = 'Max'```\n\nPascal Case variables - each word start with an capital letter:\n\n```py\nMyFriendsName = 'Toni'```\n\nSnake Case variables are separated with an underscore character:\n```py\nmy_dads_name = 'Gerald'```\n\n*Thats easy!*"
+          "question": "**Camel Case - Pascal Case - Snake Case**\n\nCamel Case variables (which is the one you will want to use most of the time) are variables, where each word starts with a capital letter except for the first one:\n```py\nmyFriendsName = 'Max'\n```\n\nPascal Case variables (which you shouldn't use so you don't get confused with classes) - each word starts with a capital letter:\n```py\nMyFriendsName = 'Toni'\n```\n\nSnake Case variables are separated by an underscore:\n```py\nmy_dads_name = 'Gerald'\n```\n\n*That's easy!*"
         }
       ],
 
       [
         {
-          "question": "**Answer**\n\nSnake Case Variable:\n```py\nmy_dadsName = 'Gerald'```\n\n**Would this Snake Case Variable work?**",
+          "question": "**Answer**\n\nSnake Case Variable:\n```py\nmy_dadsName = 'Gerald'\n```\n\n**Would this Snake Case Variable work?**",
           "answers": ["yes"],
           "time": 90000,
           "tries": 2,
@@ -183,7 +183,7 @@
 
       [
         {
-          "question": "**Camel Case Variables**\n\nDoes the following rewrite to Camel Case work? - check my Cheatsheet above if you need Hints\n\nExample:\n```py\ncody_is_cool = 'that is true'```\n",
+          "question": "**Camel Case Variables**\n\nDoes the following rewrite to Camel Case work? - check my Cheatsheet above if you need Hints\n\nExample:\n```py\ncody_is_cool = 'that is true'\n```\n",
           "answers": ["❌"],
           "time": 90000,
           "tries": 3,
@@ -196,7 +196,7 @@
 
       [
         {
-          "question": "**Pascal Case Variables**\n\nDoes the following rewrite to Pascal Case Variables work? - check my Cheatsheet above if you need Hints\n\nExample:\n```py\nilovecoding = '2021'```\n",
+          "question": "**Pascal Case Variables**\n\nDoes the following rewrite to Pascal Case Variables work? - check my cheatsheet above if you need hints\n\nExample:\n```py\nilovecoding = '2021'\n```\n",
           "answers": ["no"],
           "time": 90000,
           "tries": 3,
@@ -213,7 +213,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Assign Multiple Values**\n\nPython allows us to assign values to multiple variables in a single line\n\n```py\nx, y, z = 'Apple', 'Banana', 'Cola'\nprint(x)\nprint(y)\nprint(z)```\n\n**Make sure your number of variables are matching the numbers of the values, otherwise it's an error**"
+          "question": "**Assign Multiple Values**\n\nPython allows us to assign values to multiple variables in a single line\n```py\nx, y, z = 'Apple', 'Banana', 'Cola'\nprint(x)\nprint(y)\nprint(z)\n```\n\n**Make sure your number of variables are matching the number of the values, otherwise, there will be an error**"
         }
       ],
 
@@ -223,13 +223,13 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Another Method for multi line Values**\n\nYou can assign the same value to multiple variables in a single line!\n\n```py\nx = y =  z = 'Cola'```\nprint(x)\nprint(y)\nprint(z)\n\n**Easy, right?**"
+          "question": "**Another Method for multi-line Values**\n\nYou can assign the same value to multiple variables in a single line!\n```py\nx = y =  z = 'Cola'\n```\nprint(x)\nprint(y)\nprint(z)\n\n**Easy, right?**"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\nRevision from the last task:\n```py\nx + y = z = 'Apple'```\n\n**Would this work?**",
+          "question": "**True, or false?**\n\nRevision from the last task:\n```py\nx + y = z = 'Apple'\n```\n\n**Would this work?**",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -246,7 +246,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Unpacking a Collection**\n\nPython allows you extract the values into variables, unpacking!\n\n```py\nanimals = ['Dog', 'Cat', 'Bird']\nx, y, z = 'animals'```\nprint(x)\nprint(y), print(z)"
+          "question": "**Unpacking a Collection/Array**\n\nPython allows you extract the values into variables, unpacking!\n```py\nanimals = ['Dog', 'Cat', 'Bird']\nx, y, z = 'animals'\n```\nprint(x)\nprint(y), print(z)"
         }
       ],
 
@@ -256,13 +256,13 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Output Variables**\n\nPython print() option is often used to output something into the Console here\n\n```py\nxyz = 'awesome'\nprint('Python is: ' + xyz)```\n\n```py\na = 'Sam is '\nb = 'cute'\nz = a + b\nprint(z)```\nRemember, you cannot combine a String with a Number!"
+          "question": "**Output Variables**\n\nPython `print()` statement is often used to output something to the console here\n```py\nxyz = 'awesome'\nprint('Python is: ' + xyz)\n```\n```py\na = 'Sam is '\nb = 'cute'\nz = a + b\nprint(z)\n```\nRemember, you cannot combine a String with a Number (Integer)!"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\nRevision from the last task:\n```py\ny = 'John'\n x = 5\nprint(x + y)```\n\n**Logically, can this work?**",
+          "question": "**True, or false?**\n\nRevision from the last task:\n```py\ny = 'John'\n x = 5\nprint(x + y)\n```\n\n**Logically, can this work?**",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -279,13 +279,13 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Global Variables**\n\nVariables - created outside of a function, used inside of the function\n\n```py\nme = 'cool'\ndef myfunction():\n   print('I am ' + me)\n\nmyfunction()```\n\nDon't forget the (): after your def!"
+          "question": "**Global Variables**\n\nVariables created outside of a function, used inside of the function\n```py\nme = 'cool'\ndef myfunction():\n    print('I am ' + me)\n\nmyfunction()\n```\n\nDon't forget the (): after your def!"
         }
       ],
 
       [
         {
-          "question": "**True, or false?**\n\nRevision from the last task:\n```py\njoshtype = 'friendly'\ndef myfunction()\nprint('My friend is ' + joshtype)\n\nmyfunction():```\n\nRead the Code carefully, are there any Errors?",
+          "question": "**True, or false?**\n\nRevision from the last task:\n```py\njoshtype = 'friendly'\ndef myfunction()\nprint('My friend is ' + joshtype)\n\nmyfunction():\n```\n\nRead the Code carefully, are there any Errors?",
           "answers": ["✅"],
           "time": 90000,
           "tries": 2,
@@ -302,12 +302,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Global Variables Functions**\n\n```py\nkoni = 'awesome'\n\ndef myfunc():\n  global koni\n  koni = 'cool'\nmyfunc()\n\nprint('People like Koni are: ' + koni)```\nEasy Peasy!"
+          "question": "**Global Variables Functions**\n```py\nkoni = 'awesome'\n\ndef myfunc():\n    global koni\n    koni = 'cool'\nmyfunc()\n\nprint('People like Koni are: ' + koni)\n```\nEasy Peasy!"
         }
       ],
       [
         {
-          "question": "**True, or false?**\n\n*Quick Revision about the last task*:\n\nTo **change** the value of a **Global Variable** inside of a function, we refer to use the `gobal` keyword.\n\n",
+          "question": "**True, or false?**\n\n*Quick Revision about the last task*:\n\nTo **change** the value of a **Global Variable** inside of a function, we refer to use the `global` keyword.\n\n",
           "answers": ["✅"],
           "time": 90000,
           "tries": 2,
@@ -323,12 +323,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Data Types**\n\nThere are many important data type concepts\n\n**Text Type**: str\nNumeric Types: `int`, `float`, `complex`\n**Sequence Types**: list, tuple, range\n**Mapping Type**: `dict`\nSet Types: `set`, `frozenset`\n**Boolean Type**: `bool`\n**Binary Types**: bytes, bytearray, memoryview\n\n```py\nx = 150\nprint(type(x))```\nThat is very important to know."
+          "question": "**Python Data Types**\n\nThere are many important data type concepts\n\n**Text Type**: `str` (String)\nNumeric Types: `int` (Integer), `float`, `complex`\n**Sequence Types**: list, tuple, range\n**Mapping Type**: `dict`\nSet Types: `set`, `frozenset`\n**Boolean Type**: `bool`\n**Binary Types**: bytes, bytearray, memoryview\n```py\nx = 150\nprint(type(x))\n```\nThat is very important to know."
         }
       ],
       [
         {
-          "question": "**Lets give it a try!**\n\nSetting data types, Part 1: **Strings**\nUse Data type `str` to create variable x with the value Hello World\n\nRemember to use lower case.\n\nHint: ||x = is your value, a string is always declared with ''||",
+          "question": "**Let's give it a try!**\n\nSetting data types, Part 1: **Strings**\nUse Data type `str` to create variable x with the value Hello World\n\nRemember to use lower case.\n\nHint: ||x = is your value, a string is always declared with ''||",
           "answers": ["x = 'hello world'", "x= 'hello world'", "x ='hello world'", "x='hello world'"],
           "time": 60000,
           "tries": 5,
@@ -340,7 +340,7 @@
       ],
       [
         {
-          "question": "**Another one!**\n\nSetting data types, Part 2: **Integar**\nUse Data type `int` to create variable y with the result of 5 + 25\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
+          "question": "**Another one!**\n\nSetting data types, Part 2: **Integer**\nUse Data type `int` to create variable y with the result of 5 + 25\n\nRemember to use lower case.\n\nHint: ||y = is your value, a int is always a number, without strings ''||",
           "answers": ["y = 30", "y= 30", "y =30", "y=30"],
           "time": 60000,
           "tries": 5,
@@ -356,12 +356,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Numbers**\n\nPython has three (3) numeric types\n\n➜ x = 1 # int\n➜ y = 3.5 # float\n➜ z = 1a # complex\n\nIf you want to verify the object, use the `type()` function\n\n```py\nprint(type(a))```\n Int or Integar, is a whole number, positive or negative, w/o decimals inclusive unlimited length"
+          "question": "**Python Numbers**\n\nPython has three (3) numeric types\n\n➜ x = 1 # int\n➜ y = 3.5 # float\n➜ z = 1a # complex\n\nIf you want to verify the object, use the `type()` function\n```py\nprint(type(a))\n```\n Int or Integer, is a whole number, positive or negative, without decimals inclusive unlimited length"
         }
       ],
-      [ 
+      [
         {
-          "question": "**Declare your own Python Number!**\n\nLast example, we had three numeric types! Go ahead and declare your own complex number.\n**Some important rules:**\nOnly use variables between `a` - `b` (a, b), numbers between 1 and 3 (1, 2, 3)\n```py\na = 2c```\nAs an example\n\nHint: || Choose a variable, for example a, now declare a complex number to it, for example 1b / 2a / 3a||",
+          "question": "**Declare your own Python Number!**\n\nLast example, we had three numeric types! Go ahead and declare your own complex number.\n**Some important rules:**\nOnly use variables between `a` - `b` (a, b), numbers between 1 and 3 (1, 2, 3)\n```py\na = 2c\n```\nAs an example\n\nHint: || Choose a variable, for example a, now declare a complex number to it, for example 1b / 2a / 3a||",
           "answers": ["a = 1a", "a= 1a", "a =1a", "a=1a", "a = 2a", "a= 2a", "a =2a", "a=2a", "a = 3a", "a= 3a", "a =3a", "a=3a", "a = 3a", "a= 3a", "a =3a", "a=3a","b = 1a", "b= 1a", "b =1a", "b=1a", "b = 2a", "b= 2a", "b =2a", "b=2a", "b = 3a", "b= 3a", "b =3a", "b=3a", "b = 3a", "b= 3a", "b =3a", "b=3a", "b= 1b", "b =1b", "b=1b", "b = 2b", "b= 2b", "b =2b", "b=2b", "b = 3b", "b= 3b", "b =3b", "b=3b", "b = 3b", "b= 3b", "b =3b", "b=3b"],
           "time": 90000,
           "tries": 5,
@@ -371,9 +371,9 @@
           "correct": "Good!"
         }
       ],
-      [ 
+      [
         {
-          "question": "**Revision**\n\nLast example, we had three numeric types! We have successfully declared an Complex Number. Now we want to log the type into the Console!\nExample:\n```py\nx = 3.14444444563```\nPrint the type of **x**\nHint: ||Use the print and type statement within (variable name here) like print(type(abcdefg))||",
+          "question": "**Revision**\n\nLast example, we had three numeric types! We have successfully declared a Complex Number. Now we want to log the type into the Console!\nExample:\n```py\nx = 3.14444444563\n```\nPrint the type of **x**\nHint: ||Use the print and type statement within (variable name here) like print(type(abcdefg))||",
           "answers": ["print(type(x))"],
           "time": 90000,
           "tries": 5,
@@ -383,9 +383,9 @@
           "correct": "Perfect!"
         }
       ],
-      [ 
+      [
         {
-          "question": "**Revision 2.0**\n\nUse the Cheatsheet above if needed, we will use more variables within complex Numbers. Go ahead and log it again!\nExample:```py\nz = -87.7e400```\nHint: || Use the print statement with the type declaration + ()) ||",
+          "question": "**Revision 2.0**\n\nUse the Cheatsheet above if needed, we will use more variables within complex Numbers. Go ahead and log it again!\nExample:\n```py\nz = -87.7e400\n```\nHint: || Use the print statement with the type declaration + ()) ||",
           "answers": ["print(type(z))"],
           "time": 90000,
           "tries": 5,
@@ -403,12 +403,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Python Strings**\nYou are able to assign a multiline string to a variable by using three quotes:\n```py\ntext = '''Lorem ipsum dolor\nsit amet consectetur adipiscing elit'''\nprint(text)```\nIf you want to use the common strings, you have to use 3x2 of them."
+          "question": "**Python Strings**\nYou are able to assign a multiline string to a variable by using three quotes:\n```py\ntext = '''Lorem ipsum dolor\nsit amet consectetur adipiscing elit'''\nprint(text)\n```\nIf you want to use the common strings, you have to put them at the beginning and the end of each line, but we'll be using the triple ones for now."
         }
       ],
       [
         {
-          "question": "**Python Strings**\nWe have variable **text** with the value **'Hello, Program!'**\nWe now want to log the first letter of the Text with the Index of **1**.\nRemember, the first index is always **0**!\n```py\na = 'Hello, Program!'\n# here we want to print using the Index of 1```\nStuck? Here is a Hint: ||With the help of an array [] and the Index Number, you can easily log it using print||\nMore help: ||test[12] would print the 12th letter of the given text, can you solve it?||",
+          "question": "**Python Strings**\nWe have variable **text** with the value **'Hello, Program!'**\nWe now want to log the first letter of the Text with the Index of **1**.\nRemember, the first index is always **0**!\n```py\na = 'Hello, Program!'\n# here we want to print using the Index of 1\n```\nStuck? Here is a Hint: ||With the help of an array [] and the Index Number, you can easily log it using print||\nMore help: ||test[12] would print the 12th letter of the given text, can you solve it?||",
           "answers": ["print(a[1])"],
           "time": 90000,
           "tries": 5,
@@ -424,7 +424,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Looping trough Strings & String Length**\nSince strings are arrays, we can loops trough the characters within a string, using the **for** loop!\n```py\nfor heathly in 'banana':\n print(healthy)```\n**String Length**\nTo get the length of an string, we can use the `len()` function!\n```py\nmytext = 'Test, MyCoolTest!'\n  print(len(mytext))```\nEasy!"
+          "question": "**Looping trough Strings & String Length**\nSince strings are arrays, we can loops trough the characters within a string, using the **for** loop!\n```py\nfor healthy in 'banana':\n print(healthy)\n```\n**String Length**\nTo get the length of a string or the number of values in an array, we can use the `len()` function!\n```py\nmytext = 'Test, MyCoolTest!'\n  print(len(mytext))\n```\nEasy!"
         }
       ],
       [
@@ -445,12 +445,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**String Checks**\nYou can check if a phrase or character is present in a string, we will use the keyword `in`\n```py\ntext = 'I love to use Cody!'\nprint('Cody' in text)```\nIf its presenting, it will get logged. Very useful!"
+          "question": "**String Checks**\nYou can check if a phrase or character is present in a string, we will use the keyword `in`\n````py\ntext = 'I love to use Cody!'\nprint('Cody' if 'Cody' in text)\n```\nIf it's presenting, it will be logged. Very useful!"
         }
       ],
       [
         {
-          "question": "We can also check if its **NOT** in the text, do you think this could work?\n```py\ntext = 'I love to code all day!'\nprint('codyiscool' not in text)",
+          "question": "We can also check if its **NOT** in the text, do you think this could work?\n```py\ntext = 'I love to code all day!'\nprint('codyiscool' if not 'codyiscool' in text)",
           "answers": ["✅"],
           "time": 90000,
           "tries": 2,
@@ -466,12 +466,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**String Slicing**\nYou can return a range of characters by using the slice syntax. You specify the start and the end index, separated by a colon, to return a part of the string. In this example, the output would be 'llo':\n ```py\nb = 'Hello, World!'\nprint(b[:5])```"
+          "question": "**String Slicing**\nYou can return a range of characters by using the slice syntax. You specify the start and the end index, separated by a colon, to return a part of the string. In this example, the output would be 'Hel':\n \n```py\nb = 'Hello, World!'\nprint(b[:3])\n```"
         }
       ],
       [
         {
-          "question": "**Slice From the Start**\nSo let's start at the beginning. By leaving out the start index, the range will start at the first character.\n```py\nb='Hello World!'\nprint(b[:5])```In this example, the output is 'Hello'. Now solve the following code:\n```py\nx='Cody is cool!'\nprint(x[:4])```",
+          "question": "**Slice From the Start**\nSo let's start at the beginning. By leaving out the start index, the range will start at the first character.\n```py\nb='Hello World!'\nprint(b[:5])\n```In this example, the output is 'Hello'. Now solve the following code:\n```py\nx='Cody is cool!'\nprint(x[:4])\n```",
           "answers": ["cody"],
           "time": 90000,
           "tries": 5,
@@ -483,7 +483,7 @@
       ],
       [
         {
-          "question": "**Slice to the End**\nBy leaving out the end index, the range will go to the end:\n```py\nb='Hello World!'\nprint(b[2:]```\nIn this case the first 2 Letters are going to be deleted, so the output is 'llo, World!'. Do you think the ouput of the following code is 'Discord'?\n```py\na = 'I hate Discord'\nprint(a[7:])```",
+          "question": "**Slice to the End**\nBy leaving out the end index, the range will go to the end:\n```py\nb='Hello World!'\nprint(b[2:]\n```\nIn this case the first 2 Letters are going to be deleted, so the output is 'llo, World!'. Do you think the output of the following code is 'Discord'?\n```py\na = 'I hate Discord'\nprint(a[7:])\n```",
           "answers": ["✅"],
           "time": 90000,
           "tries": 2,
@@ -495,7 +495,7 @@
       ],
       [
         {
-          "question": "**Negative Indexing**\nUse negative indexes to start the slice from the end of the string:\n```py\na='Hello, World!'\nprint(a[-5:-2])```\n The range starts at the 'o' (position -5) in 'World!' and ends at the 'd' (position -2)' If we change the first index to -13, is the ouput be 'Hello'?",
+          "question": "**Negative Indexing**\nUse negative indexes to start the slice from the end of the string:\n```py\na='Hello, World!'\nprint(a[-5:-2])\n```\n The range starts at the 'o' (position -5) in 'World!' and ends at the 'd' (position -2)' If we change the first index to -13, will the output be 'Hello'?",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -511,12 +511,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Modify Strings**\n Python has a set of built-in methods that you can use on strings to modify them. In the following examples we will just print the result, but theres a important thing: If you modify a string with any of the coming methods, notice that they only return a string. If you want it to be saved, you need to save it in any variable."
+          "question": "**Modify Strings**\n Python has a set of built-in methods that you can use modify strings. In the following examples we will just print the result, but theres an important thing: If you modify a string with any of the coming methods, notice that they only **return** a string. If you want it to be saved, you need to save it in any variable."
         }
       ],
       [
         {
-          "question": "**Upper Case**\nThe upper() method returns the string in upper case. What do you think is going to be the output?\n```py\na = 'Cody is cool!'\nprint(a.upper())```\nPlease answer with `yes` if the result is\n```py\nCODY IS COOL```\n\nAnswer with `no` if the Output is something else!",
+          "question": "**Upper Case**\nThe upper() method returns the string in upper case. What do you think is going to be the output?\n```py\na = 'Cody is cool!'\nprint(a.upper())\n```\nPlease answer with `yes` if the result is\n```py\nCODY IS COOL\n```\n\nAnswer with `no` if the Output is something else!",
           "answers": ["yes"],
           "time": 90000,
           "tries": 5,
@@ -528,7 +528,7 @@
       ],
       [
         {
-          "question": "**Lower Case**\nThe lower() method returns the string in upper case.\n```py\na = 'Cody is cool!'\nprint(a.lower())```\nDo you think this prints 'CODY IS COOL!'?",
+          "question": "**Lower Case**\nThe lower() method returns the string in lower case.\n```py\na = 'Cody is cool!'\nprint(a.lower())\n```\nWill the output be 'CODY IS COOL!'?",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -540,7 +540,7 @@
       ],
       [
         {
-          "question": "**Strip String**\nThe strip() method removes any whitespace from the beginning or the end. Do you think the following Code is going to print 'Hello,World?'?\n```py\na = ' Hello, World !'\nprint(a.strip())```",
+          "question": "**Strip String**\nThe strip() method removes any whitespace from the beginning or the end. Do you think the following Code is going to print 'Hello,World?'?\n```py\na = ' Hello, World !'\nprint(a.strip())\n```",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -552,7 +552,7 @@
       ],
       [
         {
-          "question": "**Replace String**\nThe replace() method replaces a string with another string. So if you want to replace 'C' in 'Cody' with a 'B', you would just simply write this:\n```py\nprint('Cody'.replace('C', 'B')```\nWhat do you think is the output of this code:\n```py\na='Boat'\nprint(a.replace('a', 'o').replace('t', 'k')```\nANSWER WITH LOWERCASE LETTERS!",
+          "question": "**Replace String**\nThe replace() method replaces a string with another string. So if you want to replace 'C' in 'Cody' with a 'B', you would just simply write this:\n```py\nprint('Cody'.replace('C', 'B')\n```\nWhat do you think is the output of this code:\n```py\na='Boat'\nprint(a.replace('a', 'o').replace('t', 'k')\n```\nANSWER WITH LOWERCASE LETTERS!",
           "answers": ["book"],
           "time": 90000,
           "tries": 5,
@@ -564,7 +564,7 @@
       ],
       [
         {
-          "question": "**Split String**\nThe split() method returns a list where the text between the specified separator becomes the list items. We didn't do anything with lists yet, so heres a small explanation. Lists can include all Datatypes and very many of them. Every item in a list is separated by a comma:```py\nmy_list = ['Hello World', 12, 1.0, {'1': 2}]```\n Do you think this will print '['Cody', 'is', 'cool!']'?```py\na = 'Cody is cool!'\nprint(a.split(' ')```",
+          "question": "**Split String**\nThe split() method returns a list where the text between the specified separator becomes the list items. We didn't do anything with lists yet, so here's a small explanation. Lists can include all data types and very many of them. Every item in a list is separated by a comma:\n```py\nmy_list = ['Hello World', 12, 1.0, {'1': 2}]\n```\n Do you think this will print '['Cody', 'is', 'cool!']'?\n```py\na = 'Cody is cool!'\nprint(a.split(' ')\n```",
           "answers": ["✅"],
           "time": 90000,
           "tries": 5,
@@ -580,12 +580,12 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**String Concatenation**\nTo concatenate, or combine, two strings you can use the + operator. It puts them just to each other, it isn't like in math that ```py\na='1'\nb='2'\nc=a+b``` euqals 3, it's 31 because we're doing this with Strings not Integers.'"
+          "question": "**String Concatenation**\nTo concatenate, or combine, two strings you can use the + operator. It puts them just to each other, it isn't like in math that \n```py\na='1'\nb='2'\nc=a+b\n``` equals 3, it's 31 because we're doing this with Strings not Integers.'"
         }
       ],
       [
         {
-          "question": "**Merge Variables - 1**\nTo Merge two Variables together, you can just use the '+' like shown in the last explanation. What is the output of this code?\n```py\na = 'hello'\nb = 'world'\nprint(a + b)```",
+          "question": "**Merge Variables - 1**\nTo Merge two Variables together, you can just use the '+' like shown in the last explanation. What is the output of this code?\n```py\na = 'hello'\nb = 'world'\nprint(a + b)\n```",
           "answers": ["helloworld"],
           "time": 90000,
           "tries": 5,
@@ -597,7 +597,7 @@
       ],
       [
         {
-          "question": "**Merge Variables - 2**\nString Concatenation is also a great way to add a new value between strings, for example if you want to have a space between them. Do you think this will work? ```py\na='Hello'\nb='World!\nc=a + ' ' + b\nprint(c)",
+          "question": "**Merge Variables - 2**\nString Concatenation is also a great way to add a new value between strings, for example if you want to have a space between them. Do you think this will work? \n```py\na='Hello'\nb='World!\nc=a + ' ' + b\nprint(c)",
           "answers": ["✅"],
           "time": 90000,
           "tries": 5,
@@ -613,12 +613,12 @@
           "time": 90000,
           "type": "continue",
           "answers": [ "continue" ],
-          "question": "**String Format - 1**\nAs we learned in the Python Variables chapter, we cannot combine strings and numbers like this:\n```py\nage = 36\ntxt = 'My name is John, I am ' + age\nprint(txt)```\nBut we can combine strings and numbers by using the format() method! The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are Values: ```py\nage = 36\ntxt = 'My name is John, I am {}'\nprint(txt.format(age))```"
+          "question": "**String Format - 1**\nAs we learned in the Python Variables chapter, we cannot combine strings and numbers like this:\n```py\nage = 36\ntxt = 'My name is John, I am ' + age + 'years old.'\nprint(txt)\n```\nBut we can combine strings and numbers by using the format() method! The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are Values: \n```py\nage = 36\ntxt = 'My name is John, I am {}'\nprint(txt.format(age))\n```"
         }
       ],
       [
         {
-          "question": "**String Format - 2**\nThe format() method takes unlimited number of arguments, and are placed into the respective placeholders:\n```py\nquantity = 3\nitemno = 567\nprice = 49.95\nyorder = I want {} pieces of item {} for {} dollars.\nprint(myorder.format(quantity, itemno, price))```\nDo you agree that the Output is 'I want 567 pieces of item 3 for 49.95 dollars.'?",
+          "question": "**String Format - 2**\nThe format() method takes unlimited number of arguments, which are placed into the respective placeholders:\n```py\nquantity = 3\nitemno = 567\nprice = 49.95\nyorder = I want {} pieces of item {} for {} dollars.\nprint(myorder.format(quantity, itemno, price))\n```\nDo you agree that the Output is 'I want 567 pieces of item 3 for 49.95 dollars.'?",
           "answers": ["❌"],
           "time": 90000,
           "tries": 2,
@@ -630,7 +630,7 @@
       ],
       [
         {
-          "question": "**Merge Variables - Index Numbers**If you want to have your variables in a specific order, you can just put numbers in the curly braces, for example '{1}'. Do you think this works? ```py\nquantity = 3\nitemno = 567\nprice = 49.95\nmyorder = 'I want to pay {2} dollars for {0} pieces of item {1}.'\nprint(myorder.format(quantity, itemno, price))```",
+          "question": "**Merge Variables - Index Numbers**If you want to have your variables in a specific order, you can just put numbers in the curly braces, for example '{1}'. Do you think this works? \n```py\nquantity = 3\nitemno = 567\nprice = 49.95\nmyorder = 'I want to pay {2} dollars for {0} pieces of item {1}.'\nprint(myorder.format(quantity, itemno, price))\n```",
           "answers": ["✅"],
           "time": 90000,
           "tries": 2,
@@ -646,7 +646,7 @@
           "time": 90000,
           "type": "continue",
           "answers": [ "continue" ],
-          "question": "**Escape Character**\nTo insert characters that are illegal in a string, use an escape character. An escape character is a backslash followed by the character you want to insert. An example of an illegal character is a double quote inside a string that is surrounded by double quotes:\n```py\ntxt = txt = \"We are the \"Astros\" from the Earth.```\nTo avoid a error, we can use the escape character 'backslash+double quote' which cant be normally written here because it's going to be a double quote just like in python.'"
+          "question": "**Escape Character**\nTo insert characters that are illegal in a string, use an escape character. An escape character is a backslash followed by the character you want to insert. An example of an illegal character is a double quote inside a string that is surrounded by double quotes:\n```py\ntxt = \"We are the \"Astros\" from the Earth.\"\n```\nTo avoid an error, we can use the escape character 'backslash+double quote' which normally can't be written here because it's going to be a double quote just like in Python.'"
         }
       ],
       [
@@ -655,7 +655,7 @@
           "time": 90000,
           "type": "continue",
           "answers": ["continue"],
-          "question": "**Evaluate Values and Variables**\nThe `bool()` function allows you to evaluate any value, and give you `True` or `False` in return,\n```py\n\nprint(bool('Hello')\nprint(bool(30)) # => Output: true```\nAlmost any value is evaluated to **True** if it has some sort of content.\nAny string is **True**, except empty strings.\nAny number is **True**, except 0.\nAny list, tuple, set, and dictionary are **True**, except empty ones.\n\n*This is important to know for later tasks!*"
+          "question": "**Evaluate Values and Variables**\nThe `bool()` function allows you to evaluate any value, and returns `True` or `False`.\n```py\n\nprint(bool('Hello'))\nprint(bool(30)) # => Output: true\n```\nAlmost any value is evaluated to **True** if it has some sort of content.\nAny string is **True**, except for empty strings.\nAny number is **True**, except for 0.\nAny list, tuple, set, and dictionary is **True**, except for empty ones.\n\n*This is important to know for later tasks!*"
         }
       ]
     ]
