@@ -19,7 +19,7 @@ module.exports = {
         "VIEW_CHANNEL",
       ])
     ) {
-      return message.author.send(`
+      return message.author.send({ content: `
         ❌ I require some Permissions!
   
         **I need the following Permissions to work on your Server:**
@@ -31,7 +31,7 @@ module.exports = {
   
         ⚠️ Please add me the right Permissions and re-run this Command!
     
-        `);
+        ` });
     }
 
     const errorembed = new Discord.MessageEmbed()
@@ -62,14 +62,14 @@ module.exports = {
       )
     try {
     if (user && user.isPremium) {
-       message.react("✅").then(() =>  message.author.send(stats))
+       message.react("✅").then(() =>  message.author.send({ embeds: [stats] }))
       
     } else {
       return message.channel.send(errorembed);
     }
     } catch (err) {
         console.log(err)
-        message.channel.send(":x: Please enable your DMs before running this Command!")
+        message.channel.send({ content: ":x: Please enable your DMs before running this Command!" })
         }
   },
 };
