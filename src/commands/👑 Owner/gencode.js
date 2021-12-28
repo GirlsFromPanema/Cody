@@ -16,7 +16,7 @@ module.exports = {
     const plan = args[0]
     const plans = ['daily', 'weekly', 'monthly', 'yearly']
 
-    if (!plan) return message.channel.send(`**> Please provide plan**`)
+    if (!plan) return message.channel.send({ content: `**> Please provide plan**` })
 
     // If the users input does not match the plans array in line 17, return an error.
     if (!plans.includes(args[0]))
